@@ -2,7 +2,7 @@
 
 **Do briefing ao CAD paramétrico, com peças independentes, verificações e identidade de produto.**
 
-Fluxo de **rrattes** para desenvolver objetos com Codex ou Claude Code, usando Python/build123d/OCP em Docker. A `3d-engineering` conduz requisitos e decisões técnicas; a `product-design` acrescenta aparência e estilos quando solicitada. **Engenharia prevalece sobre design.**
+Fluxo de **rrattes** para desenvolver objetos com Codex ou Claude Code, usando Python/build123d/OCP em Docker. A `3d-engineering` conduz requisitos e CAD; `toy-modeler` orienta a experiência de brinquedos; `product-design` acrescenta aparência quando solicitada. **Engenharia prevalece sobre design.**
 
 [Começar um projeto](#início-rápido) · [Fluxo entre skills](docs/WORKFLOW.md) · [Instalação](docs/INSTALL.md) · [Créditos](THIRD_PARTY_NOTICES.md)
 
@@ -67,6 +67,7 @@ As gavetas abertas mostram o interior; essa pose de apresentação não comprova
 |---|---|
 | Primeira utilização | Conferir skills necessárias, Docker/Compose e `cad3d doctor`. |
 | Briefing e planejamento | `brainstorming`, `writing-plans` e `3d-engineering`. |
+| Brinquedos | `toy-modeler` antes do CAD: ação, resposta, variação e observação do protótipo. |
 | Modelagem e montagem | `executing-plans` + `3d-engineering`, com CAD no container. |
 | Verificação e correção | Verificadores CAD e `systematic-debugging` quando necessário. |
 | Aparência solicitada | `product-design`; mudanças de forma retornam às verificações afetadas. |
@@ -80,6 +81,7 @@ As gavetas abertas mostram o interior; essa pose de apresentação não comprova
 |---|---|
 | 3d-engineering 1.8.0 | Estável aprovada |
 | product-design evolução 03 | Aprovada e promovida; opcional após engenharia; comportamento parcialmente avaliado |
+| toy-modeler 1.0.0 | Aprovada e promovida para protótipos pessoais; avaliação conceitual, protótipo físico pendente |
 | product-design evolução 02 | Versão anterior preservada para recuperação |
 | 26 skills auxiliares | Apoio ao fluxo/evolução; carregar somente as necessárias |
 
@@ -98,7 +100,7 @@ export PATH="$PWD/platform/scripts:$PATH"
 cad3d init projects/meu-produto
 ```
 
-Abra Codex ou Claude Code nesta raiz e forneça um briefing novo. **Na primeira utilização, peça ao agente para conferir a disponibilidade das skills e do container antes de modelar.** As skills próprias estão vinculadas em `.agents/skills` e `.claude/skills`; confira a descoberta no agente. Leia [instalação e uso](docs/INSTALL.md) e [fluxo atual](docs/WORKFLOW.md).
+Abra Codex ou Claude Code nesta raiz e forneça um briefing novo. **Na primeira utilização, peça ao agente para conferir a disponibilidade das skills e do container antes de modelar.** As skills próprias estão vinculadas em `.agents/skills` e `.claude/skills`; confira a descoberta no agente. Para brinquedos, invoque `toy-modeler` (no Codex, `$toy-modeler`) e siga o [handoff rápido](docs/toy-modeler/INICIO_RAPIDO.md). Leia [instalação e uso](docs/INSTALL.md) e [fluxo atual](docs/WORKFLOW.md).
 
 ## Skills auxiliares
 
@@ -116,7 +118,7 @@ Para disponibilizar uma auxiliar no agente, sem sobrescrever uma existente:
 ## Estrutura
 
 - `platform/`: CLI, Docker, perfis, templates, exemplos, testes e documentação técnica.
-- `skills/`: as duas skills próprias estáveis, fonte canônica.
+- `skills/`: as três skills próprias promovidas, fonte canônica.
 - `third_party/skills/`: auxiliares com atribuição e licenças preservadas.
 - `docs/`: instalação, fluxo, guia de economia e registros das versões.
 - `.agents/skills/` e `.claude/skills/`: vínculos locais para descoberta.

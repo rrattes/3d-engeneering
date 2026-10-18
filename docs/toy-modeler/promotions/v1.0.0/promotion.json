@@ -1,0 +1,37 @@
+{
+  "state": "APPROVED_AND_PROMOTED",
+  "release": "toy-modeler 1.0.0",
+  "approval": "escreva a skill e promova. documente vou testar em outro chat",
+  "scope": "personal toy prototypes; play experience and mechanical interaction; not for commercial sale",
+  "active_path": "skills/toy-modeler",
+  "discovery_links": [
+    ".agents/skills/toy-modeler",
+    ".claude/skills/toy-modeler"
+  ],
+  "inventory_sha256": {
+    "SKILL.md": "4e0fcf8228b9db6c513c185379dea03ae58572f41f0ab43e711f4c39a93d7624",
+    "assets/toy_brief.example.json": "180d6642e01088ec719ff3a38b94ae153387e0a0336a503d6061c8678eac5b99",
+    "assets/toy_brief.schema.json": "4939702a7447a5c08ac358b084c8b33309e53647b285e6adc27971f78974233e",
+    "evals/articulated-creature.md": "3d276147cd9ffb41c9b1b3cc6b0d0c1c671d92b339de94c923b8bc17bdd5bb0a",
+    "evals/mechanism-patterns.md": "5c95ef16cdf7920f32514394bd50ca15e5056264bc1176daf1d82db1968a070c",
+    "references/mechanisms.md": "eaca2ec8bfb8ec32d2342bfabb2d1769655daf6f46384901c5fd3aad23b1a6c4",
+    "references/play-patterns.md": "afa2c4010dc5d75e5fd8724c61edb6f0f55df258461326fe43a2a0b970352555",
+    "references/prototype-observation.md": "1ffdaee08a998cd05dc19acf54fb85d30258d1e1dcf5ce5c8671163b73ffd08b",
+    "references/real-toy-patterns.md": "6f14433f4e82c10e920776df140ed6c0728f7b09d72c1f515e36f0220edd46e9",
+    "scripts/check_toy_brief.py": "2c0dd31f2d6cb966b6fbb5b882546d6e5551b50735f5a7f4f2dfff890afb66c9",
+    "tests/test_toy_brief.py": "ece578169183b1bf3d04fcf43546039059bdb54cb421ed72a4c33c19bd77f353"
+  },
+  "evaluation": {
+    "baseline_and_candidate": "one independent articulated-creature comparison recorded in skills/toy-modeler/evals/articulated-creature.md",
+    "conceptual_mechanism_examples": "cart and captive-flexure concepts recorded; not physically tested",
+    "contract_tests": "4 passed",
+    "skill_validation": "quick_validate.py passed in cad3d-engineering:1.8.0"
+  },
+  "limits": [
+    "No CAD toy pilot was generated",
+    "No printed toy or user play observation was evaluated",
+    "Pleasant feel, durability, and play value remain product-specific hypotheses"
+  ],
+  "previous_version": null,
+  "recovery": "remove discovery symlinks and restore integration/documentation from Git; retain this record"
+}

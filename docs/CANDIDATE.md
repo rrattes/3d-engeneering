@@ -9,3 +9,7 @@ Registro técnico prévio:168 testes OK. Comportamento parcial20/36, sem julgame
 Os relatórios de avaliação são históricos e mantêm os estados anteriores à aprovação. Não foram publicadas sessões privadas, respostas brutas de agentes ou STEP dos produtos. Imagens de piloto e resultados resumidos acompanham o método.
 
 A skill é opcional após engenharia. Aprovação da skill não é validação física de produtos.
+
+## Toy-modeler 1.0.0 — promovida
+
+`toy-modeler` foi promovida para orientar a experiência de brinquedos em protótipos pessoais. A avaliação conceitual não incluiu CAD ou observação física. Consulte [promoção e limites](toy-modeler/promotions/v1.0.0/APROVACAO_E_PROMOCAO.md) e [início rápido para outro chat](toy-modeler/INICIO_RAPIDO.md).

@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Toy brief",
+  "type": "object",
+  "required": ["name", "intended_player", "context", "play_promise", "play_loop", "play_patterns", "interaction_map", "mechanisms", "prototype_observations", "open_questions"],
+  "properties": {
+    "name": {"type": "string", "minLength": 1},
+    "intended_player": {"type": "string", "minLength": 1},
+    "context": {"type": "string", "minLength": 1},
+    "play_promise": {"type": "string", "minLength": 1},
+    "play_loop": {
+      "type": "object",
+      "required": ["invitation", "action", "response", "next_possibility"],
+      "properties": {
+        "invitation": {"type": "string", "minLength": 1},
+        "action": {"type": "string", "minLength": 1},
+        "response": {"type": "string", "minLength": 1},
+        "next_possibility": {"type": "string", "minLength": 1}
+      },
+      "additionalProperties": false
+    },
+    "play_patterns": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+    "interaction_map": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/interaction"}},
+    "mechanisms": {"type": "array", "items": {"$ref": "#/$defs/mechanism"}},
+    "prototype_observations": {"type": "array", "items": {"type": "string"}},
+    "open_questions": {"type": "array", "items": {"type": "string"}}
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "interaction": {
+      "type": "object",
+      "required": ["part", "player_action", "toy_response", "play_value"],
+      "properties": {
+        "part": {"type": "string", "minLength": 1},
+        "player_action": {"type": "string", "minLength": 1},
+        "toy_response": {"type": "string", "minLength": 1},
+        "play_value": {"type": "string", "minLength": 1}
+      },
+      "additionalProperties": false
+    },
+    "mechanism": {
+      "type": "object",
+      "required": ["name", "role_in_play", "prototype_question"],
+      "properties": {
+        "name": {"type": "string", "minLength": 1},
+        "role_in_play": {"type": "string", "minLength": 1},
+        "prototype_question": {"type": "string", "minLength": 1}
+      },
+      "additionalProperties": false
+    }
+  }
+}

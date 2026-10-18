@@ -1,0 +1,36 @@
+{
+  "name": "Draco das Marés",
+  "intended_player": "a definir com o usuário",
+  "context": "figura fantástica para brincadeira de faz de conta em mesa ou no chão",
+  "play_promise": "Criar poses e cenas com uma criatura que explora lugares imaginários.",
+  "play_loop": {
+    "invitation": "A criatura tem asas articuladas e cauda segmentada.",
+    "action": "A pessoa escolhe uma cena e muda a pose da figura.",
+    "response": "As juntas seguram a pose e a cauda pode ajudar no equilíbrio.",
+    "next_possibility": "Inventar outra cena ou testar outra pose e ponto de apoio."
+  },
+  "play_patterns": ["faz de conta", "personagem articulado", "pose e equilíbrio"],
+  "interaction_map": [
+    {
+      "part": "asas",
+      "player_action": "abrir, fechar ou inclinar",
+      "toy_response": "a silhueta e a pose da criatura mudam",
+      "play_value": "representar voo, repouso ou aproximação"
+    },
+    {
+      "part": "cauda segmentada",
+      "player_action": "curvar em torno de um apoio imaginário",
+      "toy_response": "a postura e o equilíbrio mudam",
+      "play_value": "criar poses e cenas diferentes"
+    }
+  ],
+  "mechanisms": [
+    {
+      "name": "junta de fricção nas asas",
+      "role_in_play": "manter poses escolhidas pelo jogador",
+      "prototype_question": "A junta segura posições úteis sem ficar difícil de mover?"
+    }
+  ],
+  "prototype_observations": [],
+  "open_questions": ["Definir dimensões, material e escala após escolher impressora e contexto de uso."]
+}

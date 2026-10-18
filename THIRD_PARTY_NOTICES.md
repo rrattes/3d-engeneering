@@ -1,6 +1,6 @@
 # Créditos de terceiros
 
-As skills próprias 3d-engineering e product-design e a integração são mantidas por [rrattes](https://github.com/rrattes). Licença MIT do código próprio: LICENSE.
+As skills próprias 3d-engineering, product-design e toy-modeler e a integração são mantidas por [rrattes](https://github.com/rrattes). Licença MIT do código próprio: LICENSE.
 
 As auxiliares abaixo preservam autoria/licença. O manifesto registra hashes das cópias locais e comparação com um commit público. Diferença não é atribuída ao mantenedor sem evidência; pode representar outra versão instalada.
 
