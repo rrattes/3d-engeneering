@@ -1,0 +1,23 @@
+{
+  "schema": "product-design-delivery-v1",
+  "revision": "r1",
+  "previous_manifest_ref": null,
+  "artifacts": [
+    {
+      "id": "body",
+      "part": "body",
+      "variant": "chosen",
+      "role": "cad",
+      "source": {
+        "path": "body.step",
+        "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      "dependencies": [
+        {
+          "path": "parameters.json",
+          "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+        }
+      ]
+    }
+  ]
+}

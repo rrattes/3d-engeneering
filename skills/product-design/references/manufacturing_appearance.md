@@ -20,3 +20,13 @@ sample required and remaining judgment. Physical texture, gloss, real color and
 handling comfort require appropriate samples/user evaluation. Prototypes should
 resolve the highest-risk interface or finish first, rather than spending on the
 whole cosmetic shell before its construction is viable.
+
+## Orientation evidence
+
+When contracted, record an engineering-owned named support datum and full six-value
+XYZ/rotation pose, plus support scope (nominal, supports_required or measured).
+Compare the report and candidate against that reference. Centroid coincidence or a
+symmetric bounding box cannot prove orientation. Missing datum stays NOT_EVALUATED;
+wrong transform blocks acceptance. Nominal support is separate from adhesion,
+support removal and surface quality; neither rendering nor orientation metadata
+proves those physical outcomes. Material or pose changes invalidate affected checks.

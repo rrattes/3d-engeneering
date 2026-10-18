@@ -65,7 +65,7 @@ def evaluate_design(contract,candidate,project_root):
     try:
         if candidate.get('contract_sha256')!=canonical_sha(contract):raise ValueError('candidate contract digest mismatch')
         auth=contract.get('authorization')
-        if contract['requirements'] or auth is not None:
+        if contract['requirements'] or auth is not None or contract.get('engineering_evidence') is not None or contract.get('design_freedom') is not None:
             approval=artifact(root,auth,True)
             policy={k:v for k,v in contract.items() if k!='authorization'}
             if approval.get('decision')!='APPROVED' or approval.get('authority')!='engineering' or approval.get('policy_sha256')!=canonical_sha(policy):raise ValueError('engineering policy changed or unapproved')
@@ -133,6 +133,10 @@ def evaluate_design(contract,candidate,project_root):
             permission=evaluate_freedom(mapping,comparison,root,comparison_config)
             add('design_freedom',permission['status'],'engineering-owned spatial permissions',details=permission)
         except (ValueError,OSError,KeyError,TypeError,IndexError) as exc:add('design_freedom','NOT_EVALUATED',str(exc))
+    if contract.get('engineering_evidence') is not None:
+        from engineering_evidence import validate_engineering_evidence
+        evidence=validate_engineering_evidence(contract,candidate,root)
+        add('engineering_evidence',evidence['status'],'current contracted engineering evidence',details=evidence)
     blocked=any(c['status']!='PASS' for c in checks)
     eligibility='BLOCKED' if blocked else 'EXPLORATORY' if candidate['purpose']=='study' or not contract['requirements'] else 'ELIGIBLE'
     return {'schema':'product-design-evaluation-v1','eligibility':eligibility,'target_scope':contract['target_scope'],

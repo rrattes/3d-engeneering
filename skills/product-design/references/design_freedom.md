@@ -47,3 +47,27 @@ outside it. Choose that policy only where engineering judges the thresholds adeq
 it does not prove absolutely unchanged material or exclude tiny local changes.
 Invalid intermediate/fragments or inconsistent delta volume make CAD evidence
 NOT_EVALUATED; the comparator cannot discard bad fragments and certify the remainder.
+
+## Optional v2: exact BREP regions
+
+`product-design-freedom-v2`, mode `brep_regions`, units mm, frame comparison_local_mm.
+Use this only when engineering supplies pinned region STEPs. Policy declares
+baseline_revision, engineering_source, nonnegative margin_mm, margins_embedded=true,
+and comparison_policy with positive linear/volume/angular tolerances matching the
+comparison. Physical margins must already be modeled into the regions; numerical
+volume tolerance is not clearance.
+
+Each part declares id, source of baseline STEP, before_pose/after_pose, locked and
+pose_locked, and explicit lists protected_material, protected_void, editable_volumes.
+Each region has id, source {path,sha256}, pose (six values, inverse transformation
+into comparison frame). Region poses and both part frames belong to the authorized
+engineering policy, not the candidate. Lists may be empty only by explicit policy.
+
+The existing kernel recomputes comparison and checks retained material, free space
+and added/removed material within the union of editable volumes. Opposite-side
+changes need not fail because their combined bounding box crosses the core.
+A preserved core never excuses occupation of a protected drawer path. Invalid or
+mixed solid/free topology, stale sources and inconclusive operations fail closed.
+No fallback to v1 boxes. This bounded mode supports explicit same-part correspondence
+(max32 parts,32 regions/list,256 imported solids,8192 Boolean cuts per part).
+New/deleted part identities require an engineering remap. Existing v1 is unchanged.

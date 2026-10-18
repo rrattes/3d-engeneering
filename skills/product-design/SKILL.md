@@ -49,6 +49,8 @@ opening does not prove compensation for reduced area at another.
 For a physical change, use [engineering_guardrails.md](references/engineering_guardrails.md)
 to record protected requirements and run the independent engineering gate. Limits
 come from engineering; never weaken them or omit a requirement to obtain PASS.
+When contracted, use the current evidence adapter for source/revision, actual limits,
+coverage, parameter authority and datum/pose; a weaker-threshold PASS cannot qualify.
 A blocked proposal can remain an exploratory artifact, labelled accordingly, and
 cannot replace the accepted reference. Gate scripts do not intercept external tools:
 call the gate explicitly before acceptance. Aesthetic/user approval does not close
@@ -87,7 +89,8 @@ the existing gate and selector, including explicit poses and changed-material bo
 Use [parametric_features.md](references/parametric_features.md) for optional CAD
 recipes; integrate them into existing geometry and recheck affected requirements.
 Use [productivity.md](references/productivity.md) for matched STEP comparisons,
-declared dependency reuse and a compact live change report. Cached outputs never
+declared dependency reuse, delivery consistency and a compact live change report.
+A partial update must preserve the last consistent delivery and expose stale outputs. Cached outputs never
 approve engineering, aesthetic review or user acceptance. Do not load every resource
 or generate alternatives when a simple chosen direction is sufficient.
 

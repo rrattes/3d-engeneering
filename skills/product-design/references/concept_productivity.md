@@ -39,3 +39,25 @@ parameter/datum, affected requirement and review evidence. Resolve silhouette an
 proportion before decorative details. Retain before/after evidence and record which
 criterion improved; no universal beauty score. Desired texture/comfort remains a
 hypothesis until made/evaluated physically.
+
+## Family and interaction intent (optional)
+
+When multiple interacting parts are requested, record optional `family_rules`
+(shared features, controlled variations) and `interaction_intent` (part → action →
+engineering constraint → evidence needed). `make_brief` accepts both as keyword
+objects; existing and custom briefs remain valid. These are declarations, not checks.
+
+For drawers: relate front silhouette, handle attachment/section and seam rhythm.
+Check travel, finger approach, stop/retention and print orientation against engineering.
+A rounded handle is not evidence of comfort. A request for common handles takes
+priority over making each style different. Keep shared internals and interfaces when
+useful; distinguish styles through allowed massing, transitions and visible joints.
+
+For a console or lamp: coordinate enclosure, grille, service cover and cable exit.
+A grille may echo the enclosure rhythm only within engineering limits for openings,
+airflow, cable bend, access and retention. These examples define relationships;
+they provide no standard dimensions and do not replace engineering checks.
+
+Use the requested scope: only color → labelled CMF study, existing CAD reused;
+one selected style → that direction, no mandatory five alternatives. Keep an explicit
+user limit on response length. Read only selected reference cards and affected checks.

@@ -19,6 +19,9 @@ def intersects(first,second,margin):
 
 
 def evaluate_freedom(mapping,geometry,root,config):
+    if isinstance(mapping,dict) and mapping.get("schema")=="product-design-freedom-v2":
+        from design_freedom_brep import evaluate_brep
+        return evaluate_brep(mapping,geometry,root,config)
     checks=[]
     def add(ident,status,reason):checks.append({'id':ident,'status':status,'reason':reason})
     try:

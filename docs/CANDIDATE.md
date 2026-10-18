@@ -1,10 +1,11 @@
-# Product-design evolução03 — candidata
+# Product-design evolução03 — promovida
 
-Fonte isolada: `docs/product-design/candidates/evolution-03/product-design`.
-Estável: `skills/product-design` (evolução02).
+A evolução03 foi aprovada pelo usuário e está ativa em skills/product-design. A cópia em docs/product-design/candidates/evolution-03 permanece congelada como evidência de origem, fora da descoberta. A evolução02 está em docs/product-design/promotions/evolution-03/active-before.
 
-Evidência técnica, manifesto, regras opcionais de família/interação, resumo e BREP v2 implementados. Registro local final:168 testes OK. Avaliação comportamental interrompida em20/36; sem julgamento cego final. Três achados importantes da revisão foram corrigidos e regressados pelo implementador; não houve nova revisão independente após correções.
+[Promoção e recuperação](product-design/promotions/evolution-03/APROVACAO_E_PROMOCAO.md).
 
-**Não promover automaticamente.** Completar ou revisar explicitamente o escopo pendente e obter aprovação posterior. Os relatos originais em `docs/product-design/evaluations/evolution-03` são históricos. Nem todos os anexos privados do workspace foram publicados: sessões, respostas brutas de agentes, STEP dos produtos e pacote ZIP local ficam fora deste repositório. Dois renders e resultados resumidos foram incluídos para demonstrar o piloto.
+Registro técnico prévio:168 testes OK. Comportamento parcial20/36, sem julgamento cego final; nenhuma superioridade geral demonstrada. Três achados importantes corrigidos e regressados pelo implementador, sem segunda revisão independente.
 
-Os checks portáveis estão na avaliação; apontam para a candidata neste checkout via PD_CANDIDATE. Os auxiliares históricos run_pilot.py, run_productivity.py e run_feature_examples.py dependem de produtos/saídas ausentes e não devem ser usados como comando de instalação. Consulte TESTS.md para o runner de regressão.
+Os relatórios de avaliação são históricos e mantêm os estados anteriores à aprovação. Não foram publicadas sessões privadas, respostas brutas de agentes ou STEP dos produtos. Imagens de piloto e resultados resumidos acompanham o método.
+
+A skill é opcional após engenharia. Aprovação da skill não é validação física de produtos.

@@ -63,3 +63,37 @@ Keep logs on disk and read only selected style/reference records. Reuse valid im
 for file queries; do not regenerate variants for a request to list files. Evaluate
 time/tokens with matched scope before claiming a percentage saving. These tools
 reduce repeated orchestration; they do not guarantee cheaper execution on every task.
+
+## Current delivery and revisions
+
+Use one route: impact plan → existing generation workflow → affected engineering
+checks → affected renders → actual visual review → inspect/publish delivery manifest.
+`delivery_manifest.inspect_delivery` distinguishes CONSISTENT, INCOMPLETE, STALE and
+INVALID from engineering status; integrity is not approval. JSON Pointer is supported
+for engineering_ref; WARNING and NOT_EVALUATED remain explicit. A CAD/material/pose
+change must be declared in dependent check/render inputs; only a visual color change
+can reuse unchanged CAD. Shared helpers must be dependencies of every consumer.
+Variant isolation is valid only when files and actual dependencies are isolated.
+
+Manifest v1 contains revision, previous_manifest_ref, artifacts (id, role, part,
+variant, source {path,sha256}, dependencies [{path,sha256}]), optional engineering_ref.
+The nested source groups path/hash to avoid ambiguous artifact vs dependency fields.
+Optional visual_review_ref/acceptance_ref are records, never an automatic approval.
+Use `inspect_delivery(manifest, root)` and
+`publish_manifest(manifest, root, expected_previous_sha)` from Python. Publishing
+writes only reports/product-design/delivery, serializes its own writers, records
+attempts/history and atomically replaces current.json after rechecking inputs and
+previous hash. For updates, previous_manifest_ref pins current.json and its expected
+hash. Failed/interrupted generation must not advance the pointer. A leftover lock
+requires investigating the interrupted writer before manual removal. This does not
+make external CAD/render writers transactional; coordinate them before publication.
+
+Hashes and dependency lists cannot prove a producer rendered the declared revision.
+Use actual producer logs and matched image inspection. Reuse is never human approval.
+
+When supplied, visual_review_ref uses product-design-visual-review-v1 and
+acceptance_ref uses product-design-acceptance-record-v1. Both must bind revision,
+contract_sha256 and candidate_sha256 also declared on the manifest. Visual reviews
+pin their images; optional unique `variants` names declare coverage within the
+manifest's variants. The summary reports this declared current scope, never infers
+beauty or actual user approval. Missing coverage stays unknown, not zero.

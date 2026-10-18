@@ -27,3 +27,7 @@ Cópia isolada → análise de impacto → requisitos/critério de avaliação �
 Briefing/requisitos, parâmetros autoritativos, decisões, catálogo/BOM, desenhos, montagem/impressão e relatório de validação. Separar PASS CAD, fabricação, fatiamento e físico. Produtos simples usam estrutura menor.
 
 O histórico original está em docs/history e em platform/docs. Ele contém caminhos e resultados locais de outra máquina: não é instrução de instalação nem comprovação da máquina atual.
+
+## Versão vigente
+
+Product-design evolução03 aprovada/promovida; evolução02 preservada. Comportamento parcial20/36 e julgamento pendente não foram convertidos em PASS. [Promoção](product-design/promotions/evolution-03/APROVACAO_E_PROMOCAO.md).

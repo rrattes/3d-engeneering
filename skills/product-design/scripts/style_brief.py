@@ -5,7 +5,7 @@ from pathlib import Path
 from pd_common import load_json,write_outputs,local_path,safe_output
 
 
-def make_brief(style,variant=None,custom=None):
+def _make_brief(style,variant=None,custom=None):
     assets=Path(__file__).resolve().parents[1]/'assets'
     if style=='custom':
         if not isinstance(custom,dict) or not custom.get('form') or not custom.get('criteria'):
@@ -21,6 +21,16 @@ def make_brief(style,variant=None,custom=None):
     return {'style':style,'signature':selected['signature'],'avoid':selected['avoid'],'variants':variants,
             'review_question':selected['check'],'references':[c for c in cards if c['id'] in ids],
             'engineering':'Preserve protected interfaces; differences must be implemented and rechecked.'}
+
+
+def make_brief(style,variant=None,custom=None,*,family_rules=None,interaction_intent=None):
+    result=_make_brief(style,variant,custom)
+    for key,value in [('family_rules',family_rules),('interaction_intent',interaction_intent)]:
+        if value is not None:
+            if not isinstance(value,dict) or len(value)>64:raise ValueError('bounded optional object required: '+key)
+            import copy
+            result[key]=copy.deepcopy(value)
+    return result
 
 
 def main():

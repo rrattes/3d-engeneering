@@ -1,0 +1,8 @@
+{
+  "schema": "product-design-candidate-v1",
+  "revision": "example",
+  "mode": "cmf_study",
+  "contract_sha256": "0c7071d0205dd625be34c0cdf98b50a45f2bdecf88af2191226e1ece555cf8e9",
+  "purpose": "study",
+  "metrics": {}
+}

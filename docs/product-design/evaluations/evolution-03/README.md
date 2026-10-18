@@ -1,3 +1,5 @@
+> Atualização posterior: evolução03 aprovada e promovida pelo usuário. Ver docs/product-design/promotions/evolution-03/APROVACAO_E_PROMOCAO.md. Resultados e pendências abaixo são o registro histórico pré-promoção.
+
 # Continuidade — product-design evolução 03
 
 **Leia primeiro:** [resultado e limites](RESULTADO.md), [resolução da revisão](REVIEW_RESOLUTION.md), [testes](TESTS.md).

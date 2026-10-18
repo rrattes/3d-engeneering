@@ -115,3 +115,35 @@ requires an explicit engineering scope/decision rather than silently accepting i
 For geometric modes, candidate `geometry_config` references the exact JSON config;
 its canonical settings fingerprint must match the report. Changing a frame, map,
 unit or tolerance invalidates the old report even if STEP files did not change.
+
+## Optional current engineering evidence
+
+Contract `engineering_evidence` pins a `product-design-evidence-policy-v1` JSON.
+The policy declares revision, authoritative parameter_ref, current source_refs and
+checks (id, part, requirement_id, method, unit, expected_limit min/max, coverage,
+calibration). Candidate `engineering_evidence` pins the corresponding
+`product-design-engineering-evidence-v1` envelope. A contracted missing envelope
+blocks the gate. The contract's engineering authorization binds the policy reference.
+
+`scripts/engineering_evidence.py` validates every required check against both policy
+and pinned provider record (artifact_ref with JSON Pointer). `criterion_ref.policy_id`
+identifies the policy check. Observed intervals must satisfy the actual limits.
+A PASS computed at 1.2 mm cannot qualify a 2.0 mm requirement. No threshold weakening,
+omission, exit-code substitution or inference from success text is allowed.
+
+`adapt_cad3d_report` recognizes ONLY `cad3d-product-design-report-v1`: revision,
+source_refs, parameter_ref and complete checks with status and observed_value or
+observed_interval. Existing raw CAD3D outputs without method/coverage/provenance
+return NOT_EVALUATED. Emit an explicit envelope from the existing producer using
+its real inputs, thresholds and results; never invent missing fields. This is an
+interchange adapter, not a claim that every current CAD3D command emits this schema.
+Both `pointer` and provider `json_pointer` are normalized; conflicting pointers fail.
+
+Keep one authoritative parameter artifact. Generated adapters may be used only after
+an explicit equivalence check; this implementation accepts the same pinned authority,
+not assumed equality of independent JSON/YAML copies. Hashes do not authenticate
+reports, calibration or engineering authority; they detect local stale/mismatched data.
+
+The evidence also pins `report_ref` to the entire recognized provider envelope.
+The live gate rechecks its sources/parameters/revision and each check pointer within
+that envelope; a re-pinned measurement from another CAD source cannot qualify.

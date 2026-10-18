@@ -1,3 +1,5 @@
+> Atualização posterior: evolução03 aprovada e promovida pelo usuário. Ver docs/product-design/promotions/evolution-03/APROVACAO_E_PROMOCAO.md. Resultados e pendências abaixo são o registro histórico pré-promoção.
+
 # Product-design — evolução 03
 
 Data: 18/10/2026. **Candidata implementada; promoção pendente.** Versão ativa continua evolução 02. A implementação não altera 3d-engineering, Docker nem produtos existentes.

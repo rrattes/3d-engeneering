@@ -87,3 +87,13 @@ review only the requested color/material/finish criteria and retain the existing
 For substyles and reference cards, consult [concept_productivity.md](concept_productivity.md)
 only when a project needs deeper direction. Machine-readable vocabularies are optional,
 not universal style definitions or proof of aesthetic success.
+
+### Observable form, not a palette label
+
+Use silhouette, proportion, transition, joint rhythm, grip and detail scale to explain
+the selected grammar. In requested comparisons, use matched gray views plus CMF
+views and closeups. Minimalist may use quiet transitions and recessed joints; gamer
+may use directed massing and controlled facets; industrial may expose logical
+assembly; organic may use continuous curvature; retro may reinterpret a specific
+period's proportions and framing. None requires a fixed handle or decorative pattern.
+These are optional directions subject to the brief and engineering, not style scores.

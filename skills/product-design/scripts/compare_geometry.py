@@ -114,3 +114,59 @@ def main():
         print(r['status']);return 0 if r['status']=='PASS' else 3
     except (ValueError,OSError,KeyError,TypeError) as exc:print('INVALID_INPUT: '+str(exc));return 2
 if __name__=='__main__':raise SystemExit(main())
+
+
+def solid_fragments(shape,limit=128):
+    """Reject free faces/edges/vertices even when a compound also contains solids."""
+    from OCP.TopExp import TopExp
+    from OCP.TopTools import TopTools_IndexedMapOfShape
+    from OCP.TopAbs import TopAbs_FACE,TopAbs_EDGE,TopAbs_VERTEX
+    solids=list(shape.solids())
+    if len(solids)>limit:raise ValueError('fragment budget exceeded')
+    if solids and (not shape.is_valid or any(not s.is_valid or number(s.volume)<=0 for s in solids)):
+        raise ValueError('invalid Boolean fragment')
+    for kind in (TopAbs_FACE,TopAbs_EDGE,TopAbs_VERTEX):
+        all_shapes=TopTools_IndexedMapOfShape();owned=TopTools_IndexedMapOfShape()
+        if shape.wrapped is not None:TopExp.MapShapes_s(shape.wrapped,kind,all_shapes)
+        for solid in solids:TopExp.MapShapes_s(solid.wrapped,kind,owned)
+        if any(not owned.Contains(all_shapes.FindKey(i)) for i in range(1,all_shapes.Extent()+1)):
+            raise ValueError('non-solid Boolean/STEP remnant')
+    return solids
+
+
+def region_metrics(before,after,protected_material,protected_void,editable_volumes,volume_tolerance):
+    """Exact kernel Boolean volumes in a common frame; no AABB permission fallback.
+
+    Inputs are bounded, valid nonoverlapping solid lists checked by the v2 reader.
+    Every intermediate remnant is checked, including non-solid/invalid fragments.
+    """
+    budget=0
+    def pieces(shape):return solid_fragments(shape)
+    def cut(items,cutters):
+        nonlocal budget
+        result=[]
+        for solid in items:
+            current=[solid]
+            for cutter in cutters:
+                next_items=[]
+                for item in current:
+                    budget+=1
+                    if budget>8192:raise ValueError('Boolean budget exceeded')
+                    next_items.extend(pieces(item-cutter))
+                current=next_items
+            result.extend(current)
+            if len(result)>128:raise ValueError('fragment budget exceeded')
+        return result
+    def volume(items):return sum(number(s.volume) for s in items)
+    added=cut(after,before);removed=cut(before,after)
+    lost=volume(cut(protected_material,after))
+    initial_lost=volume(cut(protected_material,before))
+    # Union through sequential subtraction avoids double-counting overlapping regions.
+    void_after=volume(after)-volume(cut(after,protected_void))
+    void_before=volume(before)-volume(cut(before,protected_void))
+    outside=volume(cut(added+removed,editable_volumes))
+    values={'added_mm3':volume(added),'removed_mm3':volume(removed),'protected_material_missing_mm3':lost,
+            'baseline_protected_material_missing_mm3':initial_lost,'protected_void_occupied_mm3':void_after,
+            'baseline_void_occupied_mm3':void_before,'outside_editable_mm3':outside}
+    if any(v < -volume_tolerance for v in values.values()):raise ValueError('inconsistent Boolean volumes')
+    return {**{k:max(0,v) for k,v in values.items()},'boolean_operations':budget}

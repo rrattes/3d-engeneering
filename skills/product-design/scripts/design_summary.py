@@ -31,12 +31,53 @@ def summarize(contract,candidate,changes,root):
                      'symmetric_difference_mm3':part.get('symmetric_difference_mm3'),'delta_bounds_mm':part.get('delta_bounds_mm'),
                      'intent':item.get('intent','NOT_DOCUMENTED'),'feature':item.get('feature','NOT_DOCUMENTED'),
                      'affected_requirements':item.get('affected_requirements',[]),'evidence_status':part.get('status','NOT_EVALUATED') if geometry_current else 'NOT_EVALUATED'})
-    for ident,item in indexed.items():rows.append({'part':ident,'intent':item.get('intent'),'feature':item.get('feature'),'evidence_status':'NOT_EVALUATED','reason':'no corresponding current CAD part comparison'})
+    for ident,item in indexed.items():rows.append({'part':ident,'intent':item.get('intent'),'feature':item.get('feature'),'affected_requirements':item.get('affected_requirements',[]),'evidence_status':'NOT_EVALUATED','reason':'no corresponding current CAD part comparison'})
+    delivery=None
+    if candidate.get('delivery') is not None:
+        from delivery_manifest import inspect_delivery
+        try:
+            manifest=artifact(root,candidate['delivery'],True)
+            if manifest.get('revision')!=candidate['revision']:raise ValueError('delivery revision mismatch')
+            delivery=inspect_delivery(manifest,root)
+        except (ValueError,OSError,KeyError,TypeError,IndexError) as exc:
+            delivery={'consistency':'INVALID','reason':str(exc),'engineering':{'status':'NOT_EVALUATED'}}
     return {'schema':'product-design-summary-v1','revision':candidate['revision'],'contract_sha256':canonical_sha(contract),
-            'candidate_sha256':canonical_sha(candidate),'engineering':gate,'parts':rows,'notes':notes,
+            'candidate_sha256':canonical_sha(candidate),'engineering':gate,'parts':rows,'notes':notes,'delivery':delivery,
+            'coverage':{'compared_parts':len(actual),'documented_parts':len(items),'visual_review':delivery.get('review_coverage',{'status':'NOT_EVALUATED','variants':None}) if delivery else {'status':'NOT_EVALUATED','variants':None}},
             'visual_review':'NOT_EVALUATED','user_acceptance':'PENDING','physical_validation':'NOT_EVALUATED',
             'limits':['Engineering state is live, but narrative intent and impact lists are caller declarations.',
                       'Part values inherit the geometry report provenance and limits; no beauty or physical-quality score.']}
+
+
+def render_summary_markdown(result):
+    """Render every JSON fact; unknowns stay null, source refs remain inspectable.
+
+    Compact part table followed by hierarchical facts avoids dropping nested criteria.
+    Caller text is escaped, so it cannot inject Markdown links, HTML or table cells.
+    """
+    import html,json
+    def escape(value):
+        text=html.escape(str(value),quote=False)
+        for char in ('\\','`','*','_','[',']','|','#'):
+            text=text.replace(char,'\\'+char)
+        return text.replace('\n','<br>')
+    def value(v):
+        return escape(json.dumps(v,ensure_ascii=False,allow_nan=False))
+    lines=['# Alterações de design','',
+           'Revisão: '+escape(result.get('revision'))+'; engenharia: '+escape(result['engineering']['eligibility'])+'.','',
+           '| Peça | Feature | Requisitos | Evidência |','|---|---|---|---|']
+    for row in result.get('parts',[]):
+        lines.append('| '+' | '.join(value(row.get(k)) for k in ('part','feature','affected_requirements','evidence_status'))+' |')
+    lines+=['','## Fatos e pendências','']
+    def facts(node,path):
+        if isinstance(node,dict) and node:
+            for key,item in node.items():facts(item,path+[str(key)])
+        elif isinstance(node,list) and node:
+            for index,item in enumerate(node):facts(item,path+[str(index)])
+        else:lines.append('- '+escape('/'.join(path))+': '+value(node))
+    facts(result,[])
+    lines+=['','Integridade, engenharia, revisão visual, decisão do usuário e físico são estados separados.','']
+    return '\n'.join(lines)
 
 
 def main():
@@ -46,13 +87,8 @@ def main():
     try:
         contract=load_json(local_path(a.project,a.contract));candidate=load_json(local_path(a.project,a.candidate));changes=load_json(local_path(a.project,a.changes))
         result=summarize(contract,candidate,changes,a.project)
-        lines=['# Alterações de design','',f'Revisão: {result["revision"]}; engenharia: **{result["engineering"]["eligibility"]}**.','',
-               '| Peça | Intenção | Evidência CAD |','|---|---|---|']
-        for row in result['parts']:
-            intent=str(row.get('intent','')).replace('|','/').replace('\n',' ');lines.append('| '+str(row['part'])+' | '+intent+' | '+str(row['evidence_status'])+' |')
-        lines+=['','## Pendências técnicas','']+[c['id']+': '+c['status']+' — '+c['reason'] for c in result['engineering']['checks'] if c['status']!='PASS']
-        lines+=['','Revisão visual, decisão do usuário e físico permanecem separados.','']
+        markdown=render_summary_markdown(result)
         directory=safe_output(a.project,a.output,'design-summary',[contract,candidate,{'path':a.contract},{'path':a.candidate},{'path':a.changes}])
-        write_outputs(directory,'design-summary',result,'\n'.join(lines));print(result['engineering']['eligibility']);return 3 if result['engineering']['eligibility']=='BLOCKED' else 0
+        write_outputs(directory,'design-summary',result,markdown);print(result['engineering']['eligibility']);return 3 if result['engineering']['eligibility']=='BLOCKED' else 0
     except (ValueError,OSError,KeyError,TypeError,IndexError) as exc:print('INVALID_INPUT: '+str(exc));return 2
 if __name__=='__main__':raise SystemExit(main())

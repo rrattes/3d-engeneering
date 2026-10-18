@@ -1,0 +1,154 @@
+{
+  "schema": "product-design-feature-recipes-v1",
+  "units": "mm",
+  "scope": "Example exterior feature building blocks, not functional products or universal style presets",
+  "recipes": {
+    "minimalista": {
+      "kind": "loft",
+      "ruled": true,
+      "sections": [
+        {
+          "kind": "rounded",
+          "width": 120,
+          "depth": 80,
+          "radius": 8,
+          "z": 0
+        },
+        {
+          "kind": "rounded",
+          "width": 120,
+          "depth": 80,
+          "radius": 8,
+          "z": 4
+        },
+        {
+          "kind": "rounded",
+          "width": 116,
+          "depth": 76,
+          "radius": 6,
+          "z": 7
+        }
+      ]
+    },
+    "gamer": {
+      "kind": "loft",
+      "ruled": true,
+      "sections": [
+        {
+          "kind": "faceted",
+          "width": 120,
+          "depth": 80,
+          "clip": 14,
+          "z": 0
+        },
+        {
+          "kind": "faceted",
+          "width": 128,
+          "depth": 88,
+          "clip": 18,
+          "z": 4
+        },
+        {
+          "kind": "faceted",
+          "width": 118,
+          "depth": 78,
+          "clip": 12,
+          "z": 12
+        }
+      ]
+    },
+    "industrial": {
+      "kind": "frame",
+      "outer": {
+        "kind": "rounded",
+        "width": 120,
+        "depth": 80,
+        "radius": 8,
+        "z": 0
+      },
+      "inner": {
+        "kind": "rounded",
+        "width": 108,
+        "depth": 68,
+        "radius": 4,
+        "z": 0
+      },
+      "height": 5
+    },
+    "organico": {
+      "kind": "loft",
+      "ruled": false,
+      "sections": [
+        {
+          "kind": "rounded",
+          "width": 120,
+          "depth": 80,
+          "radius": 20,
+          "z": 0
+        },
+        {
+          "kind": "rounded",
+          "width": 128,
+          "depth": 88,
+          "radius": 26,
+          "z": 6
+        },
+        {
+          "kind": "rounded",
+          "width": 114,
+          "depth": 74,
+          "radius": 24,
+          "z": 15
+        }
+      ]
+    },
+    "retro": {
+      "kind": "loft",
+      "ruled": true,
+      "sections": [
+        {
+          "kind": "rounded",
+          "width": 120,
+          "depth": 80,
+          "radius": 8,
+          "z": 0
+        },
+        {
+          "kind": "rounded",
+          "width": 120,
+          "depth": 80,
+          "radius": 8,
+          "z": 3
+        },
+        {
+          "kind": "rounded",
+          "width": 112,
+          "depth": 72,
+          "radius": 7,
+          "z": 3.5
+        },
+        {
+          "kind": "rounded",
+          "width": 112,
+          "depth": 72,
+          "radius": 7,
+          "z": 6
+        },
+        {
+          "kind": "rounded",
+          "width": 104,
+          "depth": 64,
+          "radius": 6,
+          "z": 6.5
+        },
+        {
+          "kind": "rounded",
+          "width": 104,
+          "depth": 64,
+          "radius": 6,
+          "z": 9
+        }
+      ]
+    }
+  }
+}

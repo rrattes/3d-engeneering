@@ -7,8 +7,8 @@ Fluxo de **rrattes** para desenvolver produtos com Codex ou Claude Code: briefin
 | Componente | Estado |
 |---|---|
 | 3d-engineering 1.8.0 | Estável aprovada |
-| product-design evolução 02 | Estável aprovada; opcional após engenharia |
-| product-design evolução 03 | Candidata, não ativada; avaliação comportamental incompleta |
+| product-design evolução 03 | Aprovada e promovida; opcional após engenharia; comportamento parcialmente avaliado |
+| product-design evolução 02 | Versão anterior preservada para recuperação |
 | 26 skills auxiliares | Apoio ao fluxo/evolução; carregar somente as necessárias |
 
 Este repositório distribui o método e suas ferramentas. As verificações CAD, fabricação, fatiamento e validação física são estados distintos. Os exemplos não são produtos homologados.
@@ -49,9 +49,9 @@ Para disponibilizar uma auxiliar no agente, sem sobrescrever uma existente:
 - `docs/`: instalação, fluxo, guia de economia e estado da candidata.
 - `.agents/skills/` e `.claude/skills/`: vínculos locais para descoberta.
 
-## Evidências e candidata
+## Evidências e versão promovida
 
-A evolução03 tem **168 testes locais aprovados** na execução registrada antes desta publicação; não são testes executados pelo GitHub. Inclui evidência técnica vinculada, manifesto de entrega e permissões BREP. **20/36 respostas comportamentais** foram coletadas; faltam amostras e julgamento final. Não substituir a ativa automaticamente. [Estado da candidata](docs/CANDIDATE.md).
+A evolução03 tem **168 testes locais aprovados** na execução registrada antes desta publicação; não são testes executados pelo GitHub. Inclui evidência técnica vinculada, manifesto de entrega e permissões BREP. **20/36 respostas comportamentais** foram coletadas; faltam amostras e julgamento final. A promoção foi aprovada pelo usuário com essas pendências documentadas. [Registro da promoção](docs/product-design/promotions/evolution-03/APROVACAO_E_PROMOCAO.md).
 
 ### Imagens do piloto
 

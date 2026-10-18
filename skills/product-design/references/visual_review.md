@@ -131,3 +131,14 @@ a transaction across externally editable evidence or a gate on CAD3D publication
 For automated matched-camera STEP images, see [productivity.md](productivity.md).
 Automatic framing records geometry and camera evidence; open the images before
 closing visual findings. It does not certify quality, color, comfort or manufacture.
+
+## Family review and detail visibility
+
+For a collection actually requested, inspect matched grayscale views before judging
+palette. Review silhouette, proportions, transitions, seams, grip, detail and process
+separately, tied to image, part and engineering restriction. Open a close view where
+a seam/relief is too small to judge; absence of visible detail is NOT_EVALUATED,
+not automatic failure or success. Retain user-requested common components.
+Compare form identity separately from personal preference. Document which variants
+and views were inspected; one reviewed variant never validates a collection.
+Ergonomics, tactile finish and adhesion require suitable physical evidence.
