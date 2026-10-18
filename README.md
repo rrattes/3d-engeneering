@@ -100,7 +100,7 @@ export PATH="$PWD/platform/scripts:$PATH"
 cad3d init projects/meu-produto
 ```
 
-Abra Codex ou Claude Code nesta raiz e forneça um briefing novo. **Na primeira utilização, peça ao agente para conferir a disponibilidade das skills e do container antes de modelar.** As três skills próprias estão vinculadas no projeto para Codex (`.agents/skills`) e Claude Code (`.claude/skills`). Para que também apareçam em chats iniciados fora desta pasta, instale-as no diretório global do agente conforme [instalação e uso](docs/INSTALL.md). Para brinquedos, invoque `toy-modeler` (no Codex, `$toy-modeler`) e siga o [handoff rápido](docs/toy-modeler/INICIO_RAPIDO.md). Leia o [fluxo atual](docs/WORKFLOW.md).
+Abra Codex ou Claude Code nesta raiz e forneça um briefing novo. **Na primeira utilização, peça ao agente para conferir a disponibilidade das skills e do container antes de modelar.** As três skills próprias estão vinculadas no projeto para Codex (`.agents/skills`) e Claude Code (`.claude/skills`). Para que também apareçam em chats iniciados fora desta pasta, instale as skills necessárias no diretório global do agente conforme [instalação e uso](docs/INSTALL.md). Para brinquedos, invoque `toy-modeler` (no Codex, `$toy-modeler`) e siga o [handoff rápido](docs/toy-modeler/INICIO_RAPIDO.md). Leia o [fluxo atual](docs/WORKFLOW.md).
 
 ## Skills auxiliares
 

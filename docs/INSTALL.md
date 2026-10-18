@@ -22,7 +22,14 @@ mkdir -p "$HOME/.codex/skills"
 ln -s "$(pwd)/skills/toy-modeler" "$HOME/.codex/skills/toy-modeler"
 ```
 
-Se o destino já existir, confira a instalação e não crie outro link por cima. Para Claude Code, use o mesmo link em `"$HOME/.claude/skills/toy-modeler"`. As outras duas skills podem já estar instaladas globalmente; confira antes de criar links duplicados. Inicie uma nova sessão após instalar para o agente recarregar o catálogo. Os links apontam para o clone, então mantenha-o no mesmo caminho ou refaça os links se movê-lo. Em sistemas que não suportam links simbólicos, copie a pasta `skills/toy-modeler` para o diretório global correspondente.
+Se o destino já existir, confira a instalação e não crie outro link por cima. Para Claude Code, crie o diretório e use o mesmo link:
+
+```sh
+mkdir -p "$HOME/.claude/skills"
+ln -s "$(pwd)/skills/toy-modeler" "$HOME/.claude/skills/toy-modeler"
+```
+
+As outras duas skills podem já estar instaladas globalmente; confira antes de criar links duplicados. Inicie uma nova sessão após instalar para o agente recarregar o catálogo. Os links apontam para o clone, então mantenha-o no mesmo caminho ou refaça os links se movê-lo. Em sistemas que não suportam links simbólicos, copie a pasta `skills/toy-modeler` para o diretório global correspondente.
 
 ## Primeira utilização no agente
 
