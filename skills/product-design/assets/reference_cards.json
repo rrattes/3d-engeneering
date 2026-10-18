@@ -1,0 +1,97 @@
+{
+  "schema": "product-design-references-v1",
+  "provenance": "Curadoria documentada em docs/product-design/REFERENCIAS_DE_ESTILO.md, pesquisa de 17/10/2026; páginas não reconsultadas nesta evolução.",
+  "classification": "Nossa interpretação formal, sem alegação de rótulo oficial salvo época/linha explícita.",
+  "cards": [
+    {
+      "id": "stowit",
+      "title": "Umbra Stowit",
+      "source_url": "https://www.umbra.com/products/stowit-storage-box",
+      "study": "Organização e juntas discretas",
+      "engineering_caution": "Não transferir gavetas sem desenvolver suas interfaces.",
+      "images_actually_reviewed": [],
+      "visual_assessment": "NOT_EVALUATED"
+    },
+    {
+      "id": "toolbox",
+      "title": "Vitra Toolbox",
+      "source_url": "https://www.vitra.com/en-gb/product/toolbox/1000",
+      "study": "Função e pega integradas",
+      "engineering_caution": "Organizador aberto não comprova mecanismo de tampa.",
+      "images_actually_reviewed": [],
+      "visual_assessment": "NOT_EVALUATED"
+    },
+    {
+      "id": "xbox",
+      "title": "Xbox Series X Carbon Black",
+      "source_url": "https://www.xbox.com/en-US/consoles/xbox-series-x",
+      "study": "Direção gamer contida",
+      "engineering_caution": "Classificação estilística é nossa interpretação; fixar a variante.",
+      "images_actually_reviewed": [],
+      "visual_assessment": "NOT_EVALUATED"
+    },
+    {
+      "id": "hyperion",
+      "title": "ROG Hyperion GR701",
+      "source_url": "https://rog.asus.com/uk/cases/rog-hyperion-gr701-model/",
+      "study": "Direcionalidade expressiva",
+      "engineering_caution": "Não herdar ventilação, RGB ou resistência.",
+      "images_actually_reviewed": [],
+      "visual_assessment": "NOT_EVALUATED"
+    },
+    {
+      "id": "systainer",
+      "title": "Festool Systainer³",
+      "source_url": "https://www.festool.com/accessory/storage-and-transportation/systainer%C2%B3",
+      "study": "Hierarquia modular",
+      "engineering_caution": "Empilhamento requer apoio, retenção e estabilidade próprios.",
+      "images_actually_reviewed": [],
+      "visual_assessment": "NOT_EVALUATED"
+    },
+    {
+      "id": "pelican",
+      "title": "Pelican 1200",
+      "source_url": "https://www.pelican.com/us/en/product/cases/1200",
+      "study": "Proteção e interação legíveis",
+      "engineering_caution": "Não transferir vedação ou resistência ao CAD novo.",
+      "images_actually_reviewed": [],
+      "visual_assessment": "NOT_EVALUATED"
+    },
+    {
+      "id": "pebbles",
+      "title": "Philippi Pebbles",
+      "source_url": "https://www.philippi.com/de/pebbles-schalen-design-philippi",
+      "study": "Contornos de recipientes",
+      "engineering_caution": "Contorno não comprova conforto ou impressão.",
+      "images_actually_reviewed": [],
+      "visual_assessment": "NOT_EVALUATED"
+    },
+    {
+      "id": "cobra",
+      "title": "Georg Jensen Cobra",
+      "source_url": "https://www.georgjensen.com/en-gb/dining-and-bar/cobra",
+      "study": "Família de curvas",
+      "engineering_caution": "Acabamento polido não comprova continuidade no CAD.",
+      "images_actually_reviewed": [],
+      "visual_assessment": "NOT_EVALUATED"
+    },
+    {
+      "id": "artdeco",
+      "title": "V&A Art Deco in the home",
+      "source_url": "https://www.vam.ac.uk/articles/art-deco-in-the-home",
+      "study": "Objetos e contexto histórico",
+      "engineering_caution": "Selecionar objeto específico antes de aplicar detalhes.",
+      "images_actually_reviewed": [],
+      "visual_assessment": "NOT_EVALUATED"
+    },
+    {
+      "id": "smeg",
+      "title": "Smeg 50s Retro Style",
+      "source_url": "https://www.smeg.com/us/aesthetic/50s-retro-style",
+      "study": "Coerência da linguagem dos anos 1950",
+      "engineering_caution": "Cromado simulado não é capacidade de FDM.",
+      "images_actually_reviewed": [],
+      "visual_assessment": "NOT_EVALUATED"
+    }
+  ]
+}

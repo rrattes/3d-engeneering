@@ -1,0 +1,79 @@
+FFFFF
+======================================================================
+FAIL: test_concurrent_publications_are_complete (__main__.Publication.test_concurrent_publications_are_complete)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/candidate/scripts/test-artifact-publication.py", line 38, in test_concurrent_publications_are_complete
+    with ThreadPoolExecutor(3) as ex:results=list(ex.map(self.publish,paths))
+                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/concurrent/futures/_base.py", line 619, in result_iterator
+    yield _result_or_cancel(fs.pop())
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/concurrent/futures/_base.py", line 317, in _result_or_cancel
+    return fut.result(timeout)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/usr/local/lib/python3.12/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/candidate/scripts/test-artifact-publication.py", line 19, in publish
+    if not hasattr(cad3d,'release'):self.fail('release pipeline is not implemented')
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: release pipeline is not implemented
+
+======================================================================
+FAIL: test_corrupt_late_export_keeps_previous_pointer (__main__.Publication.test_corrupt_late_export_keeps_previous_pointer)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/candidate/scripts/test-artifact-publication.py", line 27, in test_corrupt_late_export_keeps_previous_pointer
+    self.publish(self.stage('one'));previous=(self.root/'build/delivery/current.json').read_bytes();p=self.stage('bad');(p/'part.step').write_text('corrupt')
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/candidate/scripts/test-artifact-publication.py", line 19, in publish
+    if not hasattr(cad3d,'release'):self.fail('release pipeline is not implemented')
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: release pipeline is not implemented
+
+======================================================================
+FAIL: test_manufacturing_fail_rejects (__main__.Publication.test_manufacturing_fail_rejects)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/candidate/scripts/test-artifact-publication.py", line 35, in test_manufacturing_fail_rejects
+    with self.assertRaises(ValueError):self.publish(p)
+                                       ^^^^^^^^^^^^^^^
+  File "/candidate/scripts/test-artifact-publication.py", line 19, in publish
+    if not hasattr(cad3d,'release'):self.fail('release pipeline is not implemented')
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: release pipeline is not implemented
+
+======================================================================
+FAIL: test_source_changed_rejects (__main__.Publication.test_source_changed_rejects)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/candidate/scripts/test-artifact-publication.py", line 32, in test_source_changed_rejects
+    with self.assertRaises(ValueError):self.publish(p)
+                                       ^^^^^^^^^^^^^^^
+  File "/candidate/scripts/test-artifact-publication.py", line 19, in publish
+    if not hasattr(cad3d,'release'):self.fail('release pipeline is not implemented')
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: release pipeline is not implemented
+
+======================================================================
+FAIL: test_success_and_obsolete_files_not_mixed (__main__.Publication.test_success_and_obsolete_files_not_mixed)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/candidate/scripts/test-artifact-publication.py", line 23, in test_success_and_obsolete_files_not_mixed
+    a=self.publish(self.stage('one','old'));b=self.publish(self.stage('two','new'))
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/candidate/scripts/test-artifact-publication.py", line 19, in publish
+    if not hasattr(cad3d,'release'):self.fail('release pipeline is not implemented')
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: release pipeline is not implemented
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.023s
+
+FAILED (failures=5)

@@ -1,0 +1,8 @@
+{
+  "links": {
+    "/home/rrattes/.local/bin/cad3d": "/home/rrattes/Documentos/engineering 3d/3d-engineering-candidate-20261016/scripts/cad3d",
+    "/home/rrattes/.agents/skills/3d-engineering": "/home/rrattes/Documentos/engineering 3d/3d-engineering-candidate-20261016/skills/3d-engineering"
+  },
+  "image": "sha256:933a7f2c0e86f102d6559744a7d967685c3eba2bf3263cea81dd6c67de48925f",
+  "base_commit": "2d703fb1a812da2bc0a50abf92d1dac230b283d3"
+}

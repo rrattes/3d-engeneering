@@ -1,0 +1,38 @@
+FFF
+======================================================================
+FAIL: test_fan_change_moves_real_holes_and_opening (__main__.Parametric.test_fan_change_moves_real_holes_and_opening)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/candidate/scripts/test-parametric-propagation.py", line 12, in test_fan_change_moves_real_holes_and_opening
+    m=self.model()
+      ^^^^^^^^^^^^
+  File "/candidate/scripts/test-parametric-propagation.py", line 8, in model
+    self.assertTrue(p.is_file(),'parametric fixture with derived datums is missing')
+AssertionError: False is not true : parametric fixture with derived datums is missing
+
+======================================================================
+FAIL: test_psu_variant_and_incompatible_cavity (__main__.Parametric.test_psu_variant_and_incompatible_cavity)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/candidate/scripts/test-parametric-propagation.py", line 22, in test_psu_variant_and_incompatible_cavity
+    m=self.model();a=self.cfg();b=self.cfg();b['psu']['length']=150
+      ^^^^^^^^^^^^
+  File "/candidate/scripts/test-parametric-propagation.py", line 8, in model
+    self.assertTrue(p.is_file(),'parametric fixture with derived datums is missing')
+AssertionError: False is not true : parametric fixture with derived datums is missing
+
+======================================================================
+FAIL: test_wall_height_change_propagates_geometry (__main__.Parametric.test_wall_height_change_propagates_geometry)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/candidate/scripts/test-parametric-propagation.py", line 18, in test_wall_height_change_propagates_geometry
+    m=self.model();a=self.cfg();b=self.cfg(wall=4);b['case']['height']=80
+      ^^^^^^^^^^^^
+  File "/candidate/scripts/test-parametric-propagation.py", line 8, in model
+    self.assertTrue(p.is_file(),'parametric fixture with derived datums is missing')
+AssertionError: False is not true : parametric fixture with derived datums is missing
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.001s
+
+FAILED (failures=3)

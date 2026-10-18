@@ -1,0 +1,24 @@
+components:
+  - id: body
+    part: body
+    position_mm: [0, 0, 0]
+    rotation_deg: [0, 0, 0]
+    retention: {method: monolithic}
+  - id: lid
+    part: lid
+    position_mm: [0, 0, 48.3]
+    rotation_deg: [0, 0, 0]
+    retention: {method: intentional_free, reason: Tampa removível apoiada por gravidade para acesso de serviço}
+interfaces:
+  - id: lid-contact
+    a: body
+    b: lid
+    type: removable_cover
+    clearance_mm: 0.3
+    intentional_contact: false
+assembly_steps:
+  - id: remove-lid
+    moving_component: lid
+    direction_mm: [0, 0, -1]
+    travel_mm: 8
+    samples: 8

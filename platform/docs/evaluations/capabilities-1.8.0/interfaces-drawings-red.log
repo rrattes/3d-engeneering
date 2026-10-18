@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/candidate/scripts/test-interface-library.py", line 5, in <module>
+    from interface_library import generate_interface
+ModuleNotFoundError: No module named 'interface_library'
+Traceback (most recent call last):
+  File "/candidate/scripts/test-technical-drawings.py", line 6, in <module>
+    from technical_drawings import generate_drawings
+ModuleNotFoundError: No module named 'technical_drawings'

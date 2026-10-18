@@ -1,0 +1,144 @@
+{
+  "status": "PASS",
+  "expectation_count": 28,
+  "suites": [
+    {
+      "suite": "source-fingerprint",
+      "expected_test_or_fixture_count": 11,
+      "exit_code": 0,
+      "status": "PASS",
+      "command": [
+        "docker",
+        "run",
+        "--rm",
+        "--network",
+        "none",
+        "--read-only",
+        "--tmpfs",
+        "/tmp:rw,nosuid,size=256m",
+        "-v",
+        "/home/rrattes/Documentos/engineering 3d/3d-engineering-candidate-20261016:/candidate:ro",
+        "--entrypoint",
+        "python",
+        "cad3d-engineering:1.4.2",
+        "/candidate/scripts/test-source-fingerprint.py"
+      ],
+      "log": "test-source-fingerprint.log"
+    },
+    {
+      "suite": "product-geometry-gate",
+      "expected_test_or_fixture_count": 5,
+      "exit_code": 0,
+      "status": "PASS",
+      "command": [
+        "docker",
+        "run",
+        "--rm",
+        "--network",
+        "none",
+        "--read-only",
+        "--tmpfs",
+        "/tmp:rw,nosuid,size=256m",
+        "-v",
+        "/home/rrattes/Documentos/engineering 3d/3d-engineering-candidate-20261016:/candidate:ro",
+        "--entrypoint",
+        "python",
+        "cad3d-engineering:1.4.2",
+        "/candidate/scripts/test-product-geometry-gate.py"
+      ],
+      "log": "test-product-geometry-gate.log"
+    },
+    {
+      "suite": "preflight",
+      "expected_test_or_fixture_count": 3,
+      "exit_code": 0,
+      "status": "PASS",
+      "command": [
+        "docker",
+        "run",
+        "--rm",
+        "--network",
+        "none",
+        "--read-only",
+        "--tmpfs",
+        "/tmp:rw,nosuid,size=256m",
+        "-v",
+        "/home/rrattes/Documentos/engineering 3d/3d-engineering-candidate-20261016:/candidate:ro",
+        "--entrypoint",
+        "python",
+        "cad3d-engineering:1.4.2",
+        "/candidate/scripts/test-preflight.py"
+      ],
+      "log": "test-preflight.log"
+    },
+    {
+      "suite": "fastener-envelope-regression",
+      "expected_test_or_fixture_count": 6,
+      "exit_code": 0,
+      "status": "PASS",
+      "command": [
+        "docker",
+        "run",
+        "--rm",
+        "--network",
+        "none",
+        "--read-only",
+        "--tmpfs",
+        "/tmp:rw,nosuid,size=256m",
+        "-v",
+        "/home/rrattes/Documentos/engineering 3d/3d-engineering-candidate-20261016:/candidate:ro",
+        "--entrypoint",
+        "python",
+        "cad3d-engineering:1.4.2",
+        "/candidate/scripts/test-fastener-envelope-regression.py"
+      ],
+      "log": "test-fastener-envelope-regression.log"
+    },
+    {
+      "suite": "export-current",
+      "expected_test_or_fixture_count": 2,
+      "exit_code": 0,
+      "status": "PASS",
+      "command": [
+        "docker",
+        "run",
+        "--rm",
+        "--network",
+        "none",
+        "--read-only",
+        "--tmpfs",
+        "/tmp:rw,nosuid,size=256m",
+        "-v",
+        "/home/rrattes/Documentos/engineering 3d/3d-engineering-candidate-20261016:/candidate:ro",
+        "--entrypoint",
+        "python",
+        "cad3d-engineering:1.4.2",
+        "/candidate/scripts/test-export-current.py"
+      ],
+      "log": "test-export-current.log"
+    },
+    {
+      "suite": "interface-render",
+      "expected_test_or_fixture_count": 1,
+      "exit_code": 0,
+      "status": "PASS",
+      "command": [
+        "docker",
+        "run",
+        "--rm",
+        "--network",
+        "none",
+        "--read-only",
+        "--tmpfs",
+        "/tmp:rw,nosuid,size=256m",
+        "-v",
+        "/home/rrattes/Documentos/engineering 3d/3d-engineering-candidate-20261016:/candidate:ro",
+        "--entrypoint",
+        "python",
+        "cad3d-engineering:1.4.2",
+        "/candidate/scripts/test-interface-render.py"
+      ],
+      "log": "test-interface-render.log"
+    }
+  ]
+}

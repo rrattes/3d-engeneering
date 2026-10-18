@@ -1,0 +1,88 @@
+{
+  "status": "PASS",
+  "scope": "PRESET_CHAIN_AND_ENGINE_ONLY",
+  "requested": {
+    "printer": "elegoo-cc2",
+    "material": "petg",
+    "process": "standard-0.20"
+  },
+  "supported": {
+    "printers": [
+      "elegoo-cc2"
+    ],
+    "materials": [
+      "petg"
+    ],
+    "processes": [
+      "standard-0.20"
+    ]
+  },
+  "slicing": "NOT_PERFORMED",
+  "physical_validation": "NOT_EVALUATED",
+  "printer_communication": "NOT_PERFORMED",
+  "version": "2.4.2",
+  "version_output": "OrcaSlicer-2.4.2:\nUsage: orca-slicer [ OPTIONS ] [ file.3mf/file.stl ... ]\n\nOPTIONS:\n --allow-mix-temp option\n                     Allow filaments with high/low temperature to be printed together.\n --allow-multicolor-oneplate\n                     If enabled, Arrange will allow multiple colors on one plate.\n --allow-newer-file option\n                     Allow 3MF with newer version to be sliced.\n --allow-rotations   If enabled, Arrange will allow rotation when placing objects.\n --avoid-extrusion-cali-region\n                     If enabled, Arrange will avoid extrusion calibrate region when placing objects.\n --clone-objects \"1,3,1,10\"\n                     Clone objects in the load list.\n --datadir           Load and store settings at the given directory. This is useful for maintaining\n                     different profiles or including configurations from a network storage.\n --debug level       Sets debug logging level. 0:fatal, 1:error, 2:warning, 3:info, 4:debug, 5:trace\n --downward-check    If enabled, check whether current machine downward compatible with the machines\n                     in the list.\n --downward-settings \"machine1.json;machine2.json;...\"\n                     The machine settings list needs to do downward checking.\n --enable-timelapse  If enabled, this slicing will be considered using timelapse.\n --load-assemble-list assemble_list.json\n                     Load assemble object list from config file.\n --load-custom-gcodes custom_gcode_toolchange.json\n                     Load custom G-code from json.\n --load-filament-ids \"1,2,3,1\"\n                     Load filament IDs for each object.\n --load-filaments \"filament1.json;filament2.json;...\"\n                     Load filament settings from the specified file list.\n --load-settings \"setting1.json;setting2.json\"\n                     Load process/machine settings from the specified file.\n --logfile file      Redirects debug logging to file.\n --makerlab-name name\n                     MakerLab name to generate this 3MF.\n --makerlab-version version\n                     MakerLab version to generate this 3MF.\n --metadata-name \"name1;name2;...\"\n                     Metadata name list added into 3MF.\n --metadata-value \"value1;value2;...\"\n                     Metadata value list added into 3MF.\n --outputdir dir     Output directory for the exported files.\n --skip-modified-gcodes option\n                     Skip the modified G-code in 3MF from printer or filament presets.\n --skip-objects \"3,5,10,77\"\n                     Skip some objects in this print.\n --uptodate-filaments \"filament1.json;filament2.json;...\"\n                     Load uptodate filament settings from the specified file when using uptodate.\n --uptodate-settings \"setting1.json;setting2.json\"\n                     Load uptodate process/machine settings from the specified file when using\n                     uptodate.\n --arrange option    Arrange options: 0-disable, 1-enable, others-auto\n --assemble          Arrange the supplied models in a plate and merge them in a single model in order\n                     to perform actions once.\n --convert-unit      Convert the units of model.\n --ensure-on-bed     Lift the object above the bed when it is partially below. Disabled by default.\n --orient            Orient options: 0-disable, 1-enable, others-auto\n --repetitions count Repetition count of the whole model.\n --rotate            Rotation angle around the Z axis in degrees.\n --rotate-x          Rotation angle around the X axis in degrees.\n --rotate-y          Rotation angle around the Y axis in degrees.\n --scale factor      Scale the model by a float factor.\n --export-3mf filename.3mf\n                     Export project as 3MF.\n --export-settings settings.json\n                     Export settings to a file.\n --export-slicedata slicing_data_directory\n                     Export slicing data to a folder.\n --export-stl        Export the objects as single STL.\n --export-stls       Export the objects as multiple STLs to directory.\n --help, -h          Show command help.\n --info              Output the model's information.\n --load-defaultfila option\n                     Load first filament as default for those not loaded.\n --load-slicedata slicing_data_directory\n                     Load cached slicing data from directory.\n --min-save option   Export 3MF with minimum size.\n --mstpp time        max slicing time per plate in seconds.\n --mtcpp count       max triangle count per plate for slicing.\n --no-check          Do not run any validity checks, such as G-code path conflicts check.\n --normative-check option\n                     Check the normative items.\n --pipe pipename     Send progress to pipe.\n --slice option      Slice the plates: 0-all plates, i-plate i, others-invalid\n --uptodate          Update the config values of 3MF to latest.\n\nPrint setting priorities:\n\t1) setting values from the command line (highest priority)\n\t2) setting values loaded with --load_settings and --load_filaments\n\t3) setting values loaded from 3mf(lowest priority)",
+  "profiles": {
+    "machine": [
+      {
+        "name": "fdm_machine_common",
+        "relative_path": "Elegoo/machine/fdm_machine_common.json",
+        "sha256": "374fe18ac4503dfa15018cb9a6609a4e80c2167a1a4203b615cc48b053a680b0"
+      },
+      {
+        "name": "fdm_elegoo_3dp_001_common",
+        "relative_path": "Elegoo/machine/fdm_elegoo_3dp_001_common.json",
+        "sha256": "305c5826b25413f8257d8dec529ac691d2f4bb899fb391dbebbec576d9dcc00b"
+      },
+      {
+        "name": "Elegoo Centauri Carbon 2 0.4 nozzle",
+        "relative_path": "Elegoo/machine/ECC2/Elegoo Centauri Carbon 2 0.4 nozzle.json",
+        "sha256": "55022dd2e31aa634d39f205276113d4f74031c05c43c2804aaf89e5d9df281d9"
+      }
+    ],
+    "filament": [
+      {
+        "name": "fdm_filament_common",
+        "relative_path": "Elegoo/filament/fdm_filament_common.json",
+        "sha256": "905b6882f138c64d28cd5a6615f5abb0eb079161340781600a7b09401f05f7c8"
+      },
+      {
+        "name": "fdm_filament_pet",
+        "relative_path": "Elegoo/filament/fdm_filament_pet.json",
+        "sha256": "1341558f4d88697af4dfc27ca7499166b61057a48b78ea05a89e481e434b792b"
+      },
+      {
+        "name": "Elegoo PETG @base",
+        "relative_path": "Elegoo/filament/BASE/Elegoo PETG @base.json",
+        "sha256": "f6d9be188ccb80e30e1cf3caaec8b4809b232eb330dc8e78fda43b3b4f0fb310"
+      },
+      {
+        "name": "Elegoo PETG @ECC2",
+        "relative_path": "Elegoo/filament/ECC2/Elegoo PETG @ECC2.json",
+        "sha256": "b7392d507eac56a2f55e571799fadfa15d9cdc661632fb0e199fa155cc1c76fb"
+      }
+    ],
+    "process": [
+      {
+        "name": "fdm_process_common",
+        "relative_path": "Elegoo/process/fdm_process_common.json",
+        "sha256": "5ad25427d0c8e20fd1768555270bd573988a93d28b1a9645448ec02d09bea48a"
+      },
+      {
+        "name": "fdm_process_elegoo_common",
+        "relative_path": "Elegoo/process/fdm_process_elegoo_common.json",
+        "sha256": "840a7fb58405d3e11b34cd6fc206a2720b0143575a03581d4aea453dbdc1ce67"
+      },
+      {
+        "name": "fdm_process_elegoo_04020",
+        "relative_path": "Elegoo/process/fdm_process_elegoo_04020.json",
+        "sha256": "36b40a1a5dd70653aa8b9363925f8da79974d1621c87c643ac1572d60cf2b974"
+      },
+      {
+        "name": "0.20mm Standard @Elegoo CC2 0.4 nozzle",
+        "relative_path": "Elegoo/process/ECC2/0.20mm Standard @Elegoo CC2 0.4 nozzle.json",
+        "sha256": "dc728d993c79c49468c9f6febd568708cec5cb5301dddbf1e9d9d8c0336a51f6"
+      }
+    ]
+  }
+}

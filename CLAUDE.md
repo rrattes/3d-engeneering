@@ -1,0 +1,1 @@
+Leia AGENTS.md, README.md e docs/WORKFLOW.md. As skills próprias estão em .claude/skills por vínculos à fonte canônica. Auxiliares são opcionais; disponibilize apenas as necessárias com scripts/enable-skill.sh. A engenharia prevalece sobre design e a candidata evolução03 não está ativa.

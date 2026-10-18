@@ -1,0 +1,23 @@
+mount:
+  plate_width: 80.0
+  plate_height: 48.0
+  plate_thickness: 5.0
+  rail_z0: 7.0
+  rail_z1: 40.0
+  rail_neck_width: 8.0
+  rail_head_width: 12.0
+  rail_depth: 8.0
+  slide_clearance: 0.35
+  carrier_width: 58.0
+  carrier_back_y: 7.8
+  carrier_back_depth: 13.0
+  carrier_z0: 5.0
+  carrier_z1: 43.0
+  tray_depth: 29.0
+  tray_thickness: 5.0
+  tray_z: 5.0
+  side_lip: 3.0
+printer:
+  profile: elegoo-centauri-carbon-2
+material:
+  profile: petg

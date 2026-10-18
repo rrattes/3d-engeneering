@@ -1,0 +1,7 @@
+In /usr/local/lib/python3.12/site-packages/matplotlib/mpl-data/stylelib/classic.mplstyle: 'parseString' deprecated - use 'parse_string'
+In /usr/local/lib/python3.12/site-packages/matplotlib/mpl-data/stylelib/classic.mplstyle: 'resetCache' deprecated - use 'reset_cache'
+.
+----------------------------------------------------------------------
+Ran 1 test in 4.534s
+
+OK

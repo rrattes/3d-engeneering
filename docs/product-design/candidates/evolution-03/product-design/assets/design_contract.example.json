@@ -1,0 +1,7 @@
+{
+  "schema": "product-design-contract-v1",
+  "id": "visual-study-example",
+  "mode": "cmf_study",
+  "target_scope": "visual_study",
+  "requirements": []
+}

@@ -1,0 +1,60 @@
+{
+  "status": "PASS",
+  "version": "1.6.0",
+  "baseline_approved": "1.5.0",
+  "source_checks": 18,
+  "packaged_checks": 18,
+  "helical_tests_per_mode": 16,
+  "legacy_acceptance_checks": 35,
+  "source_frozen": true,
+  "container_modules_match_source": true,
+  "images": {
+    "cad3d-engineering:1.5.0": "sha256:29f29efe95400751376e77f749cf7fd4aa3c660d9fe6498aabacec9635c4110f",
+    "cad3d-engineering:1.6.0": "sha256:eb35556f234c628cd3c01137cd3f28d4a5218dd7fc346be19e09fb7ae8a7c0d6"
+  },
+  "real_step_cases": [
+    {
+      "hand": "right",
+      "mirrored": false,
+      "expected": "PASS",
+      "observed": "PASS",
+      "poses": 21,
+      "removal_proven": true
+    },
+    {
+      "hand": "left",
+      "mirrored": false,
+      "expected": "FAIL",
+      "observed": "FAIL",
+      "poses": 21,
+      "removal_proven": false
+    },
+    {
+      "hand": "left",
+      "mirrored": true,
+      "expected": "PASS",
+      "observed": "PASS",
+      "poses": 21,
+      "removal_proven": true
+    }
+  ],
+  "native_release_integration": "PASS; positive path publishes, blocked path preserves previous delivery",
+  "independent_review": "static; atomic-solid correction reviewed; suites executed by primary agent",
+  "skill_static_validation": "PASS",
+  "active_doctor": "PASS;1.6.0",
+  "portable_kit": {
+    "path": "dist/cad3d-1.6.0/CAD3D_Kit.zip",
+    "bytes": 226092,
+    "sha256": "823b07b15236d57de93eef7b437607f4ef1febca4810c291a2d8a8d43deb8269",
+    "inventory_hashes_match": true
+  },
+  "basket_delivery_unchanged": true,
+  "physical_validation": "NOT_EVALUATED",
+  "limits": [
+    "sampled_not_continuous",
+    "no physical thread fit, strength or torque validation",
+    "conservative terminal removal proof",
+    "no rewrite of legacy static/linear Compound handling",
+    "basket bracket thickness selector remains unresolved"
+  ]
+}

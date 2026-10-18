@@ -1,0 +1,15 @@
+{
+  "status": "ACTIVE",
+  "date": "2026-10-16T21:35:23.998650-03:00",
+  "previous_links": {
+    "/home/rrattes/.local/bin/cad3d": "/home/rrattes/Documentos/engineering 3d/3d-engineering/scripts/cad3d",
+    "/home/rrattes/.agents/skills/3d-engineering": "/home/rrattes/Documentos/engineering 3d/3d-engineering/skills/3d-engineering"
+  },
+  "current_links": {
+    "/home/rrattes/.local/bin/cad3d": "/home/rrattes/Documentos/engineering 3d/3d-engineering-candidate-20261016/scripts/cad3d",
+    "/home/rrattes/.agents/skills/3d-engineering": "/home/rrattes/Documentos/engineering 3d/3d-engineering-candidate-20261016/skills/3d-engineering"
+  },
+  "baseline_commit": "c86f7641df93fb19da38fbd8214369a03d10b087",
+  "original_checkout_preserved": true,
+  "promotion_basis": "35 integration +28 focused +10 assembly +24 template checks; bounded independent application/review; not broad behavioral superiority"
+}

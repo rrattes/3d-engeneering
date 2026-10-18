@@ -1,0 +1,17 @@
+........................                                                 [100%]
+24 passed in 2.76s
+
+==================================== ERRORS ====================================
+_____________ ERROR collecting tests/test_mechanical_validation.py _____________
+ImportError while importing test module '/tmp/assembly/tests/test_mechanical_validation.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/test_mechanical_validation.py:13: in <module>
+    from validation import nominal_wall_check, pair_check, transform_shape
+E   ModuleNotFoundError: No module named 'validation'
+=========================== short test summary info ============================
+ERROR tests/test_mechanical_validation.py
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+1 error in 2.29s

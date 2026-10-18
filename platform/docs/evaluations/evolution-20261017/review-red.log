@@ -1,0 +1,50 @@
+..F...F
+======================================================================
+FAIL: test_manifest_without_export_evidence_cannot_publish (__main__.Publication.test_manifest_without_export_evidence_cannot_publish)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/candidate/scripts/test-artifact-publication.py", line 29, in test_manifest_without_export_evidence_cannot_publish
+    with self.assertRaises(ValueError):self.publish(p)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_unknown_service_cannot_publish (__main__.Publication.test_unknown_service_cannot_publish)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/candidate/scripts/test-artifact-publication.py", line 26, in test_unknown_service_cannot_publish
+    with self.assertRaises(ValueError):self.publish(p)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 7 tests in 1.909s
+
+FAILED (failures=2)
+......F
+======================================================================
+FAIL: test_unsuccessful_prerequisite_cannot_release_next_part (__main__.Service.test_unsuccessful_prerequisite_cannot_release_next_part)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/candidate/scripts/test-service-states.py", line 36, in test_unsuccessful_prerequisite_cannot_release_next_part
+    r=m.evaluate_steps(p,[a,b]);self.assertNotEqual(r[1]['status'],'PASS')
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'PASS' == 'PASS'
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.156s
+
+FAILED (failures=1)
+..F..
+======================================================================
+FAIL: test_machined_process_does_not_claim_manufacturing_pass (__main__.Profiles.test_machined_process_does_not_claim_manufacturing_pass)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/candidate/scripts/test-calibration-profile-regression.py", line 32, in test_machined_process_does_not_claim_manufacturing_pass
+    self.assertNotEqual(r['states']['manufacturing_assessment'],'PASS')
+AssertionError: 'PASS' == 'PASS'
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.215s
+
+FAILED (failures=1)

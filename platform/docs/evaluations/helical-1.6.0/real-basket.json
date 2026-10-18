@@ -1,0 +1,665 @@
+{
+  "status": "PASS",
+  "source_basket_run": "b2424b46c6cf442eb3bed87637e7a560",
+  "cases": [
+    {
+      "hand": "right",
+      "mirrored": false,
+      "expected": "PASS",
+      "seconds": 10.32395419900422,
+      "result": {
+        "id": "withdraw",
+        "method": "sampled_helical_OCP_BREP",
+        "coverage": "sampled_not_continuous",
+        "moving_ids": [
+          "screw"
+        ],
+        "retained_ids": [
+          "support"
+        ],
+        "axis_origin_mm": [
+          22.0,
+          46.0,
+          80.0
+        ],
+        "axis_direction_unit": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "pitch_mm": 3.0,
+        "starts": 1,
+        "lead_mm": 3.0,
+        "handedness": "right",
+        "travel_mm": -15.0,
+        "rotation_deg": -1800.0,
+        "intervals_requested": 1,
+        "pose_count": 21,
+        "sample_spacing_mm": 0.75,
+        "sample_spacing_deg": 90.0,
+        "min_clearance_required_mm": 0.0,
+        "allowed_contact_pairs": [
+          "screw::support"
+        ],
+        "physical_validation": "NOT_EVALUATED",
+        "scope": "sampled nominal rigid BREP path; no continuous clearance, thread fit, force, torque or strength proof",
+        "status": "PASS",
+        "poses": [
+          {
+            "sample": 0,
+            "translation_mm": -0.0,
+            "rotation_deg": -0.0,
+            "status": "PASS"
+          },
+          {
+            "sample": 1,
+            "translation_mm": -0.75,
+            "rotation_deg": -90.0,
+            "status": "PASS"
+          },
+          {
+            "sample": 2,
+            "translation_mm": -1.5,
+            "rotation_deg": -180.0,
+            "status": "PASS"
+          },
+          {
+            "sample": 3,
+            "translation_mm": -2.25,
+            "rotation_deg": -270.0,
+            "status": "PASS"
+          },
+          {
+            "sample": 4,
+            "translation_mm": -3.0,
+            "rotation_deg": -360.0,
+            "status": "PASS"
+          },
+          {
+            "sample": 5,
+            "translation_mm": -3.75,
+            "rotation_deg": -450.0,
+            "status": "PASS"
+          },
+          {
+            "sample": 6,
+            "translation_mm": -4.5,
+            "rotation_deg": -540.0,
+            "status": "PASS"
+          },
+          {
+            "sample": 7,
+            "translation_mm": -5.25,
+            "rotation_deg": -630.0,
+            "status": "PASS"
+          },
+          {
+            "sample": 8,
+            "translation_mm": -6.0,
+            "rotation_deg": -720.0,
+            "status": "PASS"
+          },
+          {
+            "sample": 9,
+            "translation_mm": -6.75,
+            "rotation_deg": -810.0,
+            "status": "PASS"
+          },
+          {
+            "sample": 10,
+            "translation_mm": -7.5,
+            "rotation_deg": -900.0,
+            "status": "PASS"
+          },
+          {
+            "sample": 11,
+            "translation_mm": -8.25,
+            "rotation_deg": -990.0000000000001,
+            "status": "PASS"
+          },
+          {
+            "sample": 12,
+            "translation_mm": -9.0,
+            "rotation_deg": -1080.0,
+            "status": "PASS"
+          },
+          {
+            "sample": 13,
+            "translation_mm": -9.75,
+            "rotation_deg": -1170.0,
+            "status": "PASS"
+          },
+          {
+            "sample": 14,
+            "translation_mm": -10.5,
+            "rotation_deg": -1260.0,
+            "status": "PASS"
+          },
+          {
+            "sample": 15,
+            "translation_mm": -11.25,
+            "rotation_deg": -1350.0,
+            "status": "PASS"
+          },
+          {
+            "sample": 16,
+            "translation_mm": -12.0,
+            "rotation_deg": -1440.0,
+            "status": "PASS"
+          },
+          {
+            "sample": 17,
+            "translation_mm": -12.75,
+            "rotation_deg": -1530.0,
+            "status": "PASS"
+          },
+          {
+            "sample": 18,
+            "translation_mm": -13.5,
+            "rotation_deg": -1620.0,
+            "status": "PASS"
+          },
+          {
+            "sample": 19,
+            "translation_mm": -14.25,
+            "rotation_deg": -1710.0,
+            "status": "PASS"
+          },
+          {
+            "sample": 20,
+            "translation_mm": -15.0,
+            "rotation_deg": -1800.0,
+            "status": "PASS"
+          }
+        ],
+        "blockages": [],
+        "removal_proven": true,
+        "removal_proof_scope": "terminal conservative bounds separated from every retained instance; sufficient but not necessary",
+        "removed_ids": [],
+        "tool_findings": [],
+        "tool_count": 0,
+        "prerequisite_step_ids": []
+      }
+    },
+    {
+      "hand": "left",
+      "mirrored": false,
+      "expected": "FAIL",
+      "seconds": 11.10526918299729,
+      "result": {
+        "id": "withdraw",
+        "method": "sampled_helical_OCP_BREP",
+        "coverage": "sampled_not_continuous",
+        "moving_ids": [
+          "screw"
+        ],
+        "retained_ids": [
+          "support"
+        ],
+        "axis_origin_mm": [
+          22.0,
+          46.0,
+          80.0
+        ],
+        "axis_direction_unit": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "pitch_mm": 3.0,
+        "starts": 1,
+        "lead_mm": 3.0,
+        "handedness": "left",
+        "travel_mm": -15.0,
+        "rotation_deg": 1800.0,
+        "intervals_requested": 1,
+        "pose_count": 21,
+        "sample_spacing_mm": 0.75,
+        "sample_spacing_deg": 90.0,
+        "min_clearance_required_mm": 0.0,
+        "allowed_contact_pairs": [
+          "screw::support"
+        ],
+        "physical_validation": "NOT_EVALUATED",
+        "scope": "sampled nominal rigid BREP path; no continuous clearance, thread fit, force, torque or strength proof",
+        "status": "FAIL",
+        "poses": [
+          {
+            "sample": 0,
+            "translation_mm": -0.0,
+            "rotation_deg": 0.0,
+            "status": "PASS"
+          },
+          {
+            "sample": 1,
+            "translation_mm": -0.75,
+            "rotation_deg": 90.0,
+            "status": "FAIL"
+          },
+          {
+            "sample": 2,
+            "translation_mm": -1.5,
+            "rotation_deg": 180.0,
+            "status": "PASS"
+          },
+          {
+            "sample": 3,
+            "translation_mm": -2.25,
+            "rotation_deg": 270.0,
+            "status": "FAIL"
+          },
+          {
+            "sample": 4,
+            "translation_mm": -3.0,
+            "rotation_deg": 360.0,
+            "status": "PASS"
+          },
+          {
+            "sample": 5,
+            "translation_mm": -3.75,
+            "rotation_deg": 450.0,
+            "status": "FAIL"
+          },
+          {
+            "sample": 6,
+            "translation_mm": -4.5,
+            "rotation_deg": 540.0,
+            "status": "PASS"
+          },
+          {
+            "sample": 7,
+            "translation_mm": -5.25,
+            "rotation_deg": 630.0,
+            "status": "FAIL"
+          },
+          {
+            "sample": 8,
+            "translation_mm": -6.0,
+            "rotation_deg": 720.0,
+            "status": "PASS"
+          },
+          {
+            "sample": 9,
+            "translation_mm": -6.75,
+            "rotation_deg": 810.0,
+            "status": "FAIL"
+          },
+          {
+            "sample": 10,
+            "translation_mm": -7.5,
+            "rotation_deg": 900.0,
+            "status": "PASS"
+          },
+          {
+            "sample": 11,
+            "translation_mm": -8.25,
+            "rotation_deg": 990.0000000000001,
+            "status": "FAIL"
+          },
+          {
+            "sample": 12,
+            "translation_mm": -9.0,
+            "rotation_deg": 1080.0,
+            "status": "PASS"
+          },
+          {
+            "sample": 13,
+            "translation_mm": -9.75,
+            "rotation_deg": 1170.0,
+            "status": "PASS"
+          },
+          {
+            "sample": 14,
+            "translation_mm": -10.5,
+            "rotation_deg": 1260.0,
+            "status": "PASS"
+          },
+          {
+            "sample": 15,
+            "translation_mm": -11.25,
+            "rotation_deg": 1350.0,
+            "status": "PASS"
+          },
+          {
+            "sample": 16,
+            "translation_mm": -12.0,
+            "rotation_deg": 1440.0,
+            "status": "PASS"
+          },
+          {
+            "sample": 17,
+            "translation_mm": -12.75,
+            "rotation_deg": 1530.0,
+            "status": "PASS"
+          },
+          {
+            "sample": 18,
+            "translation_mm": -13.5,
+            "rotation_deg": 1620.0,
+            "status": "PASS"
+          },
+          {
+            "sample": 19,
+            "translation_mm": -14.25,
+            "rotation_deg": 1710.0,
+            "status": "PASS"
+          },
+          {
+            "sample": 20,
+            "translation_mm": -15.0,
+            "rotation_deg": 1800.0,
+            "status": "PASS"
+          }
+        ],
+        "blockages": [
+          {
+            "sample": 1,
+            "translation_mm": -0.75,
+            "rotation_deg": 90.0,
+            "pair": "screw::support",
+            "status": "FAIL",
+            "method": "OCP_atomic_solid_pairs",
+            "solid_pair_count": 1,
+            "intersection_volume_mm3": 21.341016572612368,
+            "findings": [
+              {
+                "pair": "screw::support",
+                "intersection_volume_mm3": 21.341016572612368,
+                "method": "OCP_common_volume",
+                "intentional_contact": true,
+                "status": "FAIL",
+                "reason": "positive_intersection_volume"
+              }
+            ]
+          },
+          {
+            "sample": 3,
+            "translation_mm": -2.25,
+            "rotation_deg": 270.0,
+            "pair": "screw::support",
+            "status": "FAIL",
+            "method": "OCP_atomic_solid_pairs",
+            "solid_pair_count": 1,
+            "intersection_volume_mm3": 17.46060032005092,
+            "findings": [
+              {
+                "pair": "screw::support",
+                "intersection_volume_mm3": 17.46060032005092,
+                "method": "OCP_common_volume",
+                "intentional_contact": true,
+                "status": "FAIL",
+                "reason": "positive_intersection_volume"
+              }
+            ]
+          },
+          {
+            "sample": 5,
+            "translation_mm": -3.75,
+            "rotation_deg": 450.0,
+            "pair": "screw::support",
+            "status": "FAIL",
+            "method": "OCP_atomic_solid_pairs",
+            "solid_pair_count": 1,
+            "intersection_volume_mm3": 13.58065156509039,
+            "findings": [
+              {
+                "pair": "screw::support",
+                "intersection_volume_mm3": 13.58065156509039,
+                "method": "OCP_common_volume",
+                "intentional_contact": true,
+                "status": "FAIL",
+                "reason": "positive_intersection_volume"
+              }
+            ]
+          },
+          {
+            "sample": 7,
+            "translation_mm": -5.25,
+            "rotation_deg": 630.0,
+            "pair": "screw::support",
+            "status": "FAIL",
+            "method": "OCP_atomic_solid_pairs",
+            "solid_pair_count": 1,
+            "intersection_volume_mm3": 9.700326136092137,
+            "findings": [
+              {
+                "pair": "screw::support",
+                "intersection_volume_mm3": 9.700326136092137,
+                "method": "OCP_common_volume",
+                "intentional_contact": true,
+                "status": "FAIL",
+                "reason": "positive_intersection_volume"
+              }
+            ]
+          },
+          {
+            "sample": 9,
+            "translation_mm": -6.75,
+            "rotation_deg": 810.0,
+            "pair": "screw::support",
+            "status": "FAIL",
+            "method": "OCP_atomic_solid_pairs",
+            "solid_pair_count": 1,
+            "intersection_volume_mm3": 5.820285679133786,
+            "findings": [
+              {
+                "pair": "screw::support",
+                "intersection_volume_mm3": 5.820285679133786,
+                "method": "OCP_common_volume",
+                "intentional_contact": true,
+                "status": "FAIL",
+                "reason": "positive_intersection_volume"
+              }
+            ]
+          },
+          {
+            "sample": 11,
+            "translation_mm": -8.25,
+            "rotation_deg": 990.0000000000001,
+            "pair": "screw::support",
+            "status": "FAIL",
+            "method": "OCP_atomic_solid_pairs",
+            "solid_pair_count": 1,
+            "intersection_volume_mm3": 1.9400942252835696,
+            "findings": [
+              {
+                "pair": "screw::support",
+                "intersection_volume_mm3": 1.9400942252835696,
+                "method": "OCP_common_volume",
+                "intentional_contact": true,
+                "status": "FAIL",
+                "reason": "positive_intersection_volume"
+              }
+            ]
+          }
+        ],
+        "removal_proven": false,
+        "removal_proof_scope": "terminal conservative bounds separated from every retained instance; sufficient but not necessary",
+        "removed_ids": [],
+        "tool_findings": [],
+        "tool_count": 0,
+        "prerequisite_step_ids": []
+      }
+    },
+    {
+      "hand": "left",
+      "mirrored": true,
+      "expected": "PASS",
+      "seconds": 10.61371346199303,
+      "result": {
+        "id": "withdraw",
+        "method": "sampled_helical_OCP_BREP",
+        "coverage": "sampled_not_continuous",
+        "moving_ids": [
+          "screw"
+        ],
+        "retained_ids": [
+          "support"
+        ],
+        "axis_origin_mm": [
+          -22.0,
+          46.0,
+          80.0
+        ],
+        "axis_direction_unit": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "pitch_mm": 3.0,
+        "starts": 1,
+        "lead_mm": 3.0,
+        "handedness": "left",
+        "travel_mm": -15.0,
+        "rotation_deg": 1800.0,
+        "intervals_requested": 1,
+        "pose_count": 21,
+        "sample_spacing_mm": 0.75,
+        "sample_spacing_deg": 90.0,
+        "min_clearance_required_mm": 0.0,
+        "allowed_contact_pairs": [
+          "screw::support"
+        ],
+        "physical_validation": "NOT_EVALUATED",
+        "scope": "sampled nominal rigid BREP path; no continuous clearance, thread fit, force, torque or strength proof",
+        "status": "PASS",
+        "poses": [
+          {
+            "sample": 0,
+            "translation_mm": -0.0,
+            "rotation_deg": 0.0,
+            "status": "PASS"
+          },
+          {
+            "sample": 1,
+            "translation_mm": -0.75,
+            "rotation_deg": 90.0,
+            "status": "PASS"
+          },
+          {
+            "sample": 2,
+            "translation_mm": -1.5,
+            "rotation_deg": 180.0,
+            "status": "PASS"
+          },
+          {
+            "sample": 3,
+            "translation_mm": -2.25,
+            "rotation_deg": 270.0,
+            "status": "PASS"
+          },
+          {
+            "sample": 4,
+            "translation_mm": -3.0,
+            "rotation_deg": 360.0,
+            "status": "PASS"
+          },
+          {
+            "sample": 5,
+            "translation_mm": -3.75,
+            "rotation_deg": 450.0,
+            "status": "PASS"
+          },
+          {
+            "sample": 6,
+            "translation_mm": -4.5,
+            "rotation_deg": 540.0,
+            "status": "PASS"
+          },
+          {
+            "sample": 7,
+            "translation_mm": -5.25,
+            "rotation_deg": 630.0,
+            "status": "PASS"
+          },
+          {
+            "sample": 8,
+            "translation_mm": -6.0,
+            "rotation_deg": 720.0,
+            "status": "PASS"
+          },
+          {
+            "sample": 9,
+            "translation_mm": -6.75,
+            "rotation_deg": 810.0,
+            "status": "PASS"
+          },
+          {
+            "sample": 10,
+            "translation_mm": -7.5,
+            "rotation_deg": 900.0,
+            "status": "PASS"
+          },
+          {
+            "sample": 11,
+            "translation_mm": -8.25,
+            "rotation_deg": 990.0000000000001,
+            "status": "PASS"
+          },
+          {
+            "sample": 12,
+            "translation_mm": -9.0,
+            "rotation_deg": 1080.0,
+            "status": "PASS"
+          },
+          {
+            "sample": 13,
+            "translation_mm": -9.75,
+            "rotation_deg": 1170.0,
+            "status": "PASS"
+          },
+          {
+            "sample": 14,
+            "translation_mm": -10.5,
+            "rotation_deg": 1260.0,
+            "status": "PASS"
+          },
+          {
+            "sample": 15,
+            "translation_mm": -11.25,
+            "rotation_deg": 1350.0,
+            "status": "PASS"
+          },
+          {
+            "sample": 16,
+            "translation_mm": -12.0,
+            "rotation_deg": 1440.0,
+            "status": "PASS"
+          },
+          {
+            "sample": 17,
+            "translation_mm": -12.75,
+            "rotation_deg": 1530.0,
+            "status": "PASS"
+          },
+          {
+            "sample": 18,
+            "translation_mm": -13.5,
+            "rotation_deg": 1620.0,
+            "status": "PASS"
+          },
+          {
+            "sample": 19,
+            "translation_mm": -14.25,
+            "rotation_deg": 1710.0,
+            "status": "PASS"
+          },
+          {
+            "sample": 20,
+            "translation_mm": -15.0,
+            "rotation_deg": 1800.0,
+            "status": "PASS"
+          }
+        ],
+        "blockages": [],
+        "removal_proven": true,
+        "removal_proof_scope": "terminal conservative bounds separated from every retained instance; sufficient but not necessary",
+        "removed_ids": [],
+        "tool_findings": [],
+        "tool_count": 0,
+        "prerequisite_step_ids": []
+      }
+    }
+  ],
+  "physical_validation": "NOT_EVALUATED"
+}

@@ -1,0 +1,14 @@
+mount:
+  plate_width: 100
+  plate_height: 80
+  plate_thickness: 6
+  wall_hole_pitch_x: 70
+  wall_hole_pitch_vertical: 50
+  wall_hole_diameter: 5.5
+  guide_clearance: 0.4
+  shelf_projection: 30
+  nominal_mass_kg: 1
+printer:
+  profile: elegoo-centauri-carbon-2
+material:
+  profile: petg

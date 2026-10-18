@@ -1,0 +1,42 @@
+{
+  "schema": "product-design-workflow-v1",
+  "tasks": [
+    {
+      "id": "cad",
+      "kind": "cad",
+      "inputs": [
+        "src/model.py",
+        "design/geometry.json"
+      ],
+      "outputs": [
+        "manufacturing/step/shell.step"
+      ],
+      "depends_on": [],
+      "parameters": {},
+      "environment": {
+        "cad_image": "select actual existing CAD image and immutable identity"
+      },
+      "dependencies_complete": false
+    },
+    {
+      "id": "render",
+      "kind": "render",
+      "inputs": [
+        "manufacturing/step/shell.step",
+        "design/cmf.json",
+        "design/comparison.json"
+      ],
+      "outputs": [
+        "reports/product-design/comparison/comparison-iso.png"
+      ],
+      "depends_on": [
+        "cad"
+      ],
+      "parameters": {},
+      "environment": {
+        "renderer": "select actual renderer/script identity"
+      },
+      "dependencies_complete": false
+    }
+  ]
+}

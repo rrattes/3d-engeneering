@@ -1,0 +1,50 @@
+.EEF
+======================================================================
+ERROR: test_calibrated_without_local_minimum_has_no_unbound_variable (__main__.Profiles.test_calibrated_without_local_minimum_has_no_unbound_variable)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/candidate/scripts/test-calibration-profile-regression.py", line 27, in test_calibrated_without_local_minimum_has_no_unbound_variable
+    def test_calibrated_without_local_minimum_has_no_unbound_variable(self):self.assertEqual(self.calibrated()['calibration_profile']['status'],'PASS')
+                                                                                             ^^^^^^^^^^^^^^^^^
+  File "/candidate/scripts/test-calibration-profile-regression.py", line 26, in calibrated
+    return self.call(pc)
+           ^^^^^^^^^^^^^
+  File "/candidate/scripts/test-calibration-profile-regression.py", line 17, in call
+    with patch.object(cad3d,'project_files',return_value=({},self.params,{'block':Box(10,10,10)},Path('out'))),contextlib.redirect_stdout(io.StringIO()):cad3d.validate(SimpleNamespace(assembly=None))
+                                                                                                                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/candidate/cli/cad3d.py", line 102, in validate
+    if 'min_wall_mm' not in printer_cfg: min_wall=float(profile.get('min_wall_mm',min_wall))
+                                                                                  ^^^^^^^^
+UnboundLocalError: cannot access local variable 'min_wall' where it is not associated with a value
+
+======================================================================
+ERROR: test_mismatched_identity_does_not_apply_record (__main__.Profiles.test_mismatched_identity_does_not_apply_record)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/candidate/scripts/test-calibration-profile-regression.py", line 29, in test_mismatched_identity_does_not_apply_record
+    def test_mismatched_identity_does_not_apply_record(self):self.assertEqual(self.calibrated('asa')['calibration_profile']['status'],'FAIL')
+                                                                              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/candidate/scripts/test-calibration-profile-regression.py", line 26, in calibrated
+    return self.call(pc)
+           ^^^^^^^^^^^^^
+  File "/candidate/scripts/test-calibration-profile-regression.py", line 17, in call
+    with patch.object(cad3d,'project_files',return_value=({},self.params,{'block':Box(10,10,10)},Path('out'))),contextlib.redirect_stdout(io.StringIO()):cad3d.validate(SimpleNamespace(assembly=None))
+                                                                                                                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/candidate/cli/cad3d.py", line 102, in validate
+    if 'min_wall_mm' not in printer_cfg: min_wall=float(profile.get('min_wall_mm',min_wall))
+                                                                                  ^^^^^^^^
+UnboundLocalError: cannot access local variable 'min_wall' where it is not associated with a value
+
+======================================================================
+FAIL: test_missing_profile_is_not_printer_compatibility (__main__.Profiles.test_missing_profile_is_not_printer_compatibility)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/candidate/scripts/test-calibration-profile-regression.py", line 20, in test_missing_profile_is_not_printer_compatibility
+    r=self.call();self.assertEqual(r['states'].get('printer_compatibility'),'NOT_EVALUATED');self.assertEqual(r['printer_profile']['status'],'NOT_EVALUATED')
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: None != 'NOT_EVALUATED'
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.131s
+
+FAILED (failures=1, errors=2)

@@ -1,0 +1,47 @@
+FEFF
+======================================================================
+ERROR: test_repeated_instance_has_one_part_and_two_bom_quantity (__main__.Catalog.test_repeated_instance_has_one_part_and_two_bom_quantity)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/candidate/scripts/test-component-catalog.py", line 19, in test_repeated_instance_has_one_part_and_two_bom_quantity
+    self.call(cad3d.export);rows=json.loads(Path('build/outputs/part-index.json').read_text());self.assertEqual(next(x for x in rows if x['id']=='support')['quantity'],2)
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/pathlib.py", line 1027, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'build/outputs/part-index.json'
+
+======================================================================
+FAIL: test_build_skips_commercial_stl (__main__.Catalog.test_build_skips_commercial_stl)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/candidate/scripts/test-component-catalog.py", line 17, in test_build_skips_commercial_stl
+    self.call(cad3d.build);self.assertTrue(Path('build/outputs/support.stl').is_file());self.assertFalse(Path('build/outputs/fan.stl').exists())
+                                                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_unknown_part_rejected (__main__.Catalog.test_unknown_part_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/candidate/scripts/test-component-catalog.py", line 26, in test_unknown_part_rejected
+    with self.assertRaises(ValueError):self.call(cad3d.build)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_unknown_process_rejected (__main__.Catalog.test_unknown_process_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/candidate/scripts/test-component-catalog.py", line 23, in test_unknown_process_rejected
+    with self.assertRaises(ValueError):self.call(cad3d.build)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.112s
+
+FAILED (failures=3, errors=1)

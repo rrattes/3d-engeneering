@@ -1,0 +1,7 @@
+MODULE_ROOT /tmp/packaged-suite/cli
+MODULE_SHA256 {"artifact_publication.py": "c27c7c77721daba9f35f6c33fef8c22991d13e9605078e303a683fbeb41bb466", "cad3d.py": "82fc42b32adf46e83c210917ea289ed53601c7297cf9d3841a78cc0b7b0b0146", "cad3d_visualization.py": "20386d67b2779e460e3bb8fb2176e5cd7973d3becfeb5f113ae0ca347193c96f", "calibration.py": "1497c2e733b8b55fea3a2ed8e6080fbeff670bca29de2c3edace925f0cfae761", "commercial_components.py": "56912185e72dba86a36969a245b98e97d3d0ae8b43804e5de560dab726e75df1", "component_catalog.py": "9cd9fffdd9e4d2a9f0c23e90c87188459c66ec1cdace6453fb33e0edcaea394e", "helical_motion.py": "0bde448366fdb716b65e63aa23ed5a401182215c61d7bdff3d8b9793af5c0206", "manufacturing.py": "a80da2a101542f91057fa0767a04eb18bd2d76fc299e25833af0d21ee8f7b6af", "product_engineering.py": "1a8b51dc79dd496145a0b7fc942978c778cc671ef1f5c72a518318c6ae3054f2", "service_states.py": "a3f2f90a7d453e61144948eb977c5f40f48b948524ffc95205f2cc2bb58d5f7e", "slicer_bridge.py": "8342a4a2fab8c500ea566cdd068351e95a8f321297f730950bc42bddb3cd219a", "source_fingerprint.py": "36be6211774fda13d21171e59adf71eb001bb7dff3b538b31002b239a9f9e679", "validation.py": "3b75011824fd07b425ea5c9de1cf682c1b717960b068ba47444a5904d2f769b8"}
+...
+----------------------------------------------------------------------
+Ran 3 tests in 2.729s
+
+OK

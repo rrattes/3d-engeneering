@@ -1,0 +1,23 @@
+{
+  "runtime": "1.5.0",
+  "unknown_printer": {
+    "profile_evidence": {
+      "status": "NOT_EVALUATED",
+      "requested": "unknown-printer",
+      "path": null,
+      "basis": "conceptual_budget_only_not_selected_printer"
+    },
+    "manufacturing_assessment": "NOT_EVALUATED"
+  },
+  "calibration_without_local_wall": {
+    "result": "RETURNED",
+    "calibration_status": "PASS"
+  },
+  "mixed_exports": {
+    "commercial_fan_stl_created": false,
+    "support_stl_created": true,
+    "assembly_step_created": true,
+    "bom_created": true
+  },
+  "checked_release_available": true
+}

@@ -1,0 +1,49 @@
+{
+  "status": "PASS",
+  "version": "1.8.0",
+  "source_entrypoints": 27,
+  "packaged_entrypoints": 27,
+  "source_frozen": true,
+  "new_tests_per_mode": {
+    "interface-library": 5,
+    "technical-drawings": 5,
+    "fit-calibration": 6,
+    "structural-screening": 6,
+    "motion-paths": 5,
+    "access-checks": 4,
+    "variant-campaign": 2,
+    "capabilities-integration": 5
+  },
+  "new_test_total_per_mode": 38,
+  "legacy_controls": 35,
+  "image_source_modules_match": true,
+  "images": {
+    "cad3d-engineering:1.7.0": "sha256:4d7d07da15f97fb04f3d59ca4f7ffe864f394e55a1b558dbee4d76e981d13b0a",
+    "cad3d-engineering:1.8.0": "sha256:81ff095d899a294b16b58435622b2a16555ba5c45ff4e1f1c7d3613f818cfa4a"
+  },
+  "active_doctor": "PASS;1.8.0",
+  "skill_validation": "Skill is valid!",
+  "actual_artifacts": "custom thread STEP/STL roundtrip, orthographic PDF/SVG with CAD section/face-derived dimension PASS",
+  "visual_review": [
+    "drawing-example/plate-preview.png",
+    "drawing-example/section-preview.png"
+  ],
+  "review": "isolated ownership of two independent implementation fronts; separate static gate/isolation review; current identity mismatch RED/GREEN corrected",
+  "native_publication_gates": [
+    "access blocked",
+    "structural assumed/unknown/failed",
+    "current calibration mismatch",
+    "requested drawing dimension unresolved"
+  ],
+  "previous_basket_delivery_unchanged": true,
+  "dependencies_and_orca_unchanged": true,
+  "portable_kit": {
+    "path": "dist/cad3d-1.8.0/CAD3D_Kit.zip",
+    "bytes": 290315,
+    "sha256": "aa75e016e91e5cac6c327bfc299814f78c9cb1a64ac1b50581850e5f9ade993c",
+    "crc_and_inventory_hashes": "PASS"
+  },
+  "token_optimization": "targeted reads, disk logs, minimal-context independent agents and reuse of regression runner; percentage not measured",
+  "physical_validation": "NOT_EVALUATED",
+  "scope_reference": "skills/3d-engineering/references/general_capabilities.md"
+}

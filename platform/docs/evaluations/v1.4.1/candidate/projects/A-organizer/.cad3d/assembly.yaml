@@ -1,0 +1,36 @@
+components:
+  - id: base
+    part: base
+    position_mm: [0, 0, 0]
+  - id: category_a
+    part: module_a
+    position_mm: [-56, -28, 4.5]
+  - id: category_b
+    part: module_b
+    position_mm: [0, -28, 4.5]
+  - id: category_c
+    part: module_c
+    position_mm: [56, -28, 4.5]
+interfaces:
+  - {id: I-A, a: base, b: category_a, type: pin_hole, clearance_mm: 0, intentional_contact: true}
+  - {id: I-B, a: base, b: category_b, type: pin_hole, clearance_mm: 0, intentional_contact: true}
+  - {id: I-C, a: base, b: category_c, type: pin_hole, clearance_mm: 0, intentional_contact: true}
+assembly_steps:
+  - id: remove-category-a
+    moving_component: category_a
+    allowed_contact_pairs: ["category_a::base"]
+    direction_mm: [0, 0, -1]
+    travel_mm: 8
+    samples: 16
+  - id: remove-category-b
+    moving_component: category_b
+    allowed_contact_pairs: ["category_b::base"]
+    direction_mm: [0, 0, -1]
+    travel_mm: 8
+    samples: 16
+  - id: remove-category-c
+    moving_component: category_c
+    allowed_contact_pairs: ["category_c::base"]
+    direction_mm: [0, 0, -1]
+    travel_mm: 8
+    samples: 16

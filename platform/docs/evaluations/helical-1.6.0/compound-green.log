@@ -1,0 +1,26 @@
+...F.......F..
+======================================================================
+FAIL: test_full_helix_can_release_dependent_operation (__main__.Helical.test_full_helix_can_release_dependent_operation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/candidate/scripts/test-helical-motion.py", line 98, in test_full_helix_can_release_dependent_operation
+    r=service.evaluate_steps(p,[first,second]);self.assertTrue(r[0]['removal_proven']);self.assertEqual(r[1]['status'],'PASS')
+                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_short_helix_cannot_prove_prerequisite_removal (__main__.Helical.test_short_helix_cannot_prove_prerequisite_removal)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/candidate/scripts/test-helical-motion.py", line 91, in test_short_helix_cannot_prove_prerequisite_removal
+    r=service.evaluate_steps(p,[first,second]);self.assertEqual(r[0]['status'],'PASS');self.assertFalse(r[0]['removal_proven']);self.assertEqual(r[1]['status'],'NOT_EVALUATED')
+                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'NOT_EVALUATED' != 'PASS'
+- NOT_EVALUATED
++ PASS
+
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.383s
+
+FAILED (failures=2)

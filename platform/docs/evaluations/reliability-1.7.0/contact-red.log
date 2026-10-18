@@ -1,0 +1,16 @@
+F
+======================================================================
+FAIL: test_contact_tolerance_does_not_waive_positive_clearance (__main__.Pairs.test_contact_tolerance_does_not_waive_positive_clearance)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/candidate/scripts/test-reliability-foundation.py", line 24, in test_contact_tolerance_does_not_waive_positive_clearance
+    self.assertEqual(r['status'],'FAIL')
+AssertionError: 'PASS' != 'FAIL'
+- PASS
++ FAIL
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.015s
+
+FAILED (failures=1)

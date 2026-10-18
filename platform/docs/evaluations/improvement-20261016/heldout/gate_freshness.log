@@ -1,0 +1,48 @@
+{
+  "gates": {
+    "gate_True": {
+      "status": "FAIL",
+      "reason": "product_architecture_gate_incomplete",
+      "required_phases": [
+        "requirements",
+        "functional_architecture",
+        "mechanical_architecture"
+      ],
+      "phase_states": {
+        "requirements": "FAIL",
+        "functional_architecture": "FAIL",
+        "mechanical_architecture": "FAIL",
+        "modeling": "NOT_EVALUATED",
+        "system_verification": "NOT_EVALUATED",
+        "manufacturing": "NOT_EVALUATED"
+      },
+      "next_step": "Complete .cad3d/engineering.yaml and .cad3d/assembly.yaml, then run cad3d architecture validate."
+    },
+    "gate_False": {
+      "status": "FAIL",
+      "reason": "product_architecture_gate_incomplete",
+      "required_phases": [
+        "requirements",
+        "functional_architecture",
+        "mechanical_architecture"
+      ],
+      "phase_states": {
+        "requirements": "FAIL",
+        "functional_architecture": "FAIL",
+        "mechanical_architecture": "FAIL",
+        "modeling": "NOT_EVALUATED",
+        "system_verification": "NOT_EVALUATED",
+        "manufacturing": "NOT_EVALUATED"
+      },
+      "next_step": "Complete .cad3d/engineering.yaml and .cad3d/assembly.yaml, then run cad3d architecture validate."
+    }
+  },
+  "freshness": {
+    "model_py_unchanged": true,
+    "inventory_changed": true,
+    "changed_files": [
+      ".cad3d/parameters.json",
+      "geometry.py"
+    ]
+  }
+}

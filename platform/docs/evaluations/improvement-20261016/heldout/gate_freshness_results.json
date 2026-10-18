@@ -1,0 +1,944 @@
+{
+  "gate_True": {
+    "gate": {
+      "status": "FAIL",
+      "reason": "product_architecture_gate_incomplete",
+      "required_phases": [
+        "requirements",
+        "functional_architecture",
+        "mechanical_architecture"
+      ],
+      "phase_states": {
+        "requirements": "FAIL",
+        "functional_architecture": "FAIL",
+        "mechanical_architecture": "FAIL",
+        "modeling": "NOT_EVALUATED",
+        "system_verification": "NOT_EVALUATED",
+        "manufacturing": "NOT_EVALUATED"
+      },
+      "next_step": "Complete .cad3d/engineering.yaml and .cad3d/assembly.yaml, then run cad3d architecture validate."
+    },
+    "architecture": {
+      "status": "FAIL",
+      "workflow_level": "product",
+      "contract": ".cad3d/engineering.yaml",
+      "phases": {
+        "requirements": "FAIL",
+        "functional_architecture": "FAIL",
+        "mechanical_architecture": "FAIL",
+        "modeling": "NOT_EVALUATED",
+        "system_verification": "NOT_EVALUATED",
+        "manufacturing": "NOT_EVALUATED"
+      },
+      "requirements": {},
+      "checks": [
+        {
+          "id": "project-identity",
+          "title": "Identidade e prop\u00f3sito do produto",
+          "status": "PASS",
+          "severity": "critical",
+          "kind": "automated",
+          "evidence": null,
+          "detail": {
+            "missing": []
+          },
+          "recommendation": "Defina nome, classe, fun\u00e7\u00e3o do produto e unidades expl\u00edcitas."
+        },
+        {
+          "id": "unique-requirements",
+          "title": "IDs \u00fanicos: requirements",
+          "status": "PASS",
+          "severity": "critical",
+          "kind": "automated",
+          "evidence": null,
+          "detail": {
+            "invalid_or_duplicate_ids": []
+          },
+          "recommendation": "Declare IDs n\u00e3o vazios e \u00fanicos em requirements."
+        },
+        {
+          "id": "unique-subsystems",
+          "title": "IDs \u00fanicos: subsystems",
+          "status": "PASS",
+          "severity": "critical",
+          "kind": "automated",
+          "evidence": null,
+          "detail": {
+            "invalid_or_duplicate_ids": []
+          },
+          "recommendation": "Declare IDs n\u00e3o vazios e \u00fanicos em subsystems."
+        },
+        {
+          "id": "unique-components",
+          "title": "IDs \u00fanicos: components",
+          "status": "PASS",
+          "severity": "critical",
+          "kind": "automated",
+          "evidence": null,
+          "detail": {
+            "invalid_or_duplicate_ids": []
+          },
+          "recommendation": "Declare IDs n\u00e3o vazios e \u00fanicos em components."
+        },
+        {
+          "id": "unique-interfaces",
+          "title": "IDs \u00fanicos: interfaces",
+          "status": "PASS",
+          "severity": "critical",
+          "kind": "automated",
+          "evidence": null,
+          "detail": {
+            "invalid_or_duplicate_ids": []
+          },
+          "recommendation": "Declare IDs n\u00e3o vazios e \u00fanicos em interfaces."
+        },
+        {
+          "id": "requirements-phase",
+          "title": "Fase 1: requisitos",
+          "status": "FAIL",
+          "severity": "critical",
+          "kind": "automated",
+          "evidence": null,
+          "detail": [
+            {
+              "id": "requirements-operating_conditions",
+              "title": "Operating Conditions",
+              "status": "FAIL",
+              "severity": "critical",
+              "kind": "automated",
+              "evidence": null,
+              "detail": {
+                "item_count": 0
+              },
+              "recommendation": "Registre operating conditions antes de fechar a arquitetura."
+            },
+            {
+              "id": "requirements-measurements",
+              "title": "Measurements",
+              "status": "FAIL",
+              "severity": "critical",
+              "kind": "automated",
+              "evidence": null,
+              "detail": {
+                "item_count": 0
+              },
+              "recommendation": "Registre measurements antes de fechar a arquitetura."
+            },
+            {
+              "id": "requirements-external_interfaces",
+              "title": "External Interfaces",
+              "status": "FAIL",
+              "severity": "critical",
+              "kind": "automated",
+              "evidence": null,
+              "detail": {
+                "item_count": 0
+              },
+              "recommendation": "Registre external interfaces antes de fechar a arquitetura."
+            },
+            {
+              "id": "requirements-acceptance_criteria",
+              "title": "Acceptance Criteria",
+              "status": "FAIL",
+              "severity": "critical",
+              "kind": "automated",
+              "evidence": null,
+              "detail": {
+                "item_count": 0
+              },
+              "recommendation": "Registre acceptance criteria antes de fechar a arquitetura."
+            },
+            {
+              "id": "requirements-risks_and_unknowns",
+              "title": "Risks And Unknowns",
+              "status": "FAIL",
+              "severity": "critical",
+              "kind": "automated",
+              "evidence": null,
+              "detail": {
+                "item_count": 0
+              },
+              "recommendation": "Registre risks and unknowns antes de fechar a arquitetura."
+            },
+            {
+              "id": "measurement-evidence",
+              "title": "Medi\u00e7\u00f5es separadas de hip\u00f3teses",
+              "status": "NOT_EVALUATED",
+              "severity": "critical",
+              "kind": "automated",
+              "evidence": null,
+              "detail": {
+                "unclassified": []
+              },
+              "recommendation": "Classifique cada medida como verified com source, ou assumption com uncertainty."
+            },
+            {
+              "id": "acceptance-criteria-defined",
+              "title": "Crit\u00e9rios de aceita\u00e7\u00e3o mensur\u00e1veis",
+              "status": "NOT_EVALUATED",
+              "severity": "critical",
+              "kind": "automated",
+              "evidence": null,
+              "detail": {
+                "incomplete": []
+              },
+              "recommendation": "Defina m\u00e9todo de verifica\u00e7\u00e3o e limiar observ\u00e1vel para cada crit\u00e9rio."
+            }
+          ],
+          "recommendation": null
+        },
+        {
+          "id": "functional-architecture-phase",
+          "title": "Fase 2: arquitetura funcional",
+          "status": "FAIL",
+          "severity": "critical",
+          "kind": "automated",
+          "evidence": null,
+          "detail": [
+            {
+              "id": "functional-subsystems",
+              "title": "Subsistemas com fun\u00e7\u00e3o",
+              "status": "FAIL",
+              "severity": "critical",
+              "kind": "engineering_judgment",
+              "evidence": null,
+              "detail": {
+                "count": 0,
+                "minimum": 2
+              },
+              "recommendation": "Revise se as fun\u00e7\u00f5es declaradas cobrem conceitualmente a opera\u00e7\u00e3o; presen\u00e7a de campos n\u00e3o comprova funcionamento."
+            },
+            {
+              "id": "unique-flows",
+              "title": "IDs \u00fanicos: flows",
+              "status": "PASS",
+              "severity": "critical",
+              "kind": "automated",
+              "evidence": null,
+              "detail": {
+                "invalid_or_duplicate_ids": []
+              },
+              "recommendation": "Declare IDs n\u00e3o vazios e \u00fanicos em flows."
+            },
+            {
+              "id": "functional-operating_modes",
+              "title": "Operating Modes",
+              "status": "FAIL",
+              "severity": "critical",
+              "kind": "engineering_judgment",
+              "evidence": null,
+              "detail": {
+                "item_count": 0,
+                "evidence_limit": "declared cases require engineering review"
+              },
+              "recommendation": "Revise a cobertura e plausibilidade de operating modes; a lista n\u00e3o comprova comportamento."
+            },
+            {
+              "id": "functional-failure_modes",
+              "title": "Failure Modes",
+              "status": "FAIL",
+              "severity": "critical",
+              "kind": "engineering_judgment",
+              "evidence": null,
+              "detail": {
+                "item_count": 0,
+                "evidence_limit": "declared cases require engineering review"
+              },
+              "recommendation": "Revise a cobertura e plausibilidade de failure modes; a lista n\u00e3o comprova comportamento."
+            }
+          ],
+          "recommendation": null
+        },
+        {
+          "id": "mechanical-architecture-phase",
+          "title": "Fase 3: arquitetura mec\u00e2nica",
+          "status": "FAIL",
+          "severity": "critical",
+          "kind": "automated",
+          "evidence": null,
+          "detail": [
+            {
+              "id": "retention-fan",
+              "title": "Reten\u00e7\u00e3o de fan",
+              "status": "FAIL",
+              "severity": "critical",
+              "kind": "automated",
+              "evidence": {
+                "component": {
+                  "assembly_component": {
+                    "id": "fan",
+                    "part": "fan"
+                  },
+                  "part": "fan",
+                  "function": "cooling",
+                  "retention": {}
+                },
+                "reason": "retention_method_missing"
+              },
+              "detail": null,
+              "recommendation": "Declare o m\u00e9todo e relacione interfaces CAD posicionadas; valide for\u00e7a/retens\u00e3o com m\u00e9todo apropriado."
+            },
+            {
+              "id": "retention-support",
+              "title": "Reten\u00e7\u00e3o de support",
+              "status": "FAIL",
+              "severity": "critical",
+              "kind": "automated",
+              "evidence": {
+                "component": {
+                  "assembly_component": {
+                    "id": "support",
+                    "part": "support"
+                  },
+                  "part": "support",
+                  "function": "support",
+                  "retention": {}
+                },
+                "reason": "retention_method_missing"
+              },
+              "detail": null,
+              "recommendation": "Declare o m\u00e9todo e relacione interfaces CAD posicionadas; valide for\u00e7a/retens\u00e3o com m\u00e9todo apropriado."
+            },
+            {
+              "id": "mechanical-maintenance_access",
+              "title": "Maintenance Access",
+              "status": "FAIL",
+              "severity": "major",
+              "kind": "engineering_judgment",
+              "evidence": null,
+              "detail": {
+                "item_count": 0,
+                "evidence_limit": "declaration completeness only; outcome is not physically verified"
+              },
+              "recommendation": "Revise a viabilidade real de maintenance access e vincule a uma evid\u00eancia executada."
+            },
+            {
+              "id": "mechanical-assembly_steps",
+              "title": "Assembly Steps",
+              "status": "FAIL",
+              "severity": "major",
+              "kind": "engineering_judgment",
+              "evidence": null,
+              "detail": {
+                "item_count": 0,
+                "evidence_limit": "declaration completeness only; outcome is not physically verified"
+              },
+              "recommendation": "Revise a viabilidade real de assembly steps e vincule a uma evid\u00eancia executada."
+            },
+            {
+              "id": "mechanical-print_split",
+              "title": "Print Split",
+              "status": "FAIL",
+              "severity": "major",
+              "kind": "engineering_judgment",
+              "evidence": null,
+              "detail": {
+                "item_count": 0,
+                "evidence_limit": "declaration completeness only; outcome is not physically verified"
+              },
+              "recommendation": "Revise a viabilidade real de print split e vincule a uma evid\u00eancia executada."
+            }
+          ],
+          "recommendation": null
+        },
+        {
+          "id": "system-verification-phase",
+          "title": "Fase 5: verifica\u00e7\u00e3o sist\u00eamica",
+          "status": "PASS",
+          "severity": "critical",
+          "kind": "automated",
+          "evidence": null,
+          "detail": [
+            {
+              "id": "residual-risks",
+              "title": "Riscos residuais classificados",
+              "status": "PASS",
+              "severity": "major",
+              "kind": "engineering_judgment",
+              "evidence": {
+                "open_risks": []
+              },
+              "detail": null,
+              "recommendation": "Reduza riscos cr\u00edticos antes da aprova\u00e7\u00e3o; mantenha riscos n\u00e3o fechados no relat\u00f3rio."
+            },
+            {
+              "id": "cad-review-input",
+              "title": "Relat\u00f3rio CAD atual presente e sem falha cr\u00edtica",
+              "status": "NOT_EVALUATED",
+              "severity": "critical",
+              "kind": "automated",
+              "evidence": {
+                "path": null,
+                "states": null,
+                "source_freshness": {
+                  "status": "NOT_EVALUATED",
+                  "reason": "manifest_missing"
+                }
+              },
+              "detail": null,
+              "recommendation": "Execute cad3d validate depois da \u00faltima mudan\u00e7a de geometria ou pose."
+            }
+          ],
+          "recommendation": null
+        },
+        {
+          "id": "modeling-phase",
+          "title": "Fase 4: modelagem",
+          "status": "NOT_EVALUATED",
+          "severity": "critical",
+          "kind": "automated",
+          "evidence": null,
+          "detail": [
+            {
+              "id": "component-model-links",
+              "title": "Fase 4: pe\u00e7as e componentes modelados",
+              "status": "NOT_EVALUATED",
+              "severity": "critical",
+              "kind": "automated",
+              "evidence": {
+                "missing_parts": [],
+                "shape_names": null
+              },
+              "detail": null,
+              "recommendation": "Gere ou corrija as pe\u00e7as param\u00e9tricas referenciadas no contrato."
+            }
+          ],
+          "recommendation": null
+        },
+        {
+          "id": "manufacturing-phase",
+          "title": "Fase 6: fabrica\u00e7\u00e3o",
+          "status": "NOT_EVALUATED",
+          "severity": "major",
+          "kind": "automated",
+          "evidence": null,
+          "detail": [
+            {
+              "id": "physical-validation",
+              "title": "Valida\u00e7\u00e3o f\u00edsica",
+              "status": "NOT_EVALUATED",
+              "severity": "major",
+              "kind": "engineering_judgment",
+              "evidence": null,
+              "detail": null,
+              "recommendation": "Registre resultados dimensionais e funcionais de prot\u00f3tipo quando houver impress\u00e3o f\u00edsica."
+            }
+          ],
+          "recommendation": null
+        }
+      ],
+      "flow_paths": [],
+      "limits": [
+        "contract completeness is not engineering proof",
+        "contact-free CAD pairs do not prove structural retention or joint strength",
+        "judgment, loads, seals, physical fit and functional behavior require review/test"
+      ]
+    }
+  },
+  "gate_False": {
+    "gate": {
+      "status": "FAIL",
+      "reason": "product_architecture_gate_incomplete",
+      "required_phases": [
+        "requirements",
+        "functional_architecture",
+        "mechanical_architecture"
+      ],
+      "phase_states": {
+        "requirements": "FAIL",
+        "functional_architecture": "FAIL",
+        "mechanical_architecture": "FAIL",
+        "modeling": "NOT_EVALUATED",
+        "system_verification": "NOT_EVALUATED",
+        "manufacturing": "NOT_EVALUATED"
+      },
+      "next_step": "Complete .cad3d/engineering.yaml and .cad3d/assembly.yaml, then run cad3d architecture validate."
+    },
+    "architecture": {
+      "status": "FAIL",
+      "workflow_level": "product",
+      "contract": ".cad3d/engineering.yaml",
+      "phases": {
+        "requirements": "FAIL",
+        "functional_architecture": "FAIL",
+        "mechanical_architecture": "FAIL",
+        "modeling": "NOT_EVALUATED",
+        "system_verification": "NOT_EVALUATED",
+        "manufacturing": "NOT_EVALUATED"
+      },
+      "requirements": {},
+      "checks": [
+        {
+          "id": "project-identity",
+          "title": "Identidade e prop\u00f3sito do produto",
+          "status": "PASS",
+          "severity": "critical",
+          "kind": "automated",
+          "evidence": null,
+          "detail": {
+            "missing": []
+          },
+          "recommendation": "Defina nome, classe, fun\u00e7\u00e3o do produto e unidades expl\u00edcitas."
+        },
+        {
+          "id": "unique-requirements",
+          "title": "IDs \u00fanicos: requirements",
+          "status": "PASS",
+          "severity": "critical",
+          "kind": "automated",
+          "evidence": null,
+          "detail": {
+            "invalid_or_duplicate_ids": []
+          },
+          "recommendation": "Declare IDs n\u00e3o vazios e \u00fanicos em requirements."
+        },
+        {
+          "id": "unique-subsystems",
+          "title": "IDs \u00fanicos: subsystems",
+          "status": "PASS",
+          "severity": "critical",
+          "kind": "automated",
+          "evidence": null,
+          "detail": {
+            "invalid_or_duplicate_ids": []
+          },
+          "recommendation": "Declare IDs n\u00e3o vazios e \u00fanicos em subsystems."
+        },
+        {
+          "id": "unique-components",
+          "title": "IDs \u00fanicos: components",
+          "status": "PASS",
+          "severity": "critical",
+          "kind": "automated",
+          "evidence": null,
+          "detail": {
+            "invalid_or_duplicate_ids": []
+          },
+          "recommendation": "Declare IDs n\u00e3o vazios e \u00fanicos em components."
+        },
+        {
+          "id": "unique-interfaces",
+          "title": "IDs \u00fanicos: interfaces",
+          "status": "PASS",
+          "severity": "critical",
+          "kind": "automated",
+          "evidence": null,
+          "detail": {
+            "invalid_or_duplicate_ids": []
+          },
+          "recommendation": "Declare IDs n\u00e3o vazios e \u00fanicos em interfaces."
+        },
+        {
+          "id": "requirements-phase",
+          "title": "Fase 1: requisitos",
+          "status": "FAIL",
+          "severity": "critical",
+          "kind": "automated",
+          "evidence": null,
+          "detail": [
+            {
+              "id": "requirements-operating_conditions",
+              "title": "Operating Conditions",
+              "status": "FAIL",
+              "severity": "critical",
+              "kind": "automated",
+              "evidence": null,
+              "detail": {
+                "item_count": 0
+              },
+              "recommendation": "Registre operating conditions antes de fechar a arquitetura."
+            },
+            {
+              "id": "requirements-measurements",
+              "title": "Measurements",
+              "status": "FAIL",
+              "severity": "critical",
+              "kind": "automated",
+              "evidence": null,
+              "detail": {
+                "item_count": 0
+              },
+              "recommendation": "Registre measurements antes de fechar a arquitetura."
+            },
+            {
+              "id": "requirements-external_interfaces",
+              "title": "External Interfaces",
+              "status": "FAIL",
+              "severity": "critical",
+              "kind": "automated",
+              "evidence": null,
+              "detail": {
+                "item_count": 0
+              },
+              "recommendation": "Registre external interfaces antes de fechar a arquitetura."
+            },
+            {
+              "id": "requirements-acceptance_criteria",
+              "title": "Acceptance Criteria",
+              "status": "FAIL",
+              "severity": "critical",
+              "kind": "automated",
+              "evidence": null,
+              "detail": {
+                "item_count": 0
+              },
+              "recommendation": "Registre acceptance criteria antes de fechar a arquitetura."
+            },
+            {
+              "id": "requirements-risks_and_unknowns",
+              "title": "Risks And Unknowns",
+              "status": "FAIL",
+              "severity": "critical",
+              "kind": "automated",
+              "evidence": null,
+              "detail": {
+                "item_count": 0
+              },
+              "recommendation": "Registre risks and unknowns antes de fechar a arquitetura."
+            },
+            {
+              "id": "measurement-evidence",
+              "title": "Medi\u00e7\u00f5es separadas de hip\u00f3teses",
+              "status": "NOT_EVALUATED",
+              "severity": "critical",
+              "kind": "automated",
+              "evidence": null,
+              "detail": {
+                "unclassified": []
+              },
+              "recommendation": "Classifique cada medida como verified com source, ou assumption com uncertainty."
+            },
+            {
+              "id": "acceptance-criteria-defined",
+              "title": "Crit\u00e9rios de aceita\u00e7\u00e3o mensur\u00e1veis",
+              "status": "NOT_EVALUATED",
+              "severity": "critical",
+              "kind": "automated",
+              "evidence": null,
+              "detail": {
+                "incomplete": []
+              },
+              "recommendation": "Defina m\u00e9todo de verifica\u00e7\u00e3o e limiar observ\u00e1vel para cada crit\u00e9rio."
+            }
+          ],
+          "recommendation": null
+        },
+        {
+          "id": "functional-architecture-phase",
+          "title": "Fase 2: arquitetura funcional",
+          "status": "FAIL",
+          "severity": "critical",
+          "kind": "automated",
+          "evidence": null,
+          "detail": [
+            {
+              "id": "functional-subsystems",
+              "title": "Subsistemas com fun\u00e7\u00e3o",
+              "status": "FAIL",
+              "severity": "critical",
+              "kind": "engineering_judgment",
+              "evidence": null,
+              "detail": {
+                "count": 0,
+                "minimum": 2
+              },
+              "recommendation": "Revise se as fun\u00e7\u00f5es declaradas cobrem conceitualmente a opera\u00e7\u00e3o; presen\u00e7a de campos n\u00e3o comprova funcionamento."
+            },
+            {
+              "id": "unique-flows",
+              "title": "IDs \u00fanicos: flows",
+              "status": "PASS",
+              "severity": "critical",
+              "kind": "automated",
+              "evidence": null,
+              "detail": {
+                "invalid_or_duplicate_ids": []
+              },
+              "recommendation": "Declare IDs n\u00e3o vazios e \u00fanicos em flows."
+            },
+            {
+              "id": "functional-operating_modes",
+              "title": "Operating Modes",
+              "status": "FAIL",
+              "severity": "critical",
+              "kind": "engineering_judgment",
+              "evidence": null,
+              "detail": {
+                "item_count": 0,
+                "evidence_limit": "declared cases require engineering review"
+              },
+              "recommendation": "Revise a cobertura e plausibilidade de operating modes; a lista n\u00e3o comprova comportamento."
+            },
+            {
+              "id": "functional-failure_modes",
+              "title": "Failure Modes",
+              "status": "FAIL",
+              "severity": "critical",
+              "kind": "engineering_judgment",
+              "evidence": null,
+              "detail": {
+                "item_count": 0,
+                "evidence_limit": "declared cases require engineering review"
+              },
+              "recommendation": "Revise a cobertura e plausibilidade de failure modes; a lista n\u00e3o comprova comportamento."
+            }
+          ],
+          "recommendation": null
+        },
+        {
+          "id": "mechanical-architecture-phase",
+          "title": "Fase 3: arquitetura mec\u00e2nica",
+          "status": "FAIL",
+          "severity": "critical",
+          "kind": "automated",
+          "evidence": null,
+          "detail": [
+            {
+              "id": "retention-fan",
+              "title": "Reten\u00e7\u00e3o de fan",
+              "status": "FAIL",
+              "severity": "critical",
+              "kind": "automated",
+              "evidence": {
+                "component": {
+                  "assembly_component": {
+                    "id": "fan",
+                    "part": "fan"
+                  },
+                  "part": "fan",
+                  "function": "cooling",
+                  "retention": {}
+                },
+                "reason": "retention_method_missing"
+              },
+              "detail": null,
+              "recommendation": "Declare o m\u00e9todo e relacione interfaces CAD posicionadas; valide for\u00e7a/retens\u00e3o com m\u00e9todo apropriado."
+            },
+            {
+              "id": "retention-support",
+              "title": "Reten\u00e7\u00e3o de support",
+              "status": "FAIL",
+              "severity": "critical",
+              "kind": "automated",
+              "evidence": {
+                "component": {
+                  "assembly_component": {
+                    "id": "support",
+                    "part": "support"
+                  },
+                  "part": "support",
+                  "function": "support",
+                  "retention": {}
+                },
+                "reason": "retention_method_missing"
+              },
+              "detail": null,
+              "recommendation": "Declare o m\u00e9todo e relacione interfaces CAD posicionadas; valide for\u00e7a/retens\u00e3o com m\u00e9todo apropriado."
+            },
+            {
+              "id": "mechanical-maintenance_access",
+              "title": "Maintenance Access",
+              "status": "FAIL",
+              "severity": "major",
+              "kind": "engineering_judgment",
+              "evidence": null,
+              "detail": {
+                "item_count": 0,
+                "evidence_limit": "declaration completeness only; outcome is not physically verified"
+              },
+              "recommendation": "Revise a viabilidade real de maintenance access e vincule a uma evid\u00eancia executada."
+            },
+            {
+              "id": "mechanical-assembly_steps",
+              "title": "Assembly Steps",
+              "status": "FAIL",
+              "severity": "major",
+              "kind": "engineering_judgment",
+              "evidence": null,
+              "detail": {
+                "item_count": 0,
+                "evidence_limit": "declaration completeness only; outcome is not physically verified"
+              },
+              "recommendation": "Revise a viabilidade real de assembly steps e vincule a uma evid\u00eancia executada."
+            },
+            {
+              "id": "mechanical-print_split",
+              "title": "Print Split",
+              "status": "FAIL",
+              "severity": "major",
+              "kind": "engineering_judgment",
+              "evidence": null,
+              "detail": {
+                "item_count": 0,
+                "evidence_limit": "declaration completeness only; outcome is not physically verified"
+              },
+              "recommendation": "Revise a viabilidade real de print split e vincule a uma evid\u00eancia executada."
+            }
+          ],
+          "recommendation": null
+        },
+        {
+          "id": "system-verification-phase",
+          "title": "Fase 5: verifica\u00e7\u00e3o sist\u00eamica",
+          "status": "PASS",
+          "severity": "critical",
+          "kind": "automated",
+          "evidence": null,
+          "detail": [
+            {
+              "id": "residual-risks",
+              "title": "Riscos residuais classificados",
+              "status": "PASS",
+              "severity": "major",
+              "kind": "engineering_judgment",
+              "evidence": {
+                "open_risks": []
+              },
+              "detail": null,
+              "recommendation": "Reduza riscos cr\u00edticos antes da aprova\u00e7\u00e3o; mantenha riscos n\u00e3o fechados no relat\u00f3rio."
+            },
+            {
+              "id": "cad-review-input",
+              "title": "Relat\u00f3rio CAD atual presente e sem falha cr\u00edtica",
+              "status": "NOT_EVALUATED",
+              "severity": "critical",
+              "kind": "automated",
+              "evidence": {
+                "path": null,
+                "states": null,
+                "source_freshness": {
+                  "status": "NOT_EVALUATED",
+                  "reason": "manifest_missing"
+                }
+              },
+              "detail": null,
+              "recommendation": "Execute cad3d validate depois da \u00faltima mudan\u00e7a de geometria ou pose."
+            }
+          ],
+          "recommendation": null
+        },
+        {
+          "id": "modeling-phase",
+          "title": "Fase 4: modelagem",
+          "status": "NOT_EVALUATED",
+          "severity": "critical",
+          "kind": "automated",
+          "evidence": null,
+          "detail": [
+            {
+              "id": "component-model-links",
+              "title": "Fase 4: pe\u00e7as e componentes modelados",
+              "status": "NOT_EVALUATED",
+              "severity": "critical",
+              "kind": "automated",
+              "evidence": {
+                "missing_parts": [],
+                "shape_names": null
+              },
+              "detail": null,
+              "recommendation": "Gere ou corrija as pe\u00e7as param\u00e9tricas referenciadas no contrato."
+            }
+          ],
+          "recommendation": null
+        },
+        {
+          "id": "manufacturing-phase",
+          "title": "Fase 6: fabrica\u00e7\u00e3o",
+          "status": "NOT_EVALUATED",
+          "severity": "major",
+          "kind": "automated",
+          "evidence": null,
+          "detail": [
+            {
+              "id": "physical-validation",
+              "title": "Valida\u00e7\u00e3o f\u00edsica",
+              "status": "NOT_EVALUATED",
+              "severity": "major",
+              "kind": "engineering_judgment",
+              "evidence": null,
+              "detail": null,
+              "recommendation": "Registre resultados dimensionais e funcionais de prot\u00f3tipo quando houver impress\u00e3o f\u00edsica."
+            }
+          ],
+          "recommendation": null
+        }
+      ],
+      "flow_paths": [],
+      "limits": [
+        "contract completeness is not engineering proof",
+        "contact-free CAD pairs do not prove structural retention or joint strength",
+        "judgment, loads, seals, physical fit and functional behavior require review/test"
+      ]
+    }
+  },
+  "freshness": {
+    "old": {
+      "schema": "cad3d-project-inputs-v1",
+      "sha256": "cb2e7c78617a1000d67319d4eed223ea1b334a532372152807d9b30b63f4ab09",
+      "files": [
+        {
+          "path": ".cad3d/assembly.yaml",
+          "sha256": "c604c450c2ff3863060c06a25d3986eed392aa9140474b8c06478890bdaeb6af"
+        },
+        {
+          "path": ".cad3d/engineering.yaml",
+          "sha256": "e076ca0dc2dc06799c1023507d996ddce30b64ed9bb463d8508aaae128aaaf44"
+        },
+        {
+          "path": ".cad3d/parameters.json",
+          "sha256": "6adf09dd06cadd61ce5fbd21a721d5159611e2b38a1ac157c980c5ac4f52d7ea"
+        },
+        {
+          "path": ".cad3d/project.yaml",
+          "sha256": "3d1958a66362440fc697c8ab75028c1c1342585d417da34a7bf788f068b6e95b"
+        },
+        {
+          "path": "geometry.py",
+          "sha256": "05010e03408037e8b0e384e2a00230dacc981b214b5cfd6d992c7d56c4fda643"
+        },
+        {
+          "path": "model.py",
+          "sha256": "3f8e765d4ad97fdfe1d4b499b751284066a12c6e0c5f72dc9511021508021251"
+        }
+      ],
+      "scope": "project-local Python and configuration plus declared source_inputs; excludes generated/cache/hidden paths and external runtime inputs"
+    },
+    "new": {
+      "schema": "cad3d-project-inputs-v1",
+      "sha256": "2f61e65dc5de5eefed6094e85b78efe8ab30539d37894355dbb6d93464828832",
+      "files": [
+        {
+          "path": ".cad3d/assembly.yaml",
+          "sha256": "c604c450c2ff3863060c06a25d3986eed392aa9140474b8c06478890bdaeb6af"
+        },
+        {
+          "path": ".cad3d/engineering.yaml",
+          "sha256": "e076ca0dc2dc06799c1023507d996ddce30b64ed9bb463d8508aaae128aaaf44"
+        },
+        {
+          "path": ".cad3d/parameters.json",
+          "sha256": "c52ec596530abaaa62c8c77568ec0cea1a8aaecd38980dd314eba0aca59d4952"
+        },
+        {
+          "path": ".cad3d/project.yaml",
+          "sha256": "3d1958a66362440fc697c8ab75028c1c1342585d417da34a7bf788f068b6e95b"
+        },
+        {
+          "path": "geometry.py",
+          "sha256": "1a0655a66d1397507f8073024164e6f0411ebd79795c00951a9cd1c18cec8859"
+        },
+        {
+          "path": "model.py",
+          "sha256": "3f8e765d4ad97fdfe1d4b499b751284066a12c6e0c5f72dc9511021508021251"
+        }
+      ],
+      "scope": "project-local Python and configuration plus declared source_inputs; excludes generated/cache/hidden paths and external runtime inputs"
+    },
+    "model_py_unchanged": true,
+    "inventory_changed": true,
+    "changed_files": [
+      ".cad3d/parameters.json",
+      "geometry.py"
+    ]
+  }
+}

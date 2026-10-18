@@ -1,0 +1,148 @@
+engineering:
+  schema_version: 1
+  workflow_level: product
+  model_gate: true
+  project:
+    name: organizador-modular-de-bancada
+    class: FDM printed desktop organizer
+    purpose: Store small tools in three removable and reconfigurable categories within a 180 x 120 x 70 mm internal envelope.
+    units: mm
+  operating_conditions:
+    - id: bench_use
+      condition: Indoor stationary use on a level workbench; hand insertion and removal of lightweight small tools.
+  measurements:
+    - id: envelope
+      name: Available internal envelope
+      value_mm: [180, 120, 70]
+      confidence: verified
+      source: User-specified requirement in project request.
+    - id: object_sizes
+      name: Tool dimensions and quantities by category
+      confidence: assumption
+      uncertainty: Unknown; no objects or dimensions supplied. Available module internal space is only a provisional capacity estimate.
+  external_interfaces:
+    - id: bench_footprint
+      description: Flat underside rests on workbench; maximum nominal footprint 180 x 120 mm.
+  acceptance_criteria:
+    - id: fit_envelope
+      description: All organizer parts remain inside the 180 x 120 x 70 mm envelope.
+      method: CAD bounding-box inspection
+      threshold: No component extent exceeds the specified internal envelope.
+    - id: removable_modules
+      description: Three modules can be removed and repositioned by hand without a tool.
+      method: CAD interface inspection, then physical fit trial
+      threshold: Lift-out/remount motion has no geometric interference; physical force and usability checked on prototype.
+    - id: retrieval_access
+      description: Contents remain visible and can be grasped from above/front.
+      method: Engineering review and physical usability trial
+      threshold: Open-top trays with front scoop; all contents reachable by fingers.
+  risks_and_unknowns:
+    - id: object_envelope_unknown
+      description: Tools may not fit the provisional tray clear area or may require tailored dividers.
+      mitigation: Measure the largest width, length, height and quantity in each category; adjust parameters and internal layouts before final print.
+      status: OPEN
+    - id: fit_tolerance
+      description: 0.7 mm module-to-module gap is an uncalibrated starting assumption for the selected FDM process.
+      mitigation: Print a module-spacing and perimeter-lip coupon; tune spacing using the actual printer, nozzle and material.
+      status: OPEN
+  requirements:
+    - id: REQ-ENV
+      description: Fit within the internal envelope 180 x 120 x 70 mm.
+      subsystem: support
+      components: [base]
+      verification: {method: CAD bounding box}
+    - id: REQ-CAT
+      description: Provide three separately removable modules, one per tool category.
+      subsystem: storage
+      components: [module_1, module_2, module_3]
+      verification: {method: Component and interface review}
+    - id: REQ-ACCESS
+      description: Keep contents open and reachable without special tools.
+      subsystem: storage
+      components: [module_1, module_2, module_3]
+      verification: {method: Geometry and physical usability review}
+  functional_architecture:
+    subsystems:
+      - id: support
+        purpose: Provide a stable low platform with a shallow perimeter lip to keep modules on the base.
+      - id: storage
+        purpose: Hold and segregate three categories in open removable trays.
+    flows:
+      - id: hand_load
+        path: [storage, module_1]
+        description: Tools are placed or retrieved vertically through the open top and front scoop.
+    operating_modes:
+      - id: configured
+        description: Three modules resting on the base for storage and retrieval.
+      - id: reconfigure
+        description: Lift a module by its front edge and place it in another position by hand.
+    failure_modes:
+      - id: poor_spacing
+        effect: Printed modules bind or gaps are too large for neat side-by-side storage.
+        response: Measure a spacing coupon and update module clearance.
+      - id: undersized_capacity
+        effect: Tools do not fit the provisional internal tray area.
+        response: Measure objects and revise the module dimensions or layout before production.
+  mechanical_architecture:
+    components:
+      - id: base
+        function: Support organizer and provide perimeter lip.
+        part: base
+        position: XY centered; bottom at Z=0.
+        retention: {method: monolithic}
+      - id: module_1
+        function: Removable storage for category 1.
+        part: module_1
+        position: First of three equal-width slots.
+        retention: {method: intentional_free, reason: Tray is deliberately lift-out removable and gravity seated.}
+      - id: module_2
+        function: Removable storage for category 2.
+        part: module_2
+        position: Middle of three equal-width slots.
+        retention: {method: intentional_free, reason: Tray is deliberately lift-out removable and gravity seated.}
+      - id: module_3
+        function: Removable storage for category 3.
+        part: module_3
+        position: Third of three equal-width slots.
+        retention: {method: intentional_free, reason: Tray is deliberately lift-out removable and gravity seated.}
+    interfaces:
+      - id: tray_1_base_support
+        components: [base, module_1]
+        kind: contact_support
+        positioning: XY centered footprint; tray rests on base top and lifts along +Z.
+        tolerance_mm: 0.0
+        material_process: Elegoo Centauri Carbon 2 Combo profile and PETG estimate; not calibrated.
+      - id: tray_2_base_support
+        components: [base, module_2]
+        kind: contact_support
+        positioning: XY centered footprint; tray rests on base top and lifts along +Z.
+        tolerance_mm: 0.0
+        material_process: Elegoo Centauri Carbon 2 Combo profile and PETG estimate; not calibrated.
+      - id: tray_3_base_support
+        components: [base, module_3]
+        kind: contact_support
+        positioning: XY centered footprint; tray rests on base top and lifts along +Z.
+        tolerance_mm: 0.0
+        material_process: Elegoo Centauri Carbon 2 Combo profile and PETG estimate; not calibrated.
+    assembly_steps:
+      - step: 1
+        action: Place base flat on bench.
+      - step: 2
+        action: Lower each selected category tray vertically onto the base, within its perimeter lip.
+      - step: 3
+        action: For reconfiguration, lift tray by the accessible front edge and lower into the desired slot.
+    maintenance_access:
+      - id: contents
+        description: Open top exposes all contents; front scoop allows finger access and tray lifting.
+      - id: cleaning
+        description: Modules lift out vertically without tools for cleaning and rearrangement.
+    print_split:
+      - id: base_print
+        description: Base prints as one flat part, underside on build plate.
+      - id: tray_print
+        description: Each shallow open tray prints individually, floor on build plate; no supports intended.
+  manufacturing:
+    physical_validation: NOT_EVALUATED
+  visualization:
+    hidden_components: [base]
+    critical_interfaces: [tray_1_base_support]

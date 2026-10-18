@@ -1,0 +1,146 @@
+{
+  "schema": "product-design-vocabulary-v1",
+  "styles": {
+    "minimalista": {
+      "signature": [
+        "hierarquia de volumes",
+        "juntas organizadas",
+        "poucos detalhes intencionais"
+      ],
+      "avoid": [
+        "caixa genérica apenas arredondada",
+        "ocultar a pega até impedir acesso"
+      ],
+      "variants": {
+        "domestico": {
+          "form": "proporções calmas e transições suaves",
+          "cmf": "contraste baixo; textura real do processo",
+          "references": [
+            "stowit"
+          ]
+        },
+        "preciso": {
+          "form": "planos e juntas alinhados; transições controladas",
+          "cmf": "separação sutil de superfícies",
+          "references": [
+            "toolbox"
+          ]
+        }
+      },
+      "check": "A silhueta e a interação permanecem reconhecíveis sem decoração?"
+    },
+    "gamer": {
+      "signature": [
+        "gesto direcional dominante",
+        "hierarquia de painéis",
+        "detalhes coerentes entre peças"
+      ],
+      "avoid": [
+        "cortes sem relação",
+        "RGB como única identidade",
+        "ventilação decorativa que prejudique função"
+      ],
+      "variants": {
+        "discreto": {
+          "form": "volume dominante contido; acentos localizados",
+          "cmf": "contraste moderado sem depender de iluminação",
+          "references": [
+            "xbox"
+          ]
+        },
+        "expressivo": {
+          "form": "facetas e direções estruturadas; intensidade escolhida",
+          "cmf": "acento reforça a direção principal",
+          "references": [
+            "hyperion"
+          ]
+        }
+      },
+      "check": "A direção é reconhecível com luz decorativa desligada?"
+    },
+    "industrial": {
+      "signature": [
+        "construção legível",
+        "serviço acessível",
+        "detalhes ligados à função"
+      ],
+      "avoid": [
+        "parafusos falsos",
+        "relevos que só aparentam resistência"
+      ],
+      "variants": {
+        "precisao": {
+          "form": "alinhamentos e hierarquia modular; fixações ordenadas",
+          "cmf": "processo e material explicitados",
+          "references": [
+            "systainer"
+          ]
+        },
+        "robusto": {
+          "form": "proteções e pegas relacionadas ao uso real",
+          "cmf": "superfícies de contato diferenciadas quando necessário",
+          "references": [
+            "pelican"
+          ]
+        }
+      },
+      "check": "Cada proteção e elemento de serviço tem função explicada e verificação própria?"
+    },
+    "organico": {
+      "signature": [
+        "silhueta fluida",
+        "variação deliberada de seções",
+        "juntas relacionadas às curvas"
+      ],
+      "avoid": [
+        "apenas fillet nos cantos",
+        "conforto presumido por arredondamento"
+      ],
+      "variants": {
+        "seixo": {
+          "form": "contorno contínuo e volume envolvente",
+          "cmf": "textura suporta o contorno sem esconder facetas",
+          "references": [
+            "pebbles"
+          ]
+        },
+        "fluido": {
+          "form": "assimetria ou transições graduais com continuidade estudada",
+          "cmf": "reflexos ajudam a inspecionar superfícies",
+          "references": [
+            "cobra"
+          ]
+        }
+      },
+      "check": "Planta e elevação mostram transformação de forma além de cantos arredondados?"
+    },
+    "retro": {
+      "signature": [
+        "época ou família escolhida",
+        "proporções coerentes",
+        "controles e detalhes do mesmo vocabulário"
+      ],
+      "avoid": [
+        "misturar épocas sem intenção",
+        "dourado como prova de Art Déco"
+      ],
+      "variants": {
+        "art_deco": {
+          "form": "organização geométrica referenciada a objetos dos anos 1920–1930",
+          "cmf": "contraste e materiais tratados como proposta de processo",
+          "references": [
+            "artdeco"
+          ]
+        },
+        "anos_1950": {
+          "form": "ombros arredondados e elementos de interação definidos",
+          "cmf": "paleta e acabamentos coerentes com a direção escolhida",
+          "references": [
+            "smeg"
+          ]
+        }
+      },
+      "check": "É possível explicar a referência temporal sem depender apenas da cor?"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "status": "NOT_EVALUATED",
+  "scope": "PRESET_CHAIN_AND_ENGINE_ONLY",
+  "requested": {
+    "printer": "elegoo-cc2",
+    "material": "petg-cf",
+    "process": "standard-0.20"
+  },
+  "supported": {
+    "printers": [
+      "elegoo-cc2"
+    ],
+    "materials": [
+      "petg"
+    ],
+    "processes": [
+      "standard-0.20"
+    ]
+  },
+  "slicing": "NOT_PERFORMED",
+  "physical_validation": "NOT_EVALUATED",
+  "printer_communication": "NOT_PERFORMED",
+  "reason": "unsupported material profile: petg-cf"
+}

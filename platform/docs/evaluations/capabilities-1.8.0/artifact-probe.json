@@ -1,0 +1,180 @@
+{
+  "status": "PASS",
+  "thread_library": {
+    "type": "thread_pair",
+    "units": "mm",
+    "parameters": {
+      "type": "thread_pair",
+      "major_diameter_mm": 12,
+      "pitch_mm": 2,
+      "length_mm": 6,
+      "thread_depth_mm": 0.8,
+      "radial_clearance_mm": 0.2,
+      "wall_mm": 2,
+      "handedness": "right"
+    },
+    "physical_validation": "NOT_EVALUATED",
+    "fit_validation": "NOT_EVALUATED",
+    "manufacturing_validation": "NOT_EVALUATED",
+    "scope": "nominal CAD solids; caller dimensions, no standard fit or physical qualification",
+    "handedness": "right",
+    "pitch_mm": 2.0,
+    "starts": 1,
+    "lead_mm": 2.0,
+    "profile": "custom triangular 0.70-pitch root width; not ISO",
+    "clearance_scope": "radial crest/root and axial flank cutter expansion; not uniform normal clearance",
+    "nominal_interference": {
+      "status": "PASS",
+      "pairs": [
+        {
+          "pair": "male::female",
+          "method": "atomic_solids_OCP_BREP",
+          "clearance_scope": "global minimum across world-located atomic solid pairs; sampled paths remain separate",
+          "min_clearance_required_mm": 0.0,
+          "intentional_contact": false,
+          "status": "PASS",
+          "solid_pair_count": 1,
+          "intersection_volume_mm3": 0,
+          "classification": "SEPARATED",
+          "reason": "clearance_met",
+          "broad_phase": "OVERLAP",
+          "findings": [],
+          "surface_distance_mm": 0.13005414425400685
+        }
+      ]
+    },
+    "status": "PASS",
+    "cad_validity": "PASS",
+    "parts": {
+      "male": {
+        "volume_mm3": 564.0014852039631,
+        "solid_count": 1
+      },
+      "female": {
+        "volume_mm3": 659.1964808061981,
+        "solid_count": 1
+      }
+    }
+  },
+  "step_stl_roundtrip": "PASS;2actualSTLs",
+  "drawings": {
+    "status": "PASS",
+    "sections": [
+      {
+        "name": "bore-cut",
+        "part": "plate",
+        "axis": "z",
+        "at_mm": 0,
+        "status": "PASS",
+        "area_mm2": 187.4336293856408,
+        "edge_count": 5,
+        "axes": [
+          "X",
+          "Y"
+        ],
+        "files": [
+          "/evidence/drawing-example/plate-section-bore-cut.svg",
+          "/evidence/drawing-example/plate-section-bore-cut.pdf"
+        ]
+      }
+    ],
+    "feature_dimensions": [
+      {
+        "name": "bore",
+        "part": "plate",
+        "type": "diameter",
+        "status": "PASS",
+        "source": "actual_selected_CAD_faces",
+        "face_selections": [
+          {
+            "ref": null,
+            "status": "PASS",
+            "surface": "cylinder",
+            "center_mm": [
+              -2.0,
+              2.4492935982947064e-16,
+              0.0
+            ],
+            "radius_mm": 2.0,
+            "anchor_distance_mm": 0.0,
+            "area_mm2": 75.39822368615503,
+            "normal_dot": null,
+            "selection_basis": "geometric_constraints",
+            "rejection_counts": {
+              "surface_mismatch": 6
+            },
+            "nearest_candidates": [
+              {
+                "surface": "cylinder",
+                "center_mm": [
+                  -2.0,
+                  2.4492935982947064e-16,
+                  0.0
+                ],
+                "radius_mm": 2.0,
+                "anchor_distance_mm": 0.0,
+                "area_mm2": 75.39822368615503
+              }
+            ],
+            "matches": 1
+          }
+        ],
+        "value_mm": 4.0
+      }
+    ],
+    "method": "OCP orthographic hidden-line removal; sampled curve rendering",
+    "units": "mm",
+    "parts": [
+      {
+        "id": "plate",
+        "overall_mm": {
+          "x": 20.0,
+          "y": 10.0,
+          "z": 6.0
+        },
+        "views": [
+          {
+            "name": "front",
+            "visible_edges": 4,
+            "hidden_edges": 10,
+            "axes": [
+              "x",
+              "z"
+            ]
+          },
+          {
+            "name": "top",
+            "visible_edges": 5,
+            "hidden_edges": 5,
+            "axes": [
+              "x",
+              "y"
+            ]
+          },
+          {
+            "name": "right",
+            "visible_edges": 4,
+            "hidden_edges": 12,
+            "axes": [
+              "y",
+              "z"
+            ]
+          }
+        ],
+        "files": [
+          "/evidence/drawing-example/plate.svg",
+          "/evidence/drawing-example/plate.pdf"
+        ]
+      }
+    ],
+    "samples_per_edge": 64,
+    "physical_validation": "NOT_EVALUATED",
+    "standards_compliance": "NOT_EVALUATED",
+    "limitations": [
+      "Overall dimensions and declared CAD-selected feature measurements only; no tolerances, datums or GD&T",
+      "Views independently scaled; numeric dimensions govern",
+      "Curves sampled for rendering; exact BREP bounds supply dimensions"
+    ]
+  },
+  "physical_validation": "NOT_EVALUATED"
+}

@@ -1,0 +1,180 @@
+engineering:
+  schema_version: 1
+  workflow_level: product
+  model_gate: true
+  project:
+    name: organizador modular de bancada
+    class: modular_storage_product
+    purpose: Organizar ferramentas pequenas em três categorias dentro do envelope interno declarado.
+    units: mm
+  operating_conditions:
+    - id: USE-1
+      condition: Uso estacionário sobre bancada; módulos removidos e recolocados manualmente.
+  measurements:
+    - id: ENV-1
+      confidence: verified
+      source: user
+      value_mm: [180, 120, 70]
+    - id: OBJ-1
+      confidence: assumption
+      source: não informado; medir ferramentas reais
+      value_mm: [0, 0, 0]
+      uncertainty: Desconhecida; valores zero são marcadores, não dimensões observadas.
+  external_interfaces:
+    - id: EXT-1
+      type: envelope
+      description: Envelope interno máximo 180 × 120 × 70 mm; assumido como limite de peça, sem folga adicional informada.
+  acceptance_criteria:
+    - id: AC-1
+      method: bounding_box
+      threshold: Montagem completa dentro de 180 × 120 × 70 mm.
+    - id: AC-2
+      method: manual_review
+      threshold: Três áreas abertas, módulos removíveis sem ferramenta e itens acessíveis por cima.
+  risks_and_unknowns:
+    - id: U-OBJ
+      description: Dimensões, forma, quantidade, massa e frequência de acesso das ferramentas não informadas; o encaixe real nas cestas permanece não avaliado.
+      status: NOT_EVALUATED
+      resolution: Inventariar cada categoria; medir comprimento, largura e altura máximos com paquímetro/régua, registrar orientação de armazenamento e quantidade; adicionar folga de retirada e atualizar module_width, module_height e clearance antes de liberar alojamentos.
+    - id: U-FIT
+      description: Folga de pinos impressos não calibrada para máquina, material e orientação específicos.
+      status: NOT_EVALUATED
+      resolution: Imprimir corpos de prova de encaixe com o mesmo perfil FDM e ajustar socket_clearance a partir de medições.
+    - id: U-RET
+      description: Cestas apenas localizadas por pinos; retenção contra levantamento acidental ou tombamento não ensaiada.
+      status: NOT_EVALUATED
+      resolution: Avaliar uso real; se necessário, adicionar trava manual flexível ou tampa após teste de força e fadiga.
+  requirements:
+    - id: REQ-ENV
+      description: A montagem deve caber no envelope interno especificado.
+      subsystem: locating
+      components: [base, category_a, category_b, category_c]
+      verification:
+        method: evidence
+        status: NOT_EVALUATED
+        evidence:
+          - {path: build/outputs/design-evidence.json, json_pointer: /envelope/inside, expected: true}
+    - id: REQ-MOD
+      description: Módulos devem ser reposicionáveis e removíveis manualmente sem ferramenta especial.
+      subsystem: locating
+      components: [base, category_a, category_b, category_c]
+      verification:
+        method: evidence
+        status: NOT_EVALUATED
+        evidence:
+          - {path: build/outputs/validation.json, json_pointer: /assembly/assembly_sequence/status, expected: PASS}
+    - id: REQ-ACCESS
+      description: O eixo central da cesta mantém um caminho aberto de aproximação superior com raio geométrico de 1 mm.
+      subsystem: storage
+      components: [category_a, category_b, category_c]
+      verification: {method: flow_path, target: FLOW-1, status: NOT_EVALUATED}
+    - id: REQ-CAPACITY
+      description: Cada uma das três categorias deve caber em sua cesta sem interferência e com folga para retirada.
+      subsystem: storage
+      components: [category_a, category_b, category_c]
+      verification: {method: physical_fit, status: NOT_EVALUATED}
+  functional_architecture:
+    subsystems:
+      - id: locating
+        purpose: Apoiar e posicionar cestas por pinos em padrão repetido.
+        components: [base, category_a, category_b, category_c]
+      - id: storage
+        purpose: Separar três categorias em cestas abertas e removíveis.
+        components: [category_a, category_b, category_c]
+    flows:
+      - id: FLOW-1
+        path: [storage, locating]
+        medium: caminho de aproximação genérico de uma ferramenta até o interior da cesta (não representa envelope das ferramentas reais)
+        status: NOT_EVALUATED
+        geometry_check:
+          centerline_mm: [[0, 0, 70], [0, 0, 5]]
+          clearance_radius_mm: 1.0
+          sample_step_mm: 1.0
+          domain_bbox_mm: [[-90, -60, -5], [90, 60, 70]]
+    operating_modes:
+      - id: normal
+        description: Guardar e retirar ferramentas pela abertura superior; mover cestas à mão e recolocá-las nos encaixes da base.
+    failure_modes:
+      - id: F-1
+        description: Ferramenta excede a abertura ou fica difícil de pegar.
+        detection: Comparar dimensões e quantidade do inventário com a abertura da cesta e simular retirada manual.
+      - id: F-2
+        description: Pino emperra ou fica solto no soquete após impressão.
+        detection: Medir corpo de prova e testar repetidos encaixes à mão.
+      - id: F-3
+        description: Cesta se levanta ou tomba durante o uso.
+        detection: Ensaio manual nas condições reais de bancada.
+  mechanical_architecture:
+    components:
+      - id: base
+        part: base
+        function: Apoiar e localizar os módulos em uma matriz de posições.
+        retention: {method: monolithic}
+      - id: category_a
+        part: module_a
+        function: Armazenar ferramentas da categoria A em cesta aberta.
+        retention: {method: gravity_seat_and_sliding_clearance, interface_ids: [I-A]}
+      - id: category_b
+        part: module_b
+        function: Armazenar ferramentas da categoria B em cesta aberta.
+        retention: {method: gravity_seat_and_sliding_clearance, interface_ids: [I-B]}
+      - id: category_c
+        part: module_c
+        function: Armazenar ferramentas da categoria C em cesta aberta.
+        retention: {method: gravity_seat_and_sliding_clearance, interface_ids: [I-C]}
+    interfaces:
+      - {id: I-A, components: [base, category_a], kind: vertical_locating_pins, datums: [base_bottom, socket_grid], tolerance_profile: uncalibrated_fdm_clearance}
+      - {id: I-B, components: [base, category_b], kind: vertical_locating_pins, datums: [base_bottom, socket_grid], tolerance_profile: uncalibrated_fdm_clearance}
+      - {id: I-C, components: [base, category_c], kind: vertical_locating_pins, datums: [base_bottom, socket_grid], tolerance_profile: uncalibrated_fdm_clearance}
+    assembly_steps:
+      - {id: A-1, action: Alinhar os quatro pinos da cesta aos soquetes e baixar; para reconfigurar, levantar à mão e mover para outra posição da matriz.}
+    maintenance_access:
+      - {id: M-1, action: Retirar cada cesta verticalmente para limpeza ou reorganização; pegar ferramentas pela abertura superior.}
+    print_split:
+      - {part: base, reason: Peça plana única para impressão FDM.}
+      - {part: modules, reason: Cestas separadas impressas com a abertura voltada para cima.}
+  manufacturing:
+    process: FDM
+    material: PLA ou PETG, escolha final após validação de ambiente e encaixe.
+    physical_validation: NOT_EVALUATED
+  design_study:
+    need_types:
+      - {id: NEED-1, kind: user_need, description: Organizar ferramentas pequenas em três categorias com acesso e reconfiguração manual.}
+      - {id: C-1, kind: hard_constraint, source: user, value: Envelope interno 180 × 120 × 70 mm; FDM.}
+      - {id: PREF-1, kind: preference, description: Acesso visual e retirada direta por cima.}
+      - {id: U-OBJ, kind: assumption, status: NOT_EVALUATED, resolution: Medir ferramentas reais antes de fixar capacidade dos módulos.}
+    concepts:
+      - id: removable_caddies
+        description: Base rasa com matriz de posições e três cestas abertas, cada qual com quatro pinos verticais.
+        tradeoffs: {function: Três categorias separadas com acesso superior, space: Posição configurável em matriz 3 por 2, service: Levantamento manual sem destravar, fabrication: Base e cestas imprimíveis abertas para cima, risk: Folga e capacidade dependem de calibração e das medidas das ferramentas.}
+      - id: sliding_rail_cartridges
+        description: Três cartuchos que deslizam em guias laterais capturadas.
+        tradeoffs: {function: Categorias separadas com boa retenção lateral, space: Exige curso lateral e acesso livre nas extremidades, service: Extração requer alinhamento e curso de trilho, fabrication: Guias longas exigem controle de empenamento e folga, risk: Sujeito a emperramento e maior sensibilidade à tolerância.}
+    selection:
+      concept: removable_caddies
+      rationale: Prioriza retirada vertical intuitiva e reconfiguração sem curso lateral ou ferramenta; as áreas abertas facilitam enxergar e pinçar os objetos.
+      sacrifices: Cestas sem trava positiva contra levantamento ou tombamento; capacidade útil permanece provisória até medir os objetos.
+      reversal_condition: Se o conjunto for transportado ou inclinado com frequência, cartuchos com retenção positiva podem ser melhores.
+    space_budget:
+      - {id: usable_envelope, state: verified, dimensions_mm: [180, 120, 70], source: envelope interno fornecido pelo usuário; folga de instalação não especificada}
+      - {id: base_plate, state: planned, dimensions_mm: [174, 114, 4.5], source: margem nominal de projeto}
+      - {id: modules, state: planned, dimensions_mm: [50, 50, 60], source: geometria parametrizada provisória; não derivada das ferramentas}
+      - {id: service_access, state: NOT_EVALUATED, purpose: Curso vertical livre para retirar cestas e pinçar ferramentas acima das paredes; depende do contexto de bancada.}
+    functions:
+      - {id: FN-1, subsystem: locating, inputs: [cesta com pinos], outputs: [cesta alinhada na base], mode: normal, failure_modes: [encaixe apertado, folga excessiva], verification: corpo de prova e teste manual pendentes}
+      - {id: FN-2, subsystem: storage, inputs: [ferramentas medidas], outputs: [categorias separadas e acessíveis], mode: normal, failure_modes: [objeto excede a abertura, dificuldade de pinça], verification: NÃO AVALIADO até medir e testar os objetos reais}
+  concept_review:
+    status: NOT_EVALUATED
+    answers:
+      primary_outcome: Atendido conceitualmente com três cestas abertas; capacidade real pendente.
+      alternative: Guias deslizantes comparadas; descartadas por exigir curso lateral e folga de trilho.
+      parts: Base localiza; cada cesta armazena uma categoria.
+      reserved_space: Matriz 3 por 2 deixa posições vazias para expansão e reconfiguração; cestas podem ser ampliadas após medição.
+      interfaces: Envelope conhecido; folga interna do móvel e perfil de impressão desconhecidos.
+      service: Retirada vertical manual sem ferramenta, percurso geométrico será amostrado.
+      dimensions: Dimensões das ferramentas são desconhecidas e não foram inventadas.
+      process: Geometria aberta adequada à orientação FDM; avaliação de impressão é preliminar.
+      failures: CAD verifica envelope e conflitos; usabilidade, folga física, estabilidade e capacidade exigem ensaio.
+  visualization:
+    hidden_components: [category_a]
+    critical_interfaces: [I-A, I-B, I-C]

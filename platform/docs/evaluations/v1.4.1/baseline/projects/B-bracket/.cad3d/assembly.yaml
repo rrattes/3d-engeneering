@@ -1,0 +1,23 @@
+id: wall-service-bracket
+contact_tolerance_mm: 0.01
+components:
+  - id: wall_plate
+    part: wall_plate
+    position_mm: [0, 0, 0]
+  - id: removable_carriage
+    part: removable_carriage
+    position_mm: [0, 0, 0]
+interfaces:
+  - id: IF-GUIDE
+    a: wall_plate
+    b: removable_carriage
+    type: sliding
+    clearance_mm: 0.0
+    intentional_contact: true
+assembly_steps:
+  - id: remove_carriage_upward
+    moving_component: removable_carriage
+    direction_mm: [0, 0, -1]
+    travel_mm: 60
+    samples: 12
+    allowed_contact_pairs: [removable_carriage::wall_plate]

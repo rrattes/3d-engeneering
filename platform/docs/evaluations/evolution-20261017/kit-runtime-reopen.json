@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "manifest_hashes_match": true,
+  "checks": [
+    {
+      "part": "body",
+      "step_valid": true,
+      "stl_watertight": true
+    },
+    {
+      "part": "lid",
+      "step_valid": true,
+      "stl_watertight": true
+    }
+  ],
+  "physical_validation": "NOT_EVALUATED"
+}

@@ -1,0 +1,14 @@
+{
+  "schema": "product-design-changes-v1",
+  "revision": "B",
+  "changes": [
+    {
+      "part": "shell",
+      "feature": "exterior transition",
+      "intent": "Make the selected direction visible in the silhouette",
+      "affected_requirements": [
+        "use actual engineering requirement IDs"
+      ]
+    }
+  ]
+}

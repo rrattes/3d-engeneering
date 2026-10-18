@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "version": "1.7.0",
+  "source_checks": 19,
+  "packaged_checks": 19,
+  "new_reliability_tests_per_mode": 16,
+  "preserved_helical_tests_per_mode": 16,
+  "native_release_tests_per_mode": 5,
+  "legacy_acceptance_checks": 35,
+  "source_frozen": true,
+  "image_source_modules_match": true,
+  "images": {
+    "cad3d-engineering:1.6.0": "sha256:eb35556f234c628cd3c01137cd3f28d4a5218dd7fc346be19e09fb7ae8a7c0d6",
+    "cad3d-engineering:1.7.0": "sha256:4d7d07da15f97fb04f3d59ca4f7ffe864f394e55a1b558dbee4d76e981d13b0a"
+  },
+  "actual_basket": {
+    "source_run": "b2424b46c6cf442eb3bed87637e7a560",
+    "selected_faces": [
+      "PASS",
+      "PASS"
+    ],
+    "scoped_thickness": "PASS",
+    "scoped_minimum_sampled_mm": 39.96189500386208,
+    "wrong_phase_collision_detected": true,
+    "original_delivery_unchanged": true
+  },
+  "independent_review": "static review of new modules and integrations; contact-clearance finding corrected with RED/GREEN evidence",
+  "skill_static_validation": "Skill is valid!",
+  "active_doctor": "PASS;1.7.0",
+  "portable_kit": {
+    "path": "dist/cad3d-1.7.0/CAD3D_Kit.zip",
+    "sha256": "55c8f9d189f7d5f400a863e7a5e59d124ccd60dfbce14d963be2a29ce0273248",
+    "bytes": 240976,
+    "inventory_hashes_match": true
+  },
+  "token_optimization": "targeted reads, disk logs, reused regression runner, narrow independent review without full history; savings percentage not measured",
+  "physical_validation": "NOT_EVALUATED"
+}

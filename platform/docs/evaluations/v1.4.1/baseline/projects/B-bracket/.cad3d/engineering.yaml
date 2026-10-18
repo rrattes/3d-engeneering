@@ -1,0 +1,172 @@
+engineering:
+  schema_version: 1
+  workflow_level: product
+  model_gate: true
+  project:
+    name: suporte de parede para manutenção
+    class: suporte FDM de duas peças
+    purpose: sustentar equipamento de 1 kg com remoção repetida do equipamento/carro
+    units: mm
+  operating_conditions:
+    - id: O1
+      description: carga estática nominal de equipamento de 1 kg; ambiente interno assumido
+      status: assumption
+  measurements:
+    - id: M1
+      item: envelope máximo
+      value: 100 x 80 x 50 mm
+      confidence: verified
+      source: requisito fornecido pelo usuário
+    - id: M2
+      item: massa do equipamento
+      value: 1 kg
+      confidence: verified
+      source: requisito fornecido pelo usuário
+    - id: M3
+      item: substrato, padrão de fixação e interface dimensional do equipamento
+      value: desconhecidos
+      confidence: assumption
+      uncertainty: dimensões reais e padrão a medir
+    - id: M4
+      item: padrão proposto dos furos da placa
+      value: quatro furos Ø5,5 mm em 70 x 50 mm
+      confidence: assumption
+      uncertainty: definido para este conceito; não confirmado contra furação existente nem contra âncora selecionada
+  external_interfaces:
+    - id: EXT-WALL
+      description: superfície plana; fixadores e ancoragem a selecionar após identificação do material e medição
+      status: assumption
+    - id: EXT-EQUIPMENT
+      description: equipamento mantido em plataforma por cinta nos rasgos; interface real não fornecida
+      status: assumption
+  acceptance_criteria:
+    - id: AC1
+      description: peças CAD dentro do envelope 100 x 80 x 50 mm
+      method: inspection CAD
+      threshold: <= 100 x 80 x 50 mm
+    - id: AC2
+      description: carro pode ser removido e recolocado sem desmontar a placa
+      method: cycle test
+      threshold: remoção e remontagem sem dano
+    - id: AC3
+      description: sustentar 1 kg em uso real
+      method: prova de carga física
+      threshold: 1 kg sem falha
+  risks_and_unknowns:
+    - id: R1
+      description: material, ancoragem e eventual padrão de furação existente não medidos; padrão CAD 70 x 50 mm é uma hipótese
+      disposition: medir substrato e furação antes de instalar; adaptar a placa ou fixadores se o padrão não coincidir; não há alegação de capacidade do conjunto parede-fixador
+    - id: R2
+      description: capacidade estrutural de peça FDM depende de material, orientação, parâmetros e geometria real da carga
+      disposition: validar por protótipo e prova de carga; não verificada por CAD
+    - id: R3
+      description: dimensões reais do equipamento e retenção não especificadas
+      disposition: plataforma usa cinta; confirmar acesso e retenção antes da fabricação final
+  requirements:
+    - id: REQ-ENV
+      description: envelope máximo total de 100 x 80 x 50 mm
+      subsystem: F2
+      components: [wall_plate, removable_carriage]
+      verification:
+        method: geometry_artifact
+        status: PASS
+        evidence:
+          - {path: build/outputs/validation.json, json_pointer: /states/geometric_validity, expected: PASS}
+    - id: REQ-LOAD
+      description: suportar equipamento de 1 kg
+      subsystem: F3
+      components: [removable_carriage]
+      verification: {method: physical_test, status: NOT_EVALUATED}
+    - id: REQ-SERVICE
+      description: permitir remoção e remontagem repetida do equipamento/carro
+      subsystem: F2
+      components: [removable_carriage]
+      verification:
+        method: sampled_assembly_removal_path
+        status: PASS
+        evidence:
+          - {path: build/outputs/validation.json, json_pointer: /assembly/assembly_sequence/status, expected: PASS}
+    - id: REQ-WALL
+      description: fixação segura à parede
+      subsystem: F1
+      components: [wall_plate]
+      verification: {method: substrate_and_anchor_review, status: NOT_EVALUATED}
+  functional_architecture:
+    subsystems:
+      - id: F1
+        name: placa de parede
+        purpose: interface da carga com os fixadores
+        function: transferir carga para fixadores compatíveis com a parede
+      - id: F2
+        name: guia vertical e carro
+        purpose: localizar e permitir remoção do carro
+        function: localizar e remover o suporte do equipamento
+      - id: F3
+        name: plataforma e cinta
+        purpose: apoiar e reter o equipamento
+        function: apoiar e reter o equipamento
+    flows:
+      - id: LOAD
+        from: equipment
+        to: wall
+        path: [F3, F2, F1]
+        description: peso passa da plataforma ao carro, trilhos, placa, fixadores e substrato
+    operating_modes:
+      - id: MODE-NORMAL
+        description: carro guiado na placa e equipamento retido por cinta
+      - id: MODE-SERVICE
+        description: retirar equipamento/carro pela extremidade superior da guia
+    failure_modes:
+      - id: FM1
+        mode: arrancamento ou falha de âncora
+        effect: queda do conjunto
+        status: NOT_EVALUATED
+      - id: FM2
+        mode: fratura/intercamada ou fluência do polímero
+        effect: queda do equipamento
+        status: NOT_EVALUATED
+  mechanical_architecture:
+    components:
+      - id: wall_plate
+        part: wall_plate
+        function: interface com parede e guia
+        relation: montada na parede
+        retention: {method: fixed_to_datum, datum: face posterior, fastener_interface: IF-WALL}
+      - id: removable_carriage
+        part: removable_carriage
+        function: carro guia e prateleira
+        relation: desliza verticalmente na guia
+        retention: {method: captured_rail, interface_ids: [IF-GUIDE]}
+    interfaces:
+      - id: IF-GUIDE
+        components: [wall_plate, removable_carriage]
+        kind: sliding_guide
+        tolerance_mm: 0.4
+        positioning: {datum: placa frontal, axis: Z}
+        datum: face frontal da placa e eixo vertical Z
+        relation: deslizante, folga nominal de projeto 0,4 mm
+        fit: não calibrado; folga dimensional nominal 0,4 mm; contato intencional no batente inferior
+        service: elevar e retirar pela extremidade superior
+    assembly_steps:
+      - alinhar placa na parede e instalar fixadores apropriados ao substrato medido
+      - descer carro pela extremidade superior até apoiar no batente inferior
+      - colocar equipamento e fechar cinta através dos rasgos da plataforma
+    maintenance_access:
+      - id: MA1
+        description: soltar cinta e retirar equipamento
+      - id: MA2
+        description: elevar carro e removê-lo da guia sem retirar placa da parede
+    print_split:
+      - component: wall_plate
+        orientation: face traseira na mesa; furos acessíveis e sem suportes previstos
+      - component: removable_carriage
+        orientation: plataforma apoiada na mesa; validar orientação no fatiador
+  manufacturing:
+    process: FDM
+    material: PETG genérico, perfil não calibrado
+    physical_validation: NOT_EVALUATED
+    fit_clearance_mm: 0.4
+    notes: Orientações e encaixe são hipóteses de projeto; fatiamento e ensaio físico ainda pendentes.
+  visualization:
+    hidden_components: []
+    critical_interfaces: [IF-GUIDE]

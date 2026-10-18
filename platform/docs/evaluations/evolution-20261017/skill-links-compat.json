@@ -1,0 +1,6 @@
+{
+  "status": "PASS",
+  "missing_links": [],
+  "host_only_substitutions": [],
+  "scope": "local static inspection; not ECC lint execution or real agent discovery"
+}

@@ -1,0 +1,503 @@
+{
+  "status": "PASS",
+  "source_run": "b2424b46c6cf442eb3bed87637e7a560",
+  "selectors": [
+    {
+      "ref": "side",
+      "status": "PASS",
+      "surface": "plane",
+      "center_mm": [
+        35.0,
+        65.15873946910384,
+        93.10248054954135
+      ],
+      "anchor_distance_mm": 0.0,
+      "area_mm2": 1042.7638934211686,
+      "normal_dot": 1.0,
+      "selection_basis": "trimmed_face_point",
+      "rejection_counts": {
+        "anchor_outside_tolerance": 9,
+        "surface_mismatch": 68
+      },
+      "nearest_candidates": [
+        {
+          "surface": "plane",
+          "center_mm": [
+            35.0,
+            65.15873946910384,
+            93.10248054954135
+          ],
+          "anchor_distance_mm": 0.0,
+          "area_mm2": 1042.7638934211686
+        },
+        {
+          "surface": "plane",
+          "center_mm": [
+            -0.009465848760737916,
+            50.0,
+            88.22003436713014
+          ],
+          "anchor_distance_mm": 5.0,
+          "area_mm2": 3651.5662416238147
+        },
+        {
+          "surface": "plane",
+          "center_mm": [
+            0.00534879246940953,
+            60.0,
+            85.16465959026753
+          ],
+          "anchor_distance_mm": 5.0,
+          "area_mm2": 3231.5657543416655
+        },
+        {
+          "surface": "plane",
+          "center_mm": [
+            -0.012694862922239092,
+            74.0,
+            92.9632407777098
+          ],
+          "anchor_distance_mm": 19.0,
+          "area_mm2": 2133.571568443532
+        },
+        {
+          "surface": "plane",
+          "center_mm": [
+            -1.332267629550188e-15,
+            79.0,
+            76.0
+          ],
+          "anchor_distance_mm": 22.114248800264505,
+          "area_mm2": 531.9999999999995
+        }
+      ],
+      "matches": 1
+    },
+    {
+      "ref": "bridge",
+      "status": "PASS",
+      "surface": "plane",
+      "center_mm": [
+        -1.3322676295501878e-15,
+        67.0,
+        116.0
+      ],
+      "anchor_distance_mm": 0.0,
+      "area_mm2": 2211.9999999999995,
+      "normal_dot": 1.0,
+      "selection_basis": "trimmed_face_point",
+      "rejection_counts": {
+        "anchor_outside_tolerance": 9,
+        "surface_mismatch": 68
+      },
+      "nearest_candidates": [
+        {
+          "surface": "plane",
+          "center_mm": [
+            -1.3322676295501878e-15,
+            67.0,
+            116.0
+          ],
+          "anchor_distance_mm": 0.0,
+          "area_mm2": 2211.9999999999995
+        },
+        {
+          "surface": "plane",
+          "center_mm": [
+            -1.3322676295501878e-15,
+            67.0,
+            110.00000000000001
+          ],
+          "anchor_distance_mm": 6.118823416311343,
+          "area_mm2": 811.9999999999995
+        },
+        {
+          "surface": "plane",
+          "center_mm": [
+            0.00534879246940953,
+            60.0,
+            85.16465959026753
+          ],
+          "anchor_distance_mm": 7.200000000000003,
+          "area_mm2": 3231.5657543416655
+        },
+        {
+          "surface": "plane",
+          "center_mm": [
+            -0.009465848760737916,
+            50.0,
+            88.22003436713014
+          ],
+          "anchor_distance_mm": 10.071742649611338,
+          "area_mm2": 3651.5662416238147
+        },
+        {
+          "surface": "plane",
+          "center_mm": [
+            -0.012694862922239092,
+            74.0,
+            92.9632407777098
+          ],
+          "anchor_distance_mm": 15.742934923323542,
+          "area_mm2": 2133.571568443532
+        }
+      ],
+      "matches": 1
+    }
+  ],
+  "scoped_thickness": {
+    "status": "PASS",
+    "minimum_required_mm": 1.2,
+    "method": "OCP_inward_normal_ray_sample",
+    "coverage": "sampled_not_complete",
+    "samples_per_face_axis": 2,
+    "faces": [
+      {
+        "face_ordinal_ephemeral": 1,
+        "face_ref": "side",
+        "surface_type": "PLANE",
+        "status": "PASS",
+        "measured_samples": 3,
+        "unevaluated_samples": 0,
+        "minimum_sampled_mm": 70.0,
+        "maximum_sampled_mm": 70.0,
+        "below_minimum_samples": [],
+        "unevaluated_regions": [],
+        "face_selection": {
+          "ref": "side",
+          "status": "PASS",
+          "surface": "plane",
+          "center_mm": [
+            35.0,
+            65.15873946910384,
+            93.10248054954135
+          ],
+          "anchor_distance_mm": 0.0,
+          "area_mm2": 1042.7638934211686,
+          "normal_dot": 1.0,
+          "selection_basis": "trimmed_face_point",
+          "rejection_counts": {
+            "anchor_outside_tolerance": 9,
+            "surface_mismatch": 68
+          },
+          "nearest_candidates": [
+            {
+              "surface": "plane",
+              "center_mm": [
+                35.0,
+                65.15873946910384,
+                93.10248054954135
+              ],
+              "anchor_distance_mm": 0.0,
+              "area_mm2": 1042.7638934211686
+            },
+            {
+              "surface": "plane",
+              "center_mm": [
+                -0.009465848760737916,
+                50.0,
+                88.22003436713014
+              ],
+              "anchor_distance_mm": 5.0,
+              "area_mm2": 3651.5662416238147
+            },
+            {
+              "surface": "plane",
+              "center_mm": [
+                0.00534879246940953,
+                60.0,
+                85.16465959026753
+              ],
+              "anchor_distance_mm": 5.0,
+              "area_mm2": 3231.5657543416655
+            },
+            {
+              "surface": "plane",
+              "center_mm": [
+                -0.012694862922239092,
+                74.0,
+                92.9632407777098
+              ],
+              "anchor_distance_mm": 19.0,
+              "area_mm2": 2133.571568443532
+            },
+            {
+              "surface": "plane",
+              "center_mm": [
+                -1.332267629550188e-15,
+                79.0,
+                76.0
+              ],
+              "anchor_distance_mm": 22.114248800264505,
+              "area_mm2": 531.9999999999995
+            }
+          ],
+          "matches": 1
+        }
+      },
+      {
+        "face_ordinal_ephemeral": 2,
+        "face_ref": "bridge",
+        "surface_type": "PLANE",
+        "status": "PASS",
+        "measured_samples": 4,
+        "unevaluated_samples": 0,
+        "minimum_sampled_mm": 39.96189500386208,
+        "maximum_sampled_mm": 55.96189500386257,
+        "below_minimum_samples": [],
+        "unevaluated_regions": [],
+        "face_selection": {
+          "ref": "bridge",
+          "status": "PASS",
+          "surface": "plane",
+          "center_mm": [
+            -1.3322676295501878e-15,
+            67.0,
+            116.0
+          ],
+          "anchor_distance_mm": 0.0,
+          "area_mm2": 2211.9999999999995,
+          "normal_dot": 1.0,
+          "selection_basis": "trimmed_face_point",
+          "rejection_counts": {
+            "anchor_outside_tolerance": 9,
+            "surface_mismatch": 68
+          },
+          "nearest_candidates": [
+            {
+              "surface": "plane",
+              "center_mm": [
+                -1.3322676295501878e-15,
+                67.0,
+                116.0
+              ],
+              "anchor_distance_mm": 0.0,
+              "area_mm2": 2211.9999999999995
+            },
+            {
+              "surface": "plane",
+              "center_mm": [
+                -1.3322676295501878e-15,
+                67.0,
+                110.00000000000001
+              ],
+              "anchor_distance_mm": 6.118823416311343,
+              "area_mm2": 811.9999999999995
+            },
+            {
+              "surface": "plane",
+              "center_mm": [
+                0.00534879246940953,
+                60.0,
+                85.16465959026753
+              ],
+              "anchor_distance_mm": 7.200000000000003,
+              "area_mm2": 3231.5657543416655
+            },
+            {
+              "surface": "plane",
+              "center_mm": [
+                -0.009465848760737916,
+                50.0,
+                88.22003436713014
+              ],
+              "anchor_distance_mm": 10.071742649611338,
+              "area_mm2": 3651.5662416238147
+            },
+            {
+              "surface": "plane",
+              "center_mm": [
+                -0.012694862922239092,
+                74.0,
+                92.9632407777098
+              ],
+              "anchor_distance_mm": 15.742934923323542,
+              "area_mm2": 2133.571568443532
+            }
+          ],
+          "matches": 1
+        }
+      }
+    ],
+    "limitations": [
+      "normal-direction samples only",
+      "not exhaustive over face area or all directions",
+      "thin features between sample points may be missed"
+    ],
+    "face_selection": [
+      {
+        "ref": "side",
+        "status": "PASS",
+        "surface": "plane",
+        "center_mm": [
+          35.0,
+          65.15873946910384,
+          93.10248054954135
+        ],
+        "anchor_distance_mm": 0.0,
+        "area_mm2": 1042.7638934211686,
+        "normal_dot": 1.0,
+        "selection_basis": "trimmed_face_point",
+        "rejection_counts": {
+          "anchor_outside_tolerance": 9,
+          "surface_mismatch": 68
+        },
+        "nearest_candidates": [
+          {
+            "surface": "plane",
+            "center_mm": [
+              35.0,
+              65.15873946910384,
+              93.10248054954135
+            ],
+            "anchor_distance_mm": 0.0,
+            "area_mm2": 1042.7638934211686
+          },
+          {
+            "surface": "plane",
+            "center_mm": [
+              -0.009465848760737916,
+              50.0,
+              88.22003436713014
+            ],
+            "anchor_distance_mm": 5.0,
+            "area_mm2": 3651.5662416238147
+          },
+          {
+            "surface": "plane",
+            "center_mm": [
+              0.00534879246940953,
+              60.0,
+              85.16465959026753
+            ],
+            "anchor_distance_mm": 5.0,
+            "area_mm2": 3231.5657543416655
+          },
+          {
+            "surface": "plane",
+            "center_mm": [
+              -0.012694862922239092,
+              74.0,
+              92.9632407777098
+            ],
+            "anchor_distance_mm": 19.0,
+            "area_mm2": 2133.571568443532
+          },
+          {
+            "surface": "plane",
+            "center_mm": [
+              -1.332267629550188e-15,
+              79.0,
+              76.0
+            ],
+            "anchor_distance_mm": 22.114248800264505,
+            "area_mm2": 531.9999999999995
+          }
+        ],
+        "matches": 1
+      },
+      {
+        "ref": "bridge",
+        "status": "PASS",
+        "surface": "plane",
+        "center_mm": [
+          -1.3322676295501878e-15,
+          67.0,
+          116.0
+        ],
+        "anchor_distance_mm": 0.0,
+        "area_mm2": 2211.9999999999995,
+        "normal_dot": 1.0,
+        "selection_basis": "trimmed_face_point",
+        "rejection_counts": {
+          "anchor_outside_tolerance": 9,
+          "surface_mismatch": 68
+        },
+        "nearest_candidates": [
+          {
+            "surface": "plane",
+            "center_mm": [
+              -1.3322676295501878e-15,
+              67.0,
+              116.0
+            ],
+            "anchor_distance_mm": 0.0,
+            "area_mm2": 2211.9999999999995
+          },
+          {
+            "surface": "plane",
+            "center_mm": [
+              -1.3322676295501878e-15,
+              67.0,
+              110.00000000000001
+            ],
+            "anchor_distance_mm": 6.118823416311343,
+            "area_mm2": 811.9999999999995
+          },
+          {
+            "surface": "plane",
+            "center_mm": [
+              0.00534879246940953,
+              60.0,
+              85.16465959026753
+            ],
+            "anchor_distance_mm": 7.200000000000003,
+            "area_mm2": 3231.5657543416655
+          },
+          {
+            "surface": "plane",
+            "center_mm": [
+              -0.009465848760737916,
+              50.0,
+              88.22003436713014
+            ],
+            "anchor_distance_mm": 10.071742649611338,
+            "area_mm2": 3651.5662416238147
+          },
+          {
+            "surface": "plane",
+            "center_mm": [
+              -0.012694862922239092,
+              74.0,
+              92.9632407777098
+            ],
+            "anchor_distance_mm": 15.742934923323542,
+            "area_mm2": 2133.571568443532
+          }
+        ],
+        "matches": 1
+      }
+    ],
+    "measured_samples": 7,
+    "minimum_sampled_mm": 39.96189500386208,
+    "maximum_sampled_mm": 70.0
+  },
+  "wrong_phase_static_collision": {
+    "pair": null,
+    "method": "atomic_solids_OCP_BREP",
+    "clearance_scope": "global minimum across world-located atomic solid pairs; sampled paths remain separate",
+    "min_clearance_required_mm": 0.0,
+    "intentional_contact": true,
+    "status": "FAIL",
+    "solid_pair_count": 1,
+    "intersection_volume_mm3": 23.281112921941684,
+    "classification": "VOLUMETRIC_COLLISION",
+    "reason": "positive_intersection_volume",
+    "broad_phase": "OVERLAP",
+    "findings": [
+      {
+        "pair": null,
+        "intentional_contact": true,
+        "intersection_volume_mm3": 23.281112921941684,
+        "method": "OCP_atomic_solid_common",
+        "status": "FAIL",
+        "surface_distance_mm": 0.0,
+        "classification": "VOLUMETRIC_COLLISION",
+        "reason": "positive_intersection_volume"
+      }
+    ],
+    "surface_distance_mm": 0.0
+  },
+  "physical_validation": "NOT_EVALUATED",
+  "delivery_modified": false
+}

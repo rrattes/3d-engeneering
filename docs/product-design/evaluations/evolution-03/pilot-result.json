@@ -1,0 +1,275 @@
+{
+  "jewelry": {
+    "elapsed_seconds": 5.089,
+    "real_step_parts": 3,
+    "geometry": "PASS",
+    "shape_change": "NOT_DETECTED",
+    "unchanged_plan": {
+      "schema": "product-design-work-plan-v1",
+      "tasks": [
+        {
+          "id": "cad",
+          "kind": "cad",
+          "state": "REUSE",
+          "fingerprint": "a7ee26e82f8673ee85048f35eec3d29f24780404d04b5de635118727ba138d75",
+          "inputs": {},
+          "outputs": {
+            "part-0.step": "2ffd327b8da73cbaa4f06a57a095cb41182a085824182e042a5ee0741903def3",
+            "part-1.step": "b1d4b19ba1d3b84886c9233761e828789bcefbea98824eae606ff95c9998a304",
+            "part-2.step": "b35f62079c58b9eabad06820a7820e4db437a734ff9429fa7aa22be8459c8570"
+          },
+          "reason": "declared inputs/dependencies/environment and output hashes unchanged"
+        },
+        {
+          "id": "render",
+          "kind": "render",
+          "state": "REUSE",
+          "fingerprint": "853ae53497c8c5982ec0e0e3f575f968b7e411902108b5bbaa5c7f3a7adce22f",
+          "inputs": {
+            "part-0.step": "2ffd327b8da73cbaa4f06a57a095cb41182a085824182e042a5ee0741903def3",
+            "part-1.step": "b1d4b19ba1d3b84886c9233761e828789bcefbea98824eae606ff95c9998a304",
+            "part-2.step": "b35f62079c58b9eabad06820a7820e4db437a734ff9429fa7aa22be8459c8570",
+            "render.json": "96aaa89fe435c8575f79f44276ebc192bd7ae396389b0e9ea62633e8a4775614"
+          },
+          "outputs": {
+            "reports/comparison/comparison-iso.png": "c2b6622f3bee4aaf1829945bbec4313f55fea93df8b4f0a32e50dd4a3b527e2f"
+          },
+          "reason": "declared inputs/dependencies/environment and output hashes unchanged"
+        }
+      ],
+      "engineering_acceptance": "NOT_EVALUATED",
+      "limits": [
+        "Reuse applies only to declared file dependencies and environment identities; undeclared state is not tracked.",
+        "No task is executed by this script. A cached image is not a visual review or user decision."
+      ]
+    },
+    "color_plan": {
+      "schema": "product-design-work-plan-v1",
+      "tasks": [
+        {
+          "id": "cad",
+          "kind": "cad",
+          "state": "REUSE",
+          "fingerprint": "a7ee26e82f8673ee85048f35eec3d29f24780404d04b5de635118727ba138d75",
+          "inputs": {},
+          "outputs": {
+            "part-0.step": "2ffd327b8da73cbaa4f06a57a095cb41182a085824182e042a5ee0741903def3",
+            "part-1.step": "b1d4b19ba1d3b84886c9233761e828789bcefbea98824eae606ff95c9998a304",
+            "part-2.step": "b35f62079c58b9eabad06820a7820e4db437a734ff9429fa7aa22be8459c8570"
+          },
+          "reason": "declared inputs/dependencies/environment and output hashes unchanged"
+        },
+        {
+          "id": "render",
+          "kind": "render",
+          "state": "RUN",
+          "fingerprint": "62429fdf5e4fce839ad16b07b6eb18073406896f7b71fd965c719ea462d3fbce",
+          "inputs": {
+            "part-0.step": "2ffd327b8da73cbaa4f06a57a095cb41182a085824182e042a5ee0741903def3",
+            "part-1.step": "b1d4b19ba1d3b84886c9233761e828789bcefbea98824eae606ff95c9998a304",
+            "part-2.step": "b35f62079c58b9eabad06820a7820e4db437a734ff9429fa7aa22be8459c8570",
+            "render.json": "e56ec43e088de517c373b5b08a124887161011585c4345f5909d9610d35f913e"
+          },
+          "outputs": {
+            "reports/comparison/comparison-iso.png": "c2b6622f3bee4aaf1829945bbec4313f55fea93df8b4f0a32e50dd4a3b527e2f"
+          },
+          "reason": "missing/stale execution record, dependency, input, environment or output"
+        }
+      ],
+      "engineering_acceptance": "NOT_EVALUATED",
+      "limits": [
+        "Reuse applies only to declared file dependencies and environment identities; undeclared state is not tracked.",
+        "No task is executed by this script. A cached image is not a visual review or user decision."
+      ]
+    },
+    "actual_renders": 2,
+    "incremental_cad_regenerations": 0,
+    "delivery_before_interruption": {
+      "consistency": "CONSISTENT",
+      "findings": [],
+      "artifact_states": {
+        "cad0": "CURRENT",
+        "cad1": "CURRENT",
+        "cad2": "CURRENT",
+        "render": "CURRENT"
+      },
+      "engineering": {
+        "status": "NOT_EVALUATED"
+      },
+      "limits": [
+        "Consistency does not qualify engineering, aesthetics or physical manufacture.",
+        "Dependency completeness is a producer declaration; hashes do not authenticate execution.",
+        "Owned manifest writers are serialized; external artifact writers are not in an atomic transaction."
+      ]
+    },
+    "interrupted_delivery": {
+      "consistency": "STALE",
+      "findings": [
+        "render: changed render.json"
+      ],
+      "artifact_states": {
+        "cad0": "CURRENT",
+        "cad1": "CURRENT",
+        "cad2": "CURRENT",
+        "render": "STALE"
+      },
+      "engineering": {
+        "status": "NOT_EVALUATED",
+        "reason": "delivery sources are not current"
+      },
+      "limits": [
+        "Consistency does not qualify engineering, aesthetics or physical manufacture.",
+        "Dependency completeness is a producer declaration; hashes do not authenticate execution.",
+        "Owned manifest writers are serialized; external artifact writers are not in an atomic transaction."
+      ]
+    },
+    "previous_pointer_preserved": true,
+    "images": [
+      {
+        "path": "reports/comparison/comparison-iso.png",
+        "sha256": "ce96fe8aa89163594ce01c98762ef5020472cddc065186fb3a7d35daa250196c"
+      }
+    ],
+    "scope": "real STEP import/comparison and CMF render only; no new physical or motion qualification"
+  },
+  "console": {
+    "elapsed_seconds": 4.414,
+    "real_step_parts": 4,
+    "geometry": "PASS",
+    "shape_change": "NOT_DETECTED",
+    "unchanged_plan": {
+      "schema": "product-design-work-plan-v1",
+      "tasks": [
+        {
+          "id": "cad",
+          "kind": "cad",
+          "state": "REUSE",
+          "fingerprint": "282dee97fe075570e3839cbee3211021bc008ae4f89f1ce7b562349b11c9252d",
+          "inputs": {},
+          "outputs": {
+            "part-0.step": "2bb827bda5f99a5fa9ada2b69fe329828c168543d56d83b34d17c4a7a1b18ffb",
+            "part-1.step": "a8a407ab5e90a17b31cdc480648a33cdadee712f301c2f1ea7f0b639a17ccfaa",
+            "part-2.step": "020e65da334d25b7e4acfb9b3b20ea9bb849e28a28c4a7346e33cd016432c4d1",
+            "part-3.step": "b7009a8d34a0b79ef2d8b68273722b5dbb36d73e50d9920d9061e839485ff94f"
+          },
+          "reason": "declared inputs/dependencies/environment and output hashes unchanged"
+        },
+        {
+          "id": "render",
+          "kind": "render",
+          "state": "REUSE",
+          "fingerprint": "70142a80c15eba1e8991ec5b86b19f2685e735c75834cca0875b4ff233c62227",
+          "inputs": {
+            "part-0.step": "2bb827bda5f99a5fa9ada2b69fe329828c168543d56d83b34d17c4a7a1b18ffb",
+            "part-1.step": "a8a407ab5e90a17b31cdc480648a33cdadee712f301c2f1ea7f0b639a17ccfaa",
+            "part-2.step": "020e65da334d25b7e4acfb9b3b20ea9bb849e28a28c4a7346e33cd016432c4d1",
+            "part-3.step": "b7009a8d34a0b79ef2d8b68273722b5dbb36d73e50d9920d9061e839485ff94f",
+            "render.json": "9855e3ffd0f2365f17d5ce2c8c7471e5e0c1d1a4c03a3e9eb02ba8a31afda3ea"
+          },
+          "outputs": {
+            "reports/comparison/comparison-iso.png": "8894ee2aaf7d41d43f25409bd9a411fe0953e3f90deea92702de5b72ab16ef43"
+          },
+          "reason": "declared inputs/dependencies/environment and output hashes unchanged"
+        }
+      ],
+      "engineering_acceptance": "NOT_EVALUATED",
+      "limits": [
+        "Reuse applies only to declared file dependencies and environment identities; undeclared state is not tracked.",
+        "No task is executed by this script. A cached image is not a visual review or user decision."
+      ]
+    },
+    "color_plan": {
+      "schema": "product-design-work-plan-v1",
+      "tasks": [
+        {
+          "id": "cad",
+          "kind": "cad",
+          "state": "REUSE",
+          "fingerprint": "282dee97fe075570e3839cbee3211021bc008ae4f89f1ce7b562349b11c9252d",
+          "inputs": {},
+          "outputs": {
+            "part-0.step": "2bb827bda5f99a5fa9ada2b69fe329828c168543d56d83b34d17c4a7a1b18ffb",
+            "part-1.step": "a8a407ab5e90a17b31cdc480648a33cdadee712f301c2f1ea7f0b639a17ccfaa",
+            "part-2.step": "020e65da334d25b7e4acfb9b3b20ea9bb849e28a28c4a7346e33cd016432c4d1",
+            "part-3.step": "b7009a8d34a0b79ef2d8b68273722b5dbb36d73e50d9920d9061e839485ff94f"
+          },
+          "reason": "declared inputs/dependencies/environment and output hashes unchanged"
+        },
+        {
+          "id": "render",
+          "kind": "render",
+          "state": "RUN",
+          "fingerprint": "c2291970a8c83ea22123c213d9116ea806d6d77a94e3eae026ce8f622dcf2ae3",
+          "inputs": {
+            "part-0.step": "2bb827bda5f99a5fa9ada2b69fe329828c168543d56d83b34d17c4a7a1b18ffb",
+            "part-1.step": "a8a407ab5e90a17b31cdc480648a33cdadee712f301c2f1ea7f0b639a17ccfaa",
+            "part-2.step": "020e65da334d25b7e4acfb9b3b20ea9bb849e28a28c4a7346e33cd016432c4d1",
+            "part-3.step": "b7009a8d34a0b79ef2d8b68273722b5dbb36d73e50d9920d9061e839485ff94f",
+            "render.json": "77a086febf37b65d386d3e46383f93f8ac7fdb35e5e74a9c64cd40a67ca5a7e9"
+          },
+          "outputs": {
+            "reports/comparison/comparison-iso.png": "8894ee2aaf7d41d43f25409bd9a411fe0953e3f90deea92702de5b72ab16ef43"
+          },
+          "reason": "missing/stale execution record, dependency, input, environment or output"
+        }
+      ],
+      "engineering_acceptance": "NOT_EVALUATED",
+      "limits": [
+        "Reuse applies only to declared file dependencies and environment identities; undeclared state is not tracked.",
+        "No task is executed by this script. A cached image is not a visual review or user decision."
+      ]
+    },
+    "actual_renders": 2,
+    "incremental_cad_regenerations": 0,
+    "delivery_before_interruption": {
+      "consistency": "CONSISTENT",
+      "findings": [],
+      "artifact_states": {
+        "cad0": "CURRENT",
+        "cad1": "CURRENT",
+        "cad2": "CURRENT",
+        "cad3": "CURRENT",
+        "render": "CURRENT"
+      },
+      "engineering": {
+        "status": "NOT_EVALUATED"
+      },
+      "limits": [
+        "Consistency does not qualify engineering, aesthetics or physical manufacture.",
+        "Dependency completeness is a producer declaration; hashes do not authenticate execution.",
+        "Owned manifest writers are serialized; external artifact writers are not in an atomic transaction."
+      ]
+    },
+    "interrupted_delivery": {
+      "consistency": "STALE",
+      "findings": [
+        "render: changed render.json"
+      ],
+      "artifact_states": {
+        "cad0": "CURRENT",
+        "cad1": "CURRENT",
+        "cad2": "CURRENT",
+        "cad3": "CURRENT",
+        "render": "STALE"
+      },
+      "engineering": {
+        "status": "NOT_EVALUATED",
+        "reason": "delivery sources are not current"
+      },
+      "limits": [
+        "Consistency does not qualify engineering, aesthetics or physical manufacture.",
+        "Dependency completeness is a producer declaration; hashes do not authenticate execution.",
+        "Owned manifest writers are serialized; external artifact writers are not in an atomic transaction."
+      ]
+    },
+    "previous_pointer_preserved": true,
+    "images": [
+      {
+        "path": "reports/comparison/comparison-iso.png",
+        "sha256": "6ba42613d8609d4fe1adef0b03a23ba9fe7ab363bbee8adecfcee836f921ee23"
+      }
+    ],
+    "scope": "real STEP import/comparison and CMF render only; no new physical or motion qualification"
+  },
+  "elapsed_seconds": 9.511
+}

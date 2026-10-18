@@ -1,0 +1,19 @@
+{
+  "runtime": "1.4.2",
+  "unknown_printer": {
+    "profile_evidence": null,
+    "manufacturing_assessment": "WARNING"
+  },
+  "calibration_without_local_wall": {
+    "result": "EXCEPTION",
+    "type": "UnboundLocalError",
+    "message": "cannot access local variable 'min_wall' where it is not associated with a value"
+  },
+  "mixed_exports": {
+    "commercial_fan_stl_created": true,
+    "support_stl_created": true,
+    "assembly_step_created": false,
+    "bom_created": false
+  },
+  "checked_release_available": false
+}

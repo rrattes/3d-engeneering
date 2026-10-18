@@ -1,0 +1,317 @@
+FFFFFFFFFFFF
+======================================================================
+FAIL: test_arbitrary_axis_and_multistart_lead (__main__.Helical.test_arbitrary_axis_and_multistart_lead)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/candidate/scripts/test-helical-motion.py", line 14, in module
+    try:return importlib.import_module('helical_motion')
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'helical_motion'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/candidate/scripts/test-helical-motion.py", line 26, in test_arbitrary_axis_and_multistart_lead
+    m=self.module();motion=self.motion(axis_direction=[0,2,0],travel_mm=1.5,starts=2)
+      ^^^^^^^^^^^^^
+  File "/candidate/scripts/test-helical-motion.py", line 15, in module
+    except ModuleNotFoundError:self.fail('native helical motion evaluator missing')
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: native helical motion evaluator missing
+
+======================================================================
+FAIL: test_contact_allowance_is_per_original_instance (__main__.Helical.test_contact_allowance_is_per_original_instance)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/candidate/scripts/test-helical-motion.py", line 14, in module
+    try:return importlib.import_module('helical_motion')
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'helical_motion'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/candidate/scripts/test-helical-motion.py", line 48, in test_contact_allowance_is_per_original_instance
+    m=self.module();p={'screw':Pos(4,0,0)*Box(1,1,1),'head':Box(1,1,1),'support':Pos(1,0,0)*Box(1,1,1)}
+      ^^^^^^^^^^^^^
+  File "/candidate/scripts/test-helical-motion.py", line 15, in module
+    except ModuleNotFoundError:self.fail('native helical motion evaluator missing')
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: native helical motion evaluator missing
+
+======================================================================
+FAIL: test_declared_contact_never_waives_positive_volume (__main__.Helical.test_declared_contact_never_waives_positive_volume)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/candidate/scripts/test-helical-motion.py", line 14, in module
+    try:return importlib.import_module('helical_motion')
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'helical_motion'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/candidate/scripts/test-helical-motion.py", line 44, in test_declared_contact_never_waives_positive_volume
+    m=self.module();p={'screw':Box(2,2,2),'support':Box(2,2,2)}
+      ^^^^^^^^^^^^^
+  File "/candidate/scripts/test-helical-motion.py", line 15, in module
+    except ModuleNotFoundError:self.fail('native helical motion evaluator missing')
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: native helical motion evaluator missing
+
+======================================================================
+FAIL: test_full_helix_can_release_dependent_operation (__main__.Helical.test_full_helix_can_release_dependent_operation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/candidate/scripts/test-helical-motion.py", line 14, in module
+    try:return importlib.import_module('helical_motion')
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'helical_motion'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/candidate/scripts/test-helical-motion.py", line 73, in test_full_helix_can_release_dependent_operation
+    self.module();import service_states as service
+    ^^^^^^^^^^^^^
+  File "/candidate/scripts/test-helical-motion.py", line 15, in module
+    except ModuleNotFoundError:self.fail('native helical motion evaluator missing')
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: native helical motion evaluator missing
+
+======================================================================
+FAIL: test_invalid_motion_fails_closed (__main__.Helical.test_invalid_motion_fails_closed)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/candidate/scripts/test-helical-motion.py", line 14, in module
+    try:return importlib.import_module('helical_motion')
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'helical_motion'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/candidate/scripts/test-helical-motion.py", line 34, in test_invalid_motion_fails_closed
+    m=self.module()
+      ^^^^^^^^^^^^^
+  File "/candidate/scripts/test-helical-motion.py", line 15, in module
+    except ModuleNotFoundError:self.fail('native helical motion evaluator missing')
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: native helical motion evaluator missing
+
+======================================================================
+FAIL: test_invalid_solid_is_not_pass_even_without_obstacles (__main__.Helical.test_invalid_solid_is_not_pass_even_without_obstacles)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/candidate/scripts/test-helical-motion.py", line 14, in module
+    try:return importlib.import_module('helical_motion')
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'helical_motion'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/candidate/scripts/test-helical-motion.py", line 57, in test_invalid_solid_is_not_pass_even_without_obstacles
+    m=self.module();r=m.helical_path_check({'screw':Compound(children=[])},self.step())
+      ^^^^^^^^^^^^^
+  File "/candidate/scripts/test-helical-motion.py", line 15, in module
+    except ModuleNotFoundError:self.fail('native helical motion evaluator missing')
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: native helical motion evaluator missing
+
+======================================================================
+FAIL: test_native_service_dispatch_and_unknown_type_rejected (__main__.Helical.test_native_service_dispatch_and_unknown_type_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/candidate/scripts/test-helical-motion.py", line 14, in module
+    try:return importlib.import_module('helical_motion')
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'helical_motion'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/candidate/scripts/test-helical-motion.py", line 60, in test_native_service_dispatch_and_unknown_type_rejected
+    m=self.module();import service_states as service
+      ^^^^^^^^^^^^^
+  File "/candidate/scripts/test-helical-motion.py", line 15, in module
+    except ModuleNotFoundError:self.fail('native helical motion evaluator missing')
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: native helical motion evaluator missing
+
+======================================================================
+FAIL: test_quarter_turn_obstacle_blocks_despite_free_endpoints (__main__.Helical.test_quarter_turn_obstacle_blocks_despite_free_endpoints)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/candidate/scripts/test-helical-motion.py", line 14, in module
+    try:return importlib.import_module('helical_motion')
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'helical_motion'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/candidate/scripts/test-helical-motion.py", line 40, in test_quarter_turn_obstacle_blocks_despite_free_endpoints
+    m=self.module();placed={'screw':Pos(3,0,0)*Box(.6,.6,.6),'stop':Pos(0,3,.75)*Box(.7,.7,.7)}
+      ^^^^^^^^^^^^^
+  File "/candidate/scripts/test-helical-motion.py", line 15, in module
+    except ModuleNotFoundError:self.fail('native helical motion evaluator missing')
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: native helical motion evaluator missing
+
+======================================================================
+FAIL: test_sampling_includes_endpoints_and_no_full_turn_alias (__main__.Helical.test_sampling_includes_endpoints_and_no_full_turn_alias)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/candidate/scripts/test-helical-motion.py", line 14, in module
+    try:return importlib.import_module('helical_motion')
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'helical_motion'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/candidate/scripts/test-helical-motion.py", line 30, in test_sampling_includes_endpoints_and_no_full_turn_alias
+    m=self.module();r=m.helical_path_check({'screw':Box(1,1,1)},self.step(samples=1))
+      ^^^^^^^^^^^^^
+  File "/candidate/scripts/test-helical-motion.py", line 15, in module
+    except ModuleNotFoundError:self.fail('native helical motion evaluator missing')
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: native helical motion evaluator missing
+
+======================================================================
+FAIL: test_short_helix_cannot_prove_prerequisite_removal (__main__.Helical.test_short_helix_cannot_prove_prerequisite_removal)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/candidate/scripts/test-helical-motion.py", line 14, in module
+    try:return importlib.import_module('helical_motion')
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'helical_motion'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/candidate/scripts/test-helical-motion.py", line 65, in test_short_helix_cannot_prove_prerequisite_removal
+    self.module();import service_states as service
+    ^^^^^^^^^^^^^
+  File "/candidate/scripts/test-helical-motion.py", line 15, in module
+    except ModuleNotFoundError:self.fail('native helical motion evaluator missing')
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: native helical motion evaluator missing
+
+======================================================================
+FAIL: test_transform_rotation_translation_offset_axis_and_left_hand (__main__.Helical.test_transform_rotation_translation_offset_axis_and_left_hand)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/candidate/scripts/test-helical-motion.py", line 14, in module
+    try:return importlib.import_module('helical_motion')
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'helical_motion'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/candidate/scripts/test-helical-motion.py", line 20, in test_transform_rotation_translation_offset_axis_and_left_hand
+    m=self.module();shape=Pos(11,0,0)*Box(1,1,1)
+      ^^^^^^^^^^^^^
+  File "/candidate/scripts/test-helical-motion.py", line 15, in module
+    except ModuleNotFoundError:self.fail('native helical motion evaluator missing')
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: native helical motion evaluator missing
+
+======================================================================
+FAIL: test_unknown_kernel_is_not_pass (__main__.Helical.test_unknown_kernel_is_not_pass)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/candidate/scripts/test-helical-motion.py", line 14, in module
+    try:return importlib.import_module('helical_motion')
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'helical_motion'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/candidate/scripts/test-helical-motion.py", line 52, in test_unknown_kernel_is_not_pass
+    m=self.module();p={'screw':Box(1,1,1),'support':Pos(1,0,0)*Box(1,1,1)}
+      ^^^^^^^^^^^^^
+  File "/candidate/scripts/test-helical-motion.py", line 15, in module
+    except ModuleNotFoundError:self.fail('native helical motion evaluator missing')
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: native helical motion evaluator missing
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.004s
+
+FAILED (failures=12)

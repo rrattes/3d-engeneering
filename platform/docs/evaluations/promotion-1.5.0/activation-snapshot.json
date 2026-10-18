@@ -1,0 +1,17 @@
+{
+  "previous": {
+    "/home/rrattes/.local/bin/cad3d": "/home/rrattes/Documentos/engineering 3d/3d-engineering-candidate-20261016/scripts/cad3d",
+    "/home/rrattes/.agents/skills/3d-engineering": "/home/rrattes/Documentos/engineering 3d/3d-engineering-candidate-20261016/skills/3d-engineering"
+  },
+  "next": {
+    "/home/rrattes/.local/bin/cad3d": "/home/rrattes/Documentos/engineering 3d/3d-engineering-evolution-20261017/scripts/cad3d",
+    "/home/rrattes/.agents/skills/3d-engineering": "/home/rrattes/Documentos/engineering 3d/3d-engineering-evolution-20261017/skills/3d-engineering"
+  },
+  "candidate_commit": "711007f76fb8a364e0077fc630d1620a41066712",
+  "image_id": "sha256:29f29efe95400751376e77f749cf7fd4aa3c660d9fe6498aabacec9635c4110f",
+  "activation_mode": "user-authorized real-project evaluation; behavioral benchmark remains pending",
+  "environment_overrides": {
+    "CAD3D_IMAGE": null,
+    "CAD3D_DEV_SOURCE": null
+  }
+}

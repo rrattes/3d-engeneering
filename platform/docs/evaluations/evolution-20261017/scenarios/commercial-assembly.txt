@@ -1,0 +1,1 @@
+Crie um suporte aparafusado para um ventilador comercial de 80 × 80 × 25 mm, furação quadrada 71,5 mm, parafusos M4. Modele ventilador como referência comercial e suporte PETG como peça fabricada. Permita trocar por ventilador de 120 mm, espessura 25 mm e passo 105 mm. Verifique acesso, retenção e remoção sem retirar a base.

@@ -1,0 +1,17 @@
+.............F.
+======================================================================
+FAIL: test_missing_uncertainty_or_source_is_unknown (__main__.Tolerances.test_missing_uncertainty_or_source_is_unknown)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/candidate/scripts/test-reliability-foundation.py", line 74, in test_missing_uncertainty_or_source_is_unknown
+    d=self.dimensions();d['hole'].pop('source');self.assertEqual(m.evaluate_stack(self.stack(),d)['status'],'NOT_EVALUATED')
+                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'FAIL' != 'NOT_EVALUATED'
+- FAIL
++ NOT_EVALUATED
+
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.103s
+
+FAILED (failures=1)

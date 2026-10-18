@@ -1,0 +1,18 @@
+id: modulo-circulacao-3c
+contact_tolerance_mm: 0.02
+components:
+  - {id: chamber-body, part: body, position_mm: [0, 0, 0], rotation_deg: [0, 0, 0]}
+  - {id: access-cover, part: cover, position_mm: [0, 0, 0], rotation_deg: [0, 0, 0]}
+interfaces:
+  - id: cover-seat
+    a: chamber-body
+    b: access-cover
+    type: removable_cover
+    clearance_mm: 0
+    intentional_contact: true
+    male_size_mm: 124
+    female_size_mm: 124
+    positioning: XY co-centered; cover underside at z=54
+constraints:
+  - {type: datum, note: Origin at lower-left-front of body; X is chamber sequence and hose axis; Z upward}
+assembly_steps: []

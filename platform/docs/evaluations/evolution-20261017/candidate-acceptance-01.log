@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "/home/rrattes/Documentos/engineering 3d/3d-engineering-evolution-20261017/scripts/test-v14-acceptance.py", line 30, in <module>
+    run(a,'build'); run(a,'architecture','validate','--geometry'); run(a,'review'); run(a,'report','--requirements')
+    ~~~^^^^^^^^^^^
+  File "/home/rrattes/Documentos/engineering 3d/3d-engineering-evolution-20261017/scripts/test-v14-acceptance.py", line 19, in run
+    check('command '+' '.join(args),p.returncode==expect,{'returncode':p.returncode,'tail':p.stdout[-2500:]})
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rrattes/Documentos/engineering 3d/3d-engineering-evolution-20261017/scripts/test-v14-acceptance.py", line 16, in check
+    if not ok: raise AssertionError(f'{name}: {evidence}')
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: command build: {'returncode': 1, 'tail': ' Container 3d-engineering-evolution-20261017-cad3d-run-6e3466b79393 Creating \n Container 3d-engineering-evolution-20261017-cad3d-run-6e3466b79393 Created \nError response from daemon: failed to create task for container: failed to create shim task: OCI runtime create failed: runc create failed: unable to start container process: error during container init: error mounting "/home/rrattes/Documentos/engineering 3d/3d-engineering-evolution-20261017/profiles" to rootfs at "/opt/cad3d/profiles": create mountpoint for /opt/cad3d/profiles mount: make mountpoint "/opt/cad3d/profiles": create next directory component failed: mkdirat([13]<"/var/lib/docker/rootfs/overlayfs/24cda1351c4b2763a3c7aff5579b6b7f38fa0e4d38cf651efe66307d0734d047/opt/cad3d">, "profiles", 0o755): Read-only file system (os error 30)\n'}

@@ -1,0 +1,33 @@
+{
+  "active_unchanged": true,
+  "engineering_unchanged": true,
+  "pilot_sources_unchanged": true,
+  "active_files": 29,
+  "engineering_files": 17,
+  "candidate_files": 36,
+  "added": [
+    "assets/delivery_manifest.example.json",
+    "assets/design_freedom_v2.example.json",
+    "assets/engineering_evidence.example.json",
+    "assets/engineering_policy.example.json",
+    "scripts/delivery_manifest.py",
+    "scripts/design_freedom_brep.py",
+    "scripts/engineering_evidence.py"
+  ],
+  "modified": [
+    "SKILL.md",
+    "references/concept_productivity.md",
+    "references/design_freedom.md",
+    "references/engineering_guardrails.md",
+    "references/manufacturing_appearance.md",
+    "references/productivity.md",
+    "references/styles.md",
+    "references/visual_review.md",
+    "scripts/compare_geometry.py",
+    "scripts/design_freedom.py",
+    "scripts/design_summary.py",
+    "scripts/evaluate_design.py",
+    "scripts/style_brief.py"
+  ],
+  "promotion": "NOT_PERFORMED"
+}

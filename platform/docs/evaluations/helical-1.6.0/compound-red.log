@@ -1,0 +1,16 @@
+F
+======================================================================
+FAIL: test_imported_compound_checks_atomic_solids (__main__.Helical.test_imported_compound_checks_atomic_solids) (allowed=['screw::support'])
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/candidate/scripts/test-helical-motion.py", line 66, in test_imported_compound_checks_atomic_solids
+    self.assertEqual(r['status'],'FAIL')
+AssertionError: 'PASS' != 'FAIL'
+- PASS
++ FAIL
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.088s
+
+FAILED (failures=1)

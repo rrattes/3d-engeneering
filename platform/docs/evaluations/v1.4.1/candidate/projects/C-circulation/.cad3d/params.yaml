@@ -1,0 +1,15 @@
+# Valores conceituais em mm; confirmar diâmetro e material após medir a mangueira/vazão.
+module:
+  length: 124.0
+  width: 80.0
+  body_height: 48.0
+  lid_height: 3.0
+  wall: 3.0
+  slot_width: 34.0
+  slot_height: 14.0
+  slot_bottom: 3.0
+  hose_od: 12.0
+  hose_id: 8.0
+  barb_length: 18.0
+printer:
+  profile: bambu-a1

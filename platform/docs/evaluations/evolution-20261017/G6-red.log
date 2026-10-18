@@ -1,0 +1,32 @@
+F/usr/local/lib/python3.12/site-packages/matplotlib/_fontconfig_pattern.py:64: PyparsingDeprecationWarning: 'oneOf' deprecated - use 'one_of'
+  prop = Group((name + Suppress("=") + comma_separated(value)) | oneOf(_CONSTANTS))
+/usr/local/lib/python3.12/site-packages/matplotlib/_fontconfig_pattern.py:85: PyparsingDeprecationWarning: 'parseString' deprecated - use 'parse_string'
+  parse = parser.parseString(pattern)
+/usr/local/lib/python3.12/site-packages/matplotlib/_fontconfig_pattern.py:89: PyparsingDeprecationWarning: 'resetCache' deprecated - use 'reset_cache'
+  parser.resetCache()
+/usr/local/lib/python3.12/site-packages/matplotlib/_mathtext.py:45: PyparsingDeprecationWarning: 'enablePackrat' deprecated - use 'enable_packrat'
+  ParserElement.enablePackrat()
+In /usr/local/lib/python3.12/site-packages/matplotlib/mpl-data/stylelib/classic.mplstyle: 'parseString' deprecated - use 'parse_string'
+In /usr/local/lib/python3.12/site-packages/matplotlib/mpl-data/stylelib/classic.mplstyle: 'resetCache' deprecated - use 'reset_cache'
+F
+======================================================================
+FAIL: test_actual_parts_gallery_and_presentation_colors (__main__.Presentation.test_actual_parts_gallery_and_presentation_colors)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/candidate/scripts/test-presentation-catalog.py", line 16, in test_actual_parts_gallery_and_presentation_colors
+    self.assertTrue(hasattr(vis,'render_parts_catalog'),'automatic part catalog missing')
+AssertionError: False is not true : automatic part catalog missing
+
+======================================================================
+FAIL: test_legend_separate_viewport_for_36_components (__main__.Presentation.test_legend_separate_viewport_for_36_components)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/candidate/scripts/test-presentation-catalog.py", line 12, in test_legend_separate_viewport_for_36_components
+    m,_=vis.render_views(Path(d),shapes,view='iso');self.assertEqual(m.get('annotation_layout'),'separate_legend_viewport');self.assertFalse(m.get('smooth_shading',True))
+                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: None != 'separate_legend_viewport'
+
+----------------------------------------------------------------------
+Ran 2 tests in 1.868s
+
+FAILED (failures=2)

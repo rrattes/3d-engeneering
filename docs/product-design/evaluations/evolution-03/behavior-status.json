@@ -1,0 +1,9 @@
+{
+  "status": "INCOMPLETE_USAGE_LIMIT",
+  "planned": 36,
+  "recorded": 20,
+  "remaining": 16,
+  "blind_grading": "NOT_EXECUTED",
+  "comparative_conclusion": "NOT_EVALUATED",
+  "frozen_inputs_precede_final_corrections": true
+}

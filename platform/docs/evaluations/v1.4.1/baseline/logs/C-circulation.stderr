@@ -1,0 +1,8 @@
+Reading additional input from stdin...
+2026-10-13T02:49:08.565801Z ERROR codex_core::tools::router: error=apply_patch verification failed: Failed to find expected lines in /tmp/cad3d-v141-eval/baseline/C-circulation/.cad3d/engineering.yaml:
+    - O conjunto deve caber no envelope de 160 x 100 x 90 mm.
+    - Três câmaras em série com percurso geometricamente aberto entre entrada e saída.
+    - Interior acessível pela tampa removível para inspeção e limpeza.
+    - Vazão, perda de carga, vedação, purga real de ar e vida útil não são alegadas sem ensaio.
+2026-10-13T02:53:12.925266Z ERROR codex_core::tools::router: error=apply_patch verification failed: Failed to find expected lines in /tmp/cad3d-v141-eval/baseline/C-circulation/.cad3d/engineering.yaml:
+    - {id: AC-HOSE, method: hose fit test after hose selection, threshold: TBD when hose is specified}

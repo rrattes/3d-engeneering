@@ -1,0 +1,1512 @@
+ Container cad3d_kit-cad3d-run-7fd5285d4709 Creating 
+ Container cad3d_kit-cad3d-run-7fd5285d4709 Created 
+PASS: 2 components built; fabrication selected by catalog
+{
+  "status": "PASS",
+  "printer_profile": {
+    "status": "PASS",
+    "requested": "bambu-a1",
+    "path": "profiles/printers/bambu-a1.yaml",
+    "basis": "selected_CAD_profile"
+  },
+  "catalog_findings": [
+    {
+      "id": "body",
+      "status": "WARNING",
+      "reason": "legacy_part_assumed_fdm_not_physical_approval"
+    },
+    {
+      "id": "lid",
+      "status": "WARNING",
+      "reason": "legacy_part_assumed_fdm_not_physical_approval"
+    }
+  ],
+  "states": {
+    "geometric_validity": "PASS",
+    "assembly_validity": "NOT_EVALUATED",
+    "manufacturing_assessment": "WARNING",
+    "printer_compatibility": "NOT_EVALUATED",
+    "slicing": "NOT_EVALUATED",
+    "physical_validation": "NOT_EVALUATED"
+  },
+  "assembly_applicability": "APPLICABLE",
+  "manufacturing_readiness": "NOT_EVALUATED",
+  "calibration_profile": {
+    "status": "NOT_EVALUATED",
+    "reason": "no_calibration_profile_selected"
+  },
+  "units": "mm",
+  "components": [
+    {
+      "component": "body",
+      "solid_valid": true,
+      "volume_mm3": 13248.0,
+      "dimensions_mm": [
+        60.0,
+        40.0,
+        24.0
+      ],
+      "nonzero_volume": true,
+      "print_fit": {
+        "status": "PASS",
+        "selected_rotation_deg": [
+          0,
+          0,
+          0
+        ],
+        "dimensions_mm": [
+          60.0,
+          40.0,
+          24.0
+        ],
+        "limits_mm": [
+          251,
+          251,
+          251
+        ]
+      },
+      "orientation_assessment": {
+        "status": "WARNING",
+        "method": "comparative_FDM_orientation_heuristic",
+        "chosen_rotation_deg": [
+          0,
+          0,
+          0
+        ],
+        "candidates": [
+          {
+            "rotation_deg": [
+              0,
+              0,
+              0
+            ],
+            "dimensions_mm": [
+              60.0,
+              40.0,
+              24.0
+            ],
+            "envelope_status": "PASS",
+            "bed_contact_area_mm2": 2400.0,
+            "support_assessment": {
+              "status": "WARNING",
+              "method": "STL_face_normal_heuristic",
+              "potential_downward_area_mm2": 0.0,
+              "interpretation": "heuristic_only; orientation, bridges and slicer rules are not fully modeled"
+            },
+            "functional_interfaces": [],
+            "material_estimate": {
+              "status": "NOT_EVALUATED",
+              "reason": "explicit_density_and_infill_fraction_required"
+            },
+            "heuristic_score": -11.76,
+            "method": "orthogonal_candidate_heuristic"
+          },
+          {
+            "rotation_deg": [
+              90,
+              0,
+              0
+            ],
+            "dimensions_mm": [
+              60.0,
+              24.000000000000007,
+              40.00000000000001
+            ],
+            "envelope_status": "PASS",
+            "bed_contact_area_mm2": 1439.9999999999998,
+            "support_assessment": {
+              "status": "WARNING",
+              "method": "STL_face_normal_heuristic",
+              "potential_downward_area_mm2": 1232.0,
+              "interpretation": "heuristic_only; orientation, bridges and slicer rules are not fully modeled"
+            },
+            "functional_interfaces": [],
+            "material_estimate": {
+              "status": "NOT_EVALUATED",
+              "reason": "explicit_density_and_infill_fraction_required"
+            },
+            "heuristic_score": -5.568,
+            "method": "orthogonal_candidate_heuristic"
+          },
+          {
+            "rotation_deg": [
+              0,
+              90,
+              0
+            ],
+            "dimensions_mm": [
+              24.000000000000014,
+              40.0,
+              60.00000000000001
+            ],
+            "envelope_status": "PASS",
+            "bed_contact_area_mm2": 959.9999999999998,
+            "support_assessment": {
+              "status": "WARNING",
+              "method": "STL_face_normal_heuristic",
+              "potential_downward_area_mm2": 792.0,
+              "interpretation": "heuristic_only; orientation, bridges and slicer rules are not fully modeled"
+            },
+            "functional_interfaces": [],
+            "material_estimate": {
+              "status": "NOT_EVALUATED",
+              "reason": "explicit_density_and_infill_fraction_required"
+            },
+            "heuristic_score": -3.4079999999999986,
+            "method": "orthogonal_candidate_heuristic"
+          },
+          {
+            "rotation_deg": [
+              0,
+              0,
+              90
+            ],
+            "dimensions_mm": [
+              40.000000000000014,
+              60.000000000000014,
+              24.0
+            ],
+            "envelope_status": "PASS",
+            "bed_contact_area_mm2": 2400.0,
+            "support_assessment": {
+              "status": "WARNING",
+              "method": "STL_face_normal_heuristic",
+              "potential_downward_area_mm2": 0.0,
+              "interpretation": "heuristic_only; orientation, bridges and slicer rules are not fully modeled"
+            },
+            "functional_interfaces": [],
+            "material_estimate": {
+              "status": "NOT_EVALUATED",
+              "reason": "explicit_density_and_infill_fraction_required"
+            },
+            "heuristic_score": -11.76,
+            "method": "orthogonal_candidate_heuristic"
+          },
+          {
+            "rotation_deg": [
+              90,
+              90,
+              0
+            ],
+            "dimensions_mm": [
+              24.000000000000014,
+              60.000000000000014,
+              40.000000000000014
+            ],
+            "envelope_status": "PASS",
+            "bed_contact_area_mm2": 1440.0,
+            "support_assessment": {
+              "status": "WARNING",
+              "method": "STL_face_normal_heuristic",
+              "potential_downward_area_mm2": 1232.0,
+              "interpretation": "heuristic_only; orientation, bridges and slicer rules are not fully modeled"
+            },
+            "functional_interfaces": [],
+            "material_estimate": {
+              "status": "NOT_EVALUATED",
+              "reason": "explicit_density_and_infill_fraction_required"
+            },
+            "heuristic_score": -5.568,
+            "method": "orthogonal_candidate_heuristic"
+          },
+          {
+            "rotation_deg": [
+              180,
+              0,
+              0
+            ],
+            "dimensions_mm": [
+              60.0,
+              40.0,
+              24.000000000000007
+            ],
+            "envelope_status": "PASS",
+            "bed_contact_area_mm2": 384.0,
+            "support_assessment": {
+              "status": "WARNING",
+              "method": "STL_face_normal_heuristic",
+              "potential_downward_area_mm2": 2016.0,
+              "interpretation": "heuristic_only; orientation, bridges and slicer rules are not fully modeled"
+            },
+            "functional_interfaces": [],
+            "material_estimate": {
+              "status": "NOT_EVALUATED",
+              "reason": "explicit_density_and_infill_fraction_required"
+            },
+            "heuristic_score": 0.3360000000000003,
+            "method": "orthogonal_candidate_heuristic"
+          }
+        ],
+        "limitations": [
+          "not a strength prediction",
+          "support regions are approximate STL face heuristics",
+          "no slicing or physical print validation",
+          "bed contact area is tessellated estimate"
+        ]
+      },
+      "geometric_thickness": {
+        "status": "WARNING",
+        "minimum_required_mm": 1.2,
+        "method": "OCP_inward_normal_ray_sample",
+        "coverage": "sampled_not_complete",
+        "samples_per_face_axis": 3,
+        "faces": [
+          {
+            "face_ordinal_ephemeral": 1,
+            "face_ref": null,
+            "surface_type": "PLANE",
+            "status": "PASS",
+            "measured_samples": 9,
+            "unevaluated_samples": 0,
+            "minimum_sampled_mm": 2.0,
+            "maximum_sampled_mm": 2.0,
+            "below_minimum_samples": [],
+            "unevaluated_regions": []
+          },
+          {
+            "face_ordinal_ephemeral": 2,
+            "face_ref": null,
+            "surface_type": "PLANE",
+            "status": "PASS",
+            "measured_samples": 9,
+            "unevaluated_samples": 0,
+            "minimum_sampled_mm": 2.0,
+            "maximum_sampled_mm": 2.0,
+            "below_minimum_samples": [],
+            "unevaluated_regions": []
+          },
+          {
+            "face_ordinal_ephemeral": 4,
+            "face_ref": null,
+            "surface_type": "PLANE",
+            "status": "PASS",
+            "measured_samples": 9,
+            "unevaluated_samples": 0,
+            "minimum_sampled_mm": 2.0,
+            "maximum_sampled_mm": 2.0,
+            "below_minimum_samples": [],
+            "unevaluated_regions": []
+          },
+          {
+            "face_ordinal_ephemeral": 5,
+            "face_ref": null,
+            "surface_type": "PLANE",
+            "status": "PASS",
+            "measured_samples": 9,
+            "unevaluated_samples": 0,
+            "minimum_sampled_mm": 2.0,
+            "maximum_sampled_mm": 2.0,
+            "below_minimum_samples": [],
+            "unevaluated_regions": []
+          },
+          {
+            "face_ordinal_ephemeral": 6,
+            "face_ref": null,
+            "surface_type": "PLANE",
+            "status": "PASS",
+            "measured_samples": 9,
+            "unevaluated_samples": 0,
+            "minimum_sampled_mm": 2.0,
+            "maximum_sampled_mm": 2.0,
+            "below_minimum_samples": [],
+            "unevaluated_regions": []
+          },
+          {
+            "face_ordinal_ephemeral": 7,
+            "face_ref": null,
+            "surface_type": "PLANE",
+            "status": "PASS",
+            "measured_samples": 9,
+            "unevaluated_samples": 0,
+            "minimum_sampled_mm": 2.0,
+            "maximum_sampled_mm": 2.0,
+            "below_minimum_samples": [],
+            "unevaluated_regions": []
+          },
+          {
+            "face_ordinal_ephemeral": 8,
+            "face_ref": null,
+            "surface_type": "PLANE",
+            "status": "PASS",
+            "measured_samples": 9,
+            "unevaluated_samples": 0,
+            "minimum_sampled_mm": 2.0,
+            "maximum_sampled_mm": 2.0,
+            "below_minimum_samples": [],
+            "unevaluated_regions": []
+          },
+          {
+            "face_ordinal_ephemeral": 9,
+            "face_ref": null,
+            "surface_type": "PLANE",
+            "status": "PASS",
+            "measured_samples": 9,
+            "unevaluated_samples": 0,
+            "minimum_sampled_mm": 2.0,
+            "maximum_sampled_mm": 2.0,
+            "below_minimum_samples": [],
+            "unevaluated_regions": []
+          },
+          {
+            "face_ordinal_ephemeral": 10,
+            "face_ref": null,
+            "surface_type": "PLANE",
+            "status": "PASS",
+            "measured_samples": 9,
+            "unevaluated_samples": 0,
+            "minimum_sampled_mm": 2.0,
+            "maximum_sampled_mm": 2.0,
+            "below_minimum_samples": [],
+            "unevaluated_regions": []
+          },
+          {
+            "face_ordinal_ephemeral": 11,
+            "face_ref": null,
+            "surface_type": "PLANE",
+            "status": "PASS",
+            "measured_samples": 9,
+            "unevaluated_samples": 0,
+            "minimum_sampled_mm": 2.0,
+            "maximum_sampled_mm": 2.0,
+            "below_minimum_samples": [],
+            "unevaluated_regions": []
+          }
+        ],
+        "limitations": [
+          "normal-direction samples only",
+          "not exhaustive over face area or all directions",
+          "thin features between sample points may be missed"
+        ],
+        "measured_samples": 90,
+        "minimum_sampled_mm": 2.0,
+        "maximum_sampled_mm": 2.0
+      },
+      "nominal_wall_parameter": "NOT_EVALUATED unless explicitly declared",
+      "stl_watertight": true,
+      "connected_mesh": {
+        "status": "PASS",
+        "connected_components": 1,
+        "reason": "single_mesh_component"
+      },
+      "brep_solid_count": 1,
+      "support_risk": {
+        "status": "WARNING",
+        "method": "STL_face_normal_heuristic",
+        "potential_downward_area_mm2": 0.0,
+        "interpretation": "heuristic_only; orientation, bridges and slicer rules are not fully modeled"
+      },
+      "manufacturing_applicable": true
+    },
+    {
+      "component": "lid",
+      "solid_valid": true,
+      "volume_mm3": 4920.72,
+      "dimensions_mm": [
+        60.6,
+        40.6,
+        2.0
+      ],
+      "nonzero_volume": true,
+      "print_fit": {
+        "status": "PASS",
+        "selected_rotation_deg": [
+          0,
+          0,
+          0
+        ],
+        "dimensions_mm": [
+          60.6,
+          40.6,
+          2.0
+        ],
+        "limits_mm": [
+          251,
+          251,
+          251
+        ]
+      },
+      "orientation_assessment": {
+        "status": "WARNING",
+        "method": "comparative_FDM_orientation_heuristic",
+        "chosen_rotation_deg": [
+          0,
+          0,
+          0
+        ],
+        "candidates": [
+          {
+            "rotation_deg": [
+              0,
+              0,
+              0
+            ],
+            "dimensions_mm": [
+              60.6,
+              40.6,
+              2.0
+            ],
+            "envelope_status": "PASS",
+            "bed_contact_area_mm2": 2460.359845581057,
+            "support_assessment": {
+              "status": "WARNING",
+              "method": "STL_face_normal_heuristic",
+              "potential_downward_area_mm2": 0.0,
+              "interpretation": "heuristic_only; orientation, bridges and slicer rules are not fully modeled"
+            },
+            "functional_interfaces": [],
+            "material_estimate": {
+              "status": "NOT_EVALUATED",
+              "reason": "explicit_density_and_infill_fraction_required"
+            },
+            "heuristic_score": -12.281799227905285,
+            "method": "orthogonal_candidate_heuristic"
+          },
+          {
+            "rotation_deg": [
+              90,
+              0,
+              0
+            ],
+            "dimensions_mm": [
+              60.6,
+              2.0000000000000107,
+              40.6
+            ],
+            "envelope_status": "PASS",
+            "bed_contact_area_mm2": 121.19999694824219,
+            "support_assessment": {
+              "status": "WARNING",
+              "method": "STL_face_normal_heuristic",
+              "potential_downward_area_mm2": 0.0,
+              "interpretation": "heuristic_only; orientation, bridges and slicer rules are not fully modeled"
+            },
+            "functional_interfaces": [],
+            "material_estimate": {
+              "status": "NOT_EVALUATED",
+              "reason": "explicit_density_and_infill_fraction_required"
+            },
+            "heuristic_score": -0.19999998474121095,
+            "method": "orthogonal_candidate_heuristic"
+          },
+          {
+            "rotation_deg": [
+              0,
+              90,
+              0
+            ],
+            "dimensions_mm": [
+              2.000000000000014,
+              40.6,
+              60.6
+            ],
+            "envelope_status": "PASS",
+            "bed_contact_area_mm2": 81.19999694824219,
+            "support_assessment": {
+              "status": "WARNING",
+              "method": "STL_face_normal_heuristic",
+              "potential_downward_area_mm2": 0.0,
+              "interpretation": "heuristic_only; orientation, bridges and slicer rules are not fully modeled"
+            },
+            "functional_interfaces": [],
+            "material_estimate": {
+              "status": "NOT_EVALUATED",
+              "reason": "explicit_density_and_infill_fraction_required"
+            },
+            "heuristic_score": 0.20000001525878902,
+            "method": "orthogonal_candidate_heuristic"
+          },
+          {
+            "rotation_deg": [
+              0,
+              0,
+              90
+            ],
+            "dimensions_mm": [
+              40.600000000000016,
+              60.60000000000001,
+              2.0
+            ],
+            "envelope_status": "PASS",
+            "bed_contact_area_mm2": 2460.359845581057,
+            "support_assessment": {
+              "status": "WARNING",
+              "method": "STL_face_normal_heuristic",
+              "potential_downward_area_mm2": 0.0,
+              "interpretation": "heuristic_only; orientation, bridges and slicer rules are not fully modeled"
+            },
+            "functional_interfaces": [],
+            "material_estimate": {
+              "status": "NOT_EVALUATED",
+              "reason": "explicit_density_and_infill_fraction_required"
+            },
+            "heuristic_score": -12.281799227905285,
+            "method": "orthogonal_candidate_heuristic"
+          },
+          {
+            "rotation_deg": [
+              90,
+              90,
+              0
+            ],
+            "dimensions_mm": [
+              2.000000000000014,
+              60.60000000000001,
+              40.600000000000016
+            ],
+            "envelope_status": "PASS",
+            "bed_contact_area_mm2": 121.19999694824219,
+            "support_assessment": {
+              "status": "WARNING",
+              "method": "STL_face_normal_heuristic",
+              "potential_downward_area_mm2": 0.0,
+              "interpretation": "heuristic_only; orientation, bridges and slicer rules are not fully modeled"
+            },
+            "functional_interfaces": [],
+            "material_estimate": {
+              "status": "NOT_EVALUATED",
+              "reason": "explicit_density_and_infill_fraction_required"
+            },
+            "heuristic_score": -0.19999998474121083,
+            "method": "orthogonal_candidate_heuristic"
+          },
+          {
+            "rotation_deg": [
+              180,
+              0,
+              0
+            ],
+            "dimensions_mm": [
+              60.6,
+              40.6,
+              2.0000000000000036
+            ],
+            "envelope_status": "PASS",
+            "bed_contact_area_mm2": 2460.359845581057,
+            "support_assessment": {
+              "status": "WARNING",
+              "method": "STL_face_normal_heuristic",
+              "potential_downward_area_mm2": 0.0,
+              "interpretation": "heuristic_only; orientation, bridges and slicer rules are not fully modeled"
+            },
+            "functional_interfaces": [],
+            "material_estimate": {
+              "status": "NOT_EVALUATED",
+              "reason": "explicit_density_and_infill_fraction_required"
+            },
+            "heuristic_score": -12.281799227905285,
+            "method": "orthogonal_candidate_heuristic"
+          }
+        ],
+        "limitations": [
+          "not a strength prediction",
+          "support regions are approximate STL face heuristics",
+          "no slicing or physical print validation",
+          "bed contact area is tessellated estimate"
+        ]
+      },
+      "geometric_thickness": {
+        "status": "PASS",
+        "minimum_required_mm": 1.2,
+        "method": "OCP_inward_normal_ray_sample",
+        "coverage": "sampled_not_complete",
+        "samples_per_face_axis": 3,
+        "faces": [
+          {
+            "face_ordinal_ephemeral": 1,
+            "face_ref": null,
+            "surface_type": "PLANE",
+            "status": "PASS",
+            "measured_samples": 9,
+            "unevaluated_samples": 0,
+            "minimum_sampled_mm": 60.6,
+            "maximum_sampled_mm": 60.6,
+            "below_minimum_samples": [],
+            "unevaluated_regions": []
+          },
+          {
+            "face_ordinal_ephemeral": 2,
+            "face_ref": null,
+            "surface_type": "PLANE",
+            "status": "PASS",
+            "measured_samples": 9,
+            "unevaluated_samples": 0,
+            "minimum_sampled_mm": 60.6,
+            "maximum_sampled_mm": 60.6,
+            "below_minimum_samples": [],
+            "unevaluated_regions": []
+          },
+          {
+            "face_ordinal_ephemeral": 3,
+            "face_ref": null,
+            "surface_type": "PLANE",
+            "status": "PASS",
+            "measured_samples": 9,
+            "unevaluated_samples": 0,
+            "minimum_sampled_mm": 40.6,
+            "maximum_sampled_mm": 40.6,
+            "below_minimum_samples": [],
+            "unevaluated_regions": []
+          },
+          {
+            "face_ordinal_ephemeral": 4,
+            "face_ref": null,
+            "surface_type": "PLANE",
+            "status": "PASS",
+            "measured_samples": 9,
+            "unevaluated_samples": 0,
+            "minimum_sampled_mm": 40.6,
+            "maximum_sampled_mm": 40.6,
+            "below_minimum_samples": [],
+            "unevaluated_regions": []
+          },
+          {
+            "face_ordinal_ephemeral": 5,
+            "face_ref": null,
+            "surface_type": "PLANE",
+            "status": "PASS",
+            "measured_samples": 9,
+            "unevaluated_samples": 0,
+            "minimum_sampled_mm": 2.0,
+            "maximum_sampled_mm": 2.0,
+            "below_minimum_samples": [],
+            "unevaluated_regions": []
+          },
+          {
+            "face_ordinal_ephemeral": 6,
+            "face_ref": null,
+            "surface_type": "PLANE",
+            "status": "PASS",
+            "measured_samples": 9,
+            "unevaluated_samples": 0,
+            "minimum_sampled_mm": 2.0,
+            "maximum_sampled_mm": 2.0,
+            "below_minimum_samples": [],
+            "unevaluated_regions": []
+          }
+        ],
+        "limitations": [
+          "normal-direction samples only",
+          "not exhaustive over face area or all directions",
+          "thin features between sample points may be missed"
+        ],
+        "measured_samples": 54,
+        "minimum_sampled_mm": 2.0,
+        "maximum_sampled_mm": 60.6
+      },
+      "nominal_wall_parameter": "NOT_EVALUATED unless explicitly declared",
+      "stl_watertight": true,
+      "connected_mesh": {
+        "status": "PASS",
+        "connected_components": 1,
+        "reason": "single_mesh_component"
+      },
+      "brep_solid_count": 1,
+      "support_risk": {
+        "status": "WARNING",
+        "method": "STL_face_normal_heuristic",
+        "potential_downward_area_mm2": 0.0,
+        "interpretation": "heuristic_only; orientation, bridges and slicer rules are not fully modeled"
+      },
+      "manufacturing_applicable": true
+    }
+  ],
+  "assembly": {
+    "status": "NOT_EVALUATED",
+    "components": [],
+    "pairs": [],
+    "relations": [],
+    "reason": "assembly_not_configured"
+  },
+  "assembly_collision": "NOT_EVALUATED",
+  "physical_print_validation": "NOT_EVALUATED",
+  "wall_thickness_scope": "Sampled B-rep inward-normal ray distances. Directional and not exhaustive; nominal wall declarations remain separate."
+}
+{
+  "status": "PASS",
+  "manifest": "/workspace/build/outputs/render-iso.json",
+  "views": [
+    {
+      "view": "iso",
+      "path": "build/outputs/A_assembly_iso.png"
+    }
+  ]
+}
+{
+  "project": "calibration-box",
+  "units": "mm",
+  "components": [
+    {
+      "name": "body",
+      "volume_mm3": 13248.0,
+      "bbox_mm": [
+        60.0,
+        40.0,
+        24.0
+      ],
+      "valid": true
+    },
+    {
+      "name": "lid",
+      "volume_mm3": 4920.72,
+      "bbox_mm": [
+        60.6,
+        40.6,
+        2.0
+      ],
+      "valid": true
+    }
+  ],
+  "validation": {
+    "status": "PASS",
+    "printer_profile": {
+      "status": "PASS",
+      "requested": "bambu-a1",
+      "path": "profiles/printers/bambu-a1.yaml",
+      "basis": "selected_CAD_profile"
+    },
+    "catalog_findings": [
+      {
+        "id": "body",
+        "status": "WARNING",
+        "reason": "legacy_part_assumed_fdm_not_physical_approval"
+      },
+      {
+        "id": "lid",
+        "status": "WARNING",
+        "reason": "legacy_part_assumed_fdm_not_physical_approval"
+      }
+    ],
+    "states": {
+      "geometric_validity": "PASS",
+      "assembly_validity": "NOT_EVALUATED",
+      "manufacturing_assessment": "WARNING",
+      "printer_compatibility": "NOT_EVALUATED",
+      "slicing": "NOT_EVALUATED",
+      "physical_validation": "NOT_EVALUATED"
+    },
+    "assembly_applicability": "APPLICABLE",
+    "manufacturing_readiness": "NOT_EVALUATED",
+    "calibration_profile": {
+      "status": "NOT_EVALUATED",
+      "reason": "no_calibration_profile_selected"
+    },
+    "units": "mm",
+    "components": [
+      {
+        "component": "body",
+        "solid_valid": true,
+        "volume_mm3": 13248.0,
+        "dimensions_mm": [
+          60.0,
+          40.0,
+          24.0
+        ],
+        "nonzero_volume": true,
+        "print_fit": {
+          "status": "PASS",
+          "selected_rotation_deg": [
+            0,
+            0,
+            0
+          ],
+          "dimensions_mm": [
+            60.0,
+            40.0,
+            24.0
+          ],
+          "limits_mm": [
+            251,
+            251,
+            251
+          ]
+        },
+        "orientation_assessment": {
+          "status": "WARNING",
+          "method": "comparative_FDM_orientation_heuristic",
+          "chosen_rotation_deg": [
+            0,
+            0,
+            0
+          ],
+          "candidates": [
+            {
+              "rotation_deg": [
+                0,
+                0,
+                0
+              ],
+              "dimensions_mm": [
+                60.0,
+                40.0,
+                24.0
+              ],
+              "envelope_status": "PASS",
+              "bed_contact_area_mm2": 2400.0,
+              "support_assessment": {
+                "status": "WARNING",
+                "method": "STL_face_normal_heuristic",
+                "potential_downward_area_mm2": 0.0,
+                "interpretation": "heuristic_only; orientation, bridges and slicer rules are not fully modeled"
+              },
+              "functional_interfaces": [],
+              "material_estimate": {
+                "status": "NOT_EVALUATED",
+                "reason": "explicit_density_and_infill_fraction_required"
+              },
+              "heuristic_score": -11.76,
+              "method": "orthogonal_candidate_heuristic"
+            },
+            {
+              "rotation_deg": [
+                90,
+                0,
+                0
+              ],
+              "dimensions_mm": [
+                60.0,
+                24.000000000000007,
+                40.00000000000001
+              ],
+              "envelope_status": "PASS",
+              "bed_contact_area_mm2": 1439.9999999999998,
+              "support_assessment": {
+                "status": "WARNING",
+                "method": "STL_face_normal_heuristic",
+                "potential_downward_area_mm2": 1232.0,
+                "interpretation": "heuristic_only; orientation, bridges and slicer rules are not fully modeled"
+              },
+              "functional_interfaces": [],
+              "material_estimate": {
+                "status": "NOT_EVALUATED",
+                "reason": "explicit_density_and_infill_fraction_required"
+              },
+              "heuristic_score": -5.568,
+              "method": "orthogonal_candidate_heuristic"
+            },
+            {
+              "rotation_deg": [
+                0,
+                90,
+                0
+              ],
+              "dimensions_mm": [
+                24.000000000000014,
+                40.0,
+                60.00000000000001
+              ],
+              "envelope_status": "PASS",
+              "bed_contact_area_mm2": 959.9999999999998,
+              "support_assessment": {
+                "status": "WARNING",
+                "method": "STL_face_normal_heuristic",
+                "potential_downward_area_mm2": 792.0,
+                "interpretation": "heuristic_only; orientation, bridges and slicer rules are not fully modeled"
+              },
+              "functional_interfaces": [],
+              "material_estimate": {
+                "status": "NOT_EVALUATED",
+                "reason": "explicit_density_and_infill_fraction_required"
+              },
+              "heuristic_score": -3.4079999999999986,
+              "method": "orthogonal_candidate_heuristic"
+            },
+            {
+              "rotation_deg": [
+                0,
+                0,
+                90
+              ],
+              "dimensions_mm": [
+                40.000000000000014,
+                60.000000000000014,
+                24.0
+              ],
+              "envelope_status": "PASS",
+              "bed_contact_area_mm2": 2400.0,
+              "support_assessment": {
+                "status": "WARNING",
+                "method": "STL_face_normal_heuristic",
+                "potential_downward_area_mm2": 0.0,
+                "interpretation": "heuristic_only; orientation, bridges and slicer rules are not fully modeled"
+              },
+              "functional_interfaces": [],
+              "material_estimate": {
+                "status": "NOT_EVALUATED",
+                "reason": "explicit_density_and_infill_fraction_required"
+              },
+              "heuristic_score": -11.76,
+              "method": "orthogonal_candidate_heuristic"
+            },
+            {
+              "rotation_deg": [
+                90,
+                90,
+                0
+              ],
+              "dimensions_mm": [
+                24.000000000000014,
+                60.000000000000014,
+                40.000000000000014
+              ],
+              "envelope_status": "PASS",
+              "bed_contact_area_mm2": 1440.0,
+              "support_assessment": {
+                "status": "WARNING",
+                "method": "STL_face_normal_heuristic",
+                "potential_downward_area_mm2": 1232.0,
+                "interpretation": "heuristic_only; orientation, bridges and slicer rules are not fully modeled"
+              },
+              "functional_interfaces": [],
+              "material_estimate": {
+                "status": "NOT_EVALUATED",
+                "reason": "explicit_density_and_infill_fraction_required"
+              },
+              "heuristic_score": -5.568,
+              "method": "orthogonal_candidate_heuristic"
+            },
+            {
+              "rotation_deg": [
+                180,
+                0,
+                0
+              ],
+              "dimensions_mm": [
+                60.0,
+                40.0,
+                24.000000000000007
+              ],
+              "envelope_status": "PASS",
+              "bed_contact_area_mm2": 384.0,
+              "support_assessment": {
+                "status": "WARNING",
+                "method": "STL_face_normal_heuristic",
+                "potential_downward_area_mm2": 2016.0,
+                "interpretation": "heuristic_only; orientation, bridges and slicer rules are not fully modeled"
+              },
+              "functional_interfaces": [],
+              "material_estimate": {
+                "status": "NOT_EVALUATED",
+                "reason": "explicit_density_and_infill_fraction_required"
+              },
+              "heuristic_score": 0.3360000000000003,
+              "method": "orthogonal_candidate_heuristic"
+            }
+          ],
+          "limitations": [
+            "not a strength prediction",
+            "support regions are approximate STL face heuristics",
+            "no slicing or physical print validation",
+            "bed contact area is tessellated estimate"
+          ]
+        },
+        "geometric_thickness": {
+          "status": "WARNING",
+          "minimum_required_mm": 1.2,
+          "method": "OCP_inward_normal_ray_sample",
+          "coverage": "sampled_not_complete",
+          "samples_per_face_axis": 3,
+          "faces": [
+            {
+              "face_ordinal_ephemeral": 1,
+              "face_ref": null,
+              "surface_type": "PLANE",
+              "status": "PASS",
+              "measured_samples": 9,
+              "unevaluated_samples": 0,
+              "minimum_sampled_mm": 2.0,
+              "maximum_sampled_mm": 2.0,
+              "below_minimum_samples": [],
+              "unevaluated_regions": []
+            },
+            {
+              "face_ordinal_ephemeral": 2,
+              "face_ref": null,
+              "surface_type": "PLANE",
+              "status": "PASS",
+              "measured_samples": 9,
+              "unevaluated_samples": 0,
+              "minimum_sampled_mm": 2.0,
+              "maximum_sampled_mm": 2.0,
+              "below_minimum_samples": [],
+              "unevaluated_regions": []
+            },
+            {
+              "face_ordinal_ephemeral": 4,
+              "face_ref": null,
+              "surface_type": "PLANE",
+              "status": "PASS",
+              "measured_samples": 9,
+              "unevaluated_samples": 0,
+              "minimum_sampled_mm": 2.0,
+              "maximum_sampled_mm": 2.0,
+              "below_minimum_samples": [],
+              "unevaluated_regions": []
+            },
+            {
+              "face_ordinal_ephemeral": 5,
+              "face_ref": null,
+              "surface_type": "PLANE",
+              "status": "PASS",
+              "measured_samples": 9,
+              "unevaluated_samples": 0,
+              "minimum_sampled_mm": 2.0,
+              "maximum_sampled_mm": 2.0,
+              "below_minimum_samples": [],
+              "unevaluated_regions": []
+            },
+            {
+              "face_ordinal_ephemeral": 6,
+              "face_ref": null,
+              "surface_type": "PLANE",
+              "status": "PASS",
+              "measured_samples": 9,
+              "unevaluated_samples": 0,
+              "minimum_sampled_mm": 2.0,
+              "maximum_sampled_mm": 2.0,
+              "below_minimum_samples": [],
+              "unevaluated_regions": []
+            },
+            {
+              "face_ordinal_ephemeral": 7,
+              "face_ref": null,
+              "surface_type": "PLANE",
+              "status": "PASS",
+              "measured_samples": 9,
+              "unevaluated_samples": 0,
+              "minimum_sampled_mm": 2.0,
+              "maximum_sampled_mm": 2.0,
+              "below_minimum_samples": [],
+              "unevaluated_regions": []
+            },
+            {
+              "face_ordinal_ephemeral": 8,
+              "face_ref": null,
+              "surface_type": "PLANE",
+              "status": "PASS",
+              "measured_samples": 9,
+              "unevaluated_samples": 0,
+              "minimum_sampled_mm": 2.0,
+              "maximum_sampled_mm": 2.0,
+              "below_minimum_samples": [],
+              "unevaluated_regions": []
+            },
+            {
+              "face_ordinal_ephemeral": 9,
+              "face_ref": null,
+              "surface_type": "PLANE",
+              "status": "PASS",
+              "measured_samples": 9,
+              "unevaluated_samples": 0,
+              "minimum_sampled_mm": 2.0,
+              "maximum_sampled_mm": 2.0,
+              "below_minimum_samples": [],
+              "unevaluated_regions": []
+            },
+            {
+              "face_ordinal_ephemeral": 10,
+              "face_ref": null,
+              "surface_type": "PLANE",
+              "status": "PASS",
+              "measured_samples": 9,
+              "unevaluated_samples": 0,
+              "minimum_sampled_mm": 2.0,
+              "maximum_sampled_mm": 2.0,
+              "below_minimum_samples": [],
+              "unevaluated_regions": []
+            },
+            {
+              "face_ordinal_ephemeral": 11,
+              "face_ref": null,
+              "surface_type": "PLANE",
+              "status": "PASS",
+              "measured_samples": 9,
+              "unevaluated_samples": 0,
+              "minimum_sampled_mm": 2.0,
+              "maximum_sampled_mm": 2.0,
+              "below_minimum_samples": [],
+              "unevaluated_regions": []
+            }
+          ],
+          "limitations": [
+            "normal-direction samples only",
+            "not exhaustive over face area or all directions",
+            "thin features between sample points may be missed"
+          ],
+          "measured_samples": 90,
+          "minimum_sampled_mm": 2.0,
+          "maximum_sampled_mm": 2.0
+        },
+        "nominal_wall_parameter": "NOT_EVALUATED unless explicitly declared",
+        "stl_watertight": true,
+        "connected_mesh": {
+          "status": "PASS",
+          "connected_components": 1,
+          "reason": "single_mesh_component"
+        },
+        "brep_solid_count": 1,
+        "support_risk": {
+          "status": "WARNING",
+          "method": "STL_face_normal_heuristic",
+          "potential_downward_area_mm2": 0.0,
+          "interpretation": "heuristic_only; orientation, bridges and slicer rules are not fully modeled"
+        },
+        "manufacturing_applicable": true
+      },
+      {
+        "component": "lid",
+        "solid_valid": true,
+        "volume_mm3": 4920.72,
+        "dimensions_mm": [
+          60.6,
+          40.6,
+          2.0
+        ],
+        "nonzero_volume": true,
+        "print_fit": {
+          "status": "PASS",
+          "selected_rotation_deg": [
+            0,
+            0,
+            0
+          ],
+          "dimensions_mm": [
+            60.6,
+            40.6,
+            2.0
+          ],
+          "limits_mm": [
+            251,
+            251,
+            251
+          ]
+        },
+        "orientation_assessment": {
+          "status": "WARNING",
+          "method": "comparative_FDM_orientation_heuristic",
+          "chosen_rotation_deg": [
+            0,
+            0,
+            0
+          ],
+          "candidates": [
+            {
+              "rotation_deg": [
+                0,
+                0,
+                0
+              ],
+              "dimensions_mm": [
+                60.6,
+                40.6,
+                2.0
+              ],
+              "envelope_status": "PASS",
+              "bed_contact_area_mm2": 2460.359845581057,
+              "support_assessment": {
+                "status": "WARNING",
+                "method": "STL_face_normal_heuristic",
+                "potential_downward_area_mm2": 0.0,
+                "interpretation": "heuristic_only; orientation, bridges and slicer rules are not fully modeled"
+              },
+              "functional_interfaces": [],
+              "material_estimate": {
+                "status": "NOT_EVALUATED",
+                "reason": "explicit_density_and_infill_fraction_required"
+              },
+              "heuristic_score": -12.281799227905285,
+              "method": "orthogonal_candidate_heuristic"
+            },
+            {
+              "rotation_deg": [
+                90,
+                0,
+                0
+              ],
+              "dimensions_mm": [
+                60.6,
+                2.0000000000000107,
+                40.6
+              ],
+              "envelope_status": "PASS",
+              "bed_contact_area_mm2": 121.19999694824219,
+              "support_assessment": {
+                "status": "WARNING",
+                "method": "STL_face_normal_heuristic",
+                "potential_downward_area_mm2": 0.0,
+                "interpretation": "heuristic_only; orientation, bridges and slicer rules are not fully modeled"
+              },
+              "functional_interfaces": [],
+              "material_estimate": {
+                "status": "NOT_EVALUATED",
+                "reason": "explicit_density_and_infill_fraction_required"
+              },
+              "heuristic_score": -0.19999998474121095,
+              "method": "orthogonal_candidate_heuristic"
+            },
+            {
+              "rotation_deg": [
+                0,
+                90,
+                0
+              ],
+              "dimensions_mm": [
+                2.000000000000014,
+                40.6,
+                60.6
+              ],
+              "envelope_status": "PASS",
+              "bed_contact_area_mm2": 81.19999694824219,
+              "support_assessment": {
+                "status": "WARNING",
+                "method": "STL_face_normal_heuristic",
+                "potential_downward_area_mm2": 0.0,
+                "interpretation": "heuristic_only; orientation, bridges and slicer rules are not fully modeled"
+              },
+              "functional_interfaces": [],
+              "material_estimate": {
+                "status": "NOT_EVALUATED",
+                "reason": "explicit_density_and_infill_fraction_required"
+              },
+              "heuristic_score": 0.20000001525878902,
+              "method": "orthogonal_candidate_heuristic"
+            },
+            {
+              "rotation_deg": [
+                0,
+                0,
+                90
+              ],
+              "dimensions_mm": [
+                40.600000000000016,
+                60.60000000000001,
+                2.0
+              ],
+              "envelope_status": "PASS",
+              "bed_contact_area_mm2": 2460.359845581057,
+              "support_assessment": {
+                "status": "WARNING",
+                "method": "STL_face_normal_heuristic",
+                "potential_downward_area_mm2": 0.0,
+                "interpretation": "heuristic_only; orientation, bridges and slicer rules are not fully modeled"
+              },
+              "functional_interfaces": [],
+              "material_estimate": {
+                "status": "NOT_EVALUATED",
+                "reason": "explicit_density_and_infill_fraction_required"
+              },
+              "heuristic_score": -12.281799227905285,
+              "method": "orthogonal_candidate_heuristic"
+            },
+            {
+              "rotation_deg": [
+                90,
+                90,
+                0
+              ],
+              "dimensions_mm": [
+                2.000000000000014,
+                60.60000000000001,
+                40.600000000000016
+              ],
+              "envelope_status": "PASS",
+              "bed_contact_area_mm2": 121.19999694824219,
+              "support_assessment": {
+                "status": "WARNING",
+                "method": "STL_face_normal_heuristic",
+                "potential_downward_area_mm2": 0.0,
+                "interpretation": "heuristic_only; orientation, bridges and slicer rules are not fully modeled"
+              },
+              "functional_interfaces": [],
+              "material_estimate": {
+                "status": "NOT_EVALUATED",
+                "reason": "explicit_density_and_infill_fraction_required"
+              },
+              "heuristic_score": -0.19999998474121083,
+              "method": "orthogonal_candidate_heuristic"
+            },
+            {
+              "rotation_deg": [
+                180,
+                0,
+                0
+              ],
+              "dimensions_mm": [
+                60.6,
+                40.6,
+                2.0000000000000036
+              ],
+              "envelope_status": "PASS",
+              "bed_contact_area_mm2": 2460.359845581057,
+              "support_assessment": {
+                "status": "WARNING",
+                "method": "STL_face_normal_heuristic",
+                "potential_downward_area_mm2": 0.0,
+                "interpretation": "heuristic_only; orientation, bridges and slicer rules are not fully modeled"
+              },
+              "functional_interfaces": [],
+              "material_estimate": {
+                "status": "NOT_EVALUATED",
+                "reason": "explicit_density_and_infill_fraction_required"
+              },
+              "heuristic_score": -12.281799227905285,
+              "method": "orthogonal_candidate_heuristic"
+            }
+          ],
+          "limitations": [
+            "not a strength prediction",
+            "support regions are approximate STL face heuristics",
+            "no slicing or physical print validation",
+            "bed contact area is tessellated estimate"
+          ]
+        },
+        "geometric_thickness": {
+          "status": "PASS",
+          "minimum_required_mm": 1.2,
+          "method": "OCP_inward_normal_ray_sample",
+          "coverage": "sampled_not_complete",
+          "samples_per_face_axis": 3,
+          "faces": [
+            {
+              "face_ordinal_ephemeral": 1,
+              "face_ref": null,
+              "surface_type": "PLANE",
+              "status": "PASS",
+              "measured_samples": 9,
+              "unevaluated_samples": 0,
+              "minimum_sampled_mm": 60.6,
+              "maximum_sampled_mm": 60.6,
+              "below_minimum_samples": [],
+              "unevaluated_regions": []
+            },
+            {
+              "face_ordinal_ephemeral": 2,
+              "face_ref": null,
+              "surface_type": "PLANE",
+              "status": "PASS",
+              "measured_samples": 9,
+              "unevaluated_samples": 0,
+              "minimum_sampled_mm": 60.6,
+              "maximum_sampled_mm": 60.6,
+              "below_minimum_samples": [],
+              "unevaluated_regions": []
+            },
+            {
+              "face_ordinal_ephemeral": 3,
+              "face_ref": null,
+              "surface_type": "PLANE",
+              "status": "PASS",
+              "measured_samples": 9,
+              "unevaluated_samples": 0,
+              "minimum_sampled_mm": 40.6,
+              "maximum_sampled_mm": 40.6,
+              "below_minimum_samples": [],
+              "unevaluated_regions": []
+            },
+            {
+              "face_ordinal_ephemeral": 4,
+              "face_ref": null,
+              "surface_type": "PLANE",
+              "status": "PASS",
+              "measured_samples": 9,
+              "unevaluated_samples": 0,
+              "minimum_sampled_mm": 40.6,
+              "maximum_sampled_mm": 40.6,
+              "below_minimum_samples": [],
+              "unevaluated_regions": []
+            },
+            {
+              "face_ordinal_ephemeral": 5,
+              "face_ref": null,
+              "surface_type": "PLANE",
+              "status": "PASS",
+              "measured_samples": 9,
+              "unevaluated_samples": 0,
+              "minimum_sampled_mm": 2.0,
+              "maximum_sampled_mm": 2.0,
+              "below_minimum_samples": [],
+              "unevaluated_regions": []
+            },
+            {
+              "face_ordinal_ephemeral": 6,
+              "face_ref": null,
+              "surface_type": "PLANE",
+              "status": "PASS",
+              "measured_samples": 9,
+              "unevaluated_samples": 0,
+              "minimum_sampled_mm": 2.0,
+              "maximum_sampled_mm": 2.0,
+              "below_minimum_samples": [],
+              "unevaluated_regions": []
+            }
+          ],
+          "limitations": [
+            "normal-direction samples only",
+            "not exhaustive over face area or all directions",
+            "thin features between sample points may be missed"
+          ],
+          "measured_samples": 54,
+          "minimum_sampled_mm": 2.0,
+          "maximum_sampled_mm": 60.6
+        },
+        "nominal_wall_parameter": "NOT_EVALUATED unless explicitly declared",
+        "stl_watertight": true,
+        "connected_mesh": {
+          "status": "PASS",
+          "connected_components": 1,
+          "reason": "single_mesh_component"
+        },
+        "brep_solid_count": 1,
+        "support_risk": {
+          "status": "WARNING",
+          "method": "STL_face_normal_heuristic",
+          "potential_downward_area_mm2": 0.0,
+          "interpretation": "heuristic_only; orientation, bridges and slicer rules are not fully modeled"
+        },
+        "manufacturing_applicable": true
+      }
+    ],
+    "assembly": {
+      "status": "NOT_EVALUATED",
+      "components": [],
+      "pairs": [],
+      "relations": [],
+      "reason": "assembly_not_configured"
+    },
+    "assembly_collision": "NOT_EVALUATED",
+    "physical_print_validation": "NOT_EVALUATED",
+    "wall_thickness_scope": "Sampled B-rep inward-normal ray distances. Directional and not exhaustive; nominal wall declarations remain separate."
+  }
+}
+[
+  {
+    "component": "body",
+    "step_reopened": true,
+    "step_matches_source": true,
+    "source_solid_count": 1,
+    "step_solid_count": 1,
+    "source_solid_volume_mm3": 13248.0,
+    "step_solid_volume_mm3": 13248.0,
+    "step_bytes": 30222,
+    "stl_watertight": true,
+    "stl_applicable": true,
+    "scope": "current roundtrip; not physical approval",
+    "stl_connected": true,
+    "stl_bytes": 1484
+  },
+  {
+    "component": "lid",
+    "step_reopened": true,
+    "step_matches_source": true,
+    "source_solid_count": 1,
+    "step_solid_count": 1,
+    "source_solid_volume_mm3": 4920.72,
+    "step_solid_volume_mm3": 4920.72,
+    "step_bytes": 17713,
+    "stl_watertight": true,
+    "stl_applicable": true,
+    "scope": "current roundtrip; not physical approval",
+    "stl_connected": true,
+    "stl_bytes": 684
+  }
+]
+PASS: manifesto build/outputs/manifest.json

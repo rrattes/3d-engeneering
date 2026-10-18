@@ -1,0 +1,19 @@
+module:
+  length: 124.0
+  width: 78.0
+  height: 54.0
+  wall: 3.0
+  floor: 3.0
+  baffle_thickness: 3.0
+  transfer_width: 30.0
+  transfer_height: 16.0
+  port_diameter: 16.0
+  port_outer_diameter: 22.0
+  port_length: 18.0
+  port_z: 11.0
+  cover_thickness: 4.0
+  vent_diameter: 6.0
+printer:
+  profile: elegoo-centauri-carbon-2
+material:
+  profile: petg

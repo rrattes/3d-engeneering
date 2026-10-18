@@ -1,0 +1,22 @@
+components:
+  - id: wall_plate
+    part: wall_plate
+    position_mm: [0, 0, 0]
+    rotation_deg: [0, 0, 0]
+  - id: equipment_carrier
+    part: equipment_carrier
+    position_mm: [0, 0, 0]
+    rotation_deg: [0, 0, 0]
+interfaces:
+  - id: I-RAIL
+    a: wall_plate
+    b: equipment_carrier
+    type: sliding
+    clearance_mm: 0.20
+    intentional_contact: false
+assembly_steps:
+  - id: REMOVE-CARRIER
+    moving_component: equipment_carrier
+    direction_mm: [0, 0, 1]
+    travel_mm: 34
+    samples: 24

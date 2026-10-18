@@ -1,0 +1,20 @@
+{
+  "images": {
+    "cad3d-engineering:1.4.0": "sha256:90d034df91c55d8bb17d17b4aa165f17b8ec771b8437e9e86b60c3e3710da8e1",
+    "cad3d-engineering:1.4.2": "sha256:933a7f2c0e86f102d6559744a7d967685c3eba2bf3263cea81dd6c67de48925f",
+    "cad3d-orca:2.4.2": "sha256:72be10f63d6895cbffc0ecce938c8bf12c4e1de098656d8e47fc831459b60f13",
+    "cad3d-orca:2.4.2-cad3d.1.4.2": "sha256:d11c68ddbe4d70f4284b71033393b34fd8c0a3d2b0f022858a4b067f18c4572a"
+  },
+  "cad_modules_sha256": {
+    "cad3d.py": "a541ddc6a22dd584480d8d9c784e22db68f4ca7a89de7e4bb3c418772bb976e1",
+    "cad3d_visualization.py": "dca475d7b9506510ea0ae87180fca19504be22b029c8e1e909258d039d820bd3",
+    "product_engineering.py": "1a8b51dc79dd496145a0b7fc942978c778cc671ef1f5c72a518318c6ae3054f2",
+    "source_fingerprint.py": "36be6211774fda13d21171e59adf71eb001bb7dff3b538b31002b239a9f9e679",
+    "slicer_bridge.py": "8342a4a2fab8c500ea566cdd068351e95a8f321297f730950bc42bddb3cd219a",
+    "calibration.py": "1497c2e733b8b55fea3a2ed8e6080fbeff670bca29de2c3edace925f0cfae761",
+    "manufacturing.py": "a80da2a101542f91057fa0767a04eb18bd2d76fc299e25833af0d21ee8f7b6af",
+    "validation.py": "3b75011824fd07b425ea5c9de1cf682c1b717960b068ba47444a5904d2f769b8"
+  },
+  "orca_script_sha256": "1ebe9b1b9f9f53e7be7bdf58e1607a35f7301dd4f4ddb42e038fe347ab0bd24b",
+  "source_matches_packaged": true
+}

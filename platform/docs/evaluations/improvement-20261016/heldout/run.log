@@ -1,0 +1,342 @@
+{
+  "head_sink_negative": {
+    "pair": "head::sink",
+    "min_clearance_required_mm": 0.0,
+    "intentional_contact": false,
+    "method": "AABB+OCP_BREP",
+    "clearance_scope": "global minimum between component B-reps; mating faces are not isolated",
+    "broad_phase": "OVERLAP",
+    "intersection_volume_mm3": 24.75062289396235,
+    "surface_distance_mm": 0.0,
+    "status": "FAIL",
+    "classification": "VOLUMETRIC_COLLISION",
+    "reason": "positive_intersection_volume"
+  },
+  "head_sink_corrected": {
+    "pair": "head::sink",
+    "min_clearance_required_mm": 0.5,
+    "intentional_contact": false,
+    "method": "AABB+OCP_BREP",
+    "clearance_scope": "global minimum between component B-reps; mating faces are not isolated",
+    "status": "PASS",
+    "broad_phase": "DISJOINT",
+    "intersection_volume_mm3": 0.0,
+    "surface_distance_mm": 2.0,
+    "classification": "PROXIMITY",
+    "reason": "clearance_met"
+  },
+  "head_bridge_installed": {
+    "pair": "head::bridge",
+    "min_clearance_required_mm": 0.5,
+    "intentional_contact": false,
+    "method": "AABB+OCP_BREP",
+    "clearance_scope": "global minimum between component B-reps; mating faces are not isolated",
+    "status": "PASS",
+    "broad_phase": "DISJOINT",
+    "intersection_volume_mm3": 0.0,
+    "surface_distance_mm": 8.0,
+    "classification": "PROXIMITY",
+    "reason": "clearance_met"
+  },
+  "tool_bridge_negative": {
+    "pair": "driver::bridge",
+    "min_clearance_required_mm": 0.0,
+    "intentional_contact": false,
+    "method": "AABB+OCP_BREP",
+    "clearance_scope": "global minimum between component B-reps; mating faces are not isolated",
+    "broad_phase": "OVERLAP",
+    "intersection_volume_mm3": 21.506247196897462,
+    "surface_distance_mm": 0.0,
+    "status": "FAIL",
+    "classification": "VOLUMETRIC_COLLISION",
+    "reason": "positive_intersection_volume"
+  },
+  "tool_bridge_corrected": {
+    "pair": "driver::bridge",
+    "min_clearance_required_mm": 0.5,
+    "intentional_contact": false,
+    "method": "AABB+OCP_BREP",
+    "clearance_scope": "global minimum between component B-reps; mating faces are not isolated",
+    "status": "PASS",
+    "broad_phase": "DISJOINT",
+    "intersection_volume_mm3": 0.0,
+    "surface_distance_mm": 4.924428900898052,
+    "classification": "PROXIMITY",
+    "reason": "clearance_met"
+  },
+  "panel_fan_installed": {
+    "pair": "panel::fan",
+    "min_clearance_required_mm": 0.5,
+    "intentional_contact": false,
+    "method": "AABB+OCP_BREP",
+    "clearance_scope": "global minimum between component B-reps; mating faces are not isolated",
+    "status": "PASS",
+    "broad_phase": "DISJOINT",
+    "intersection_volume_mm3": 0.0,
+    "surface_distance_mm": 4.0,
+    "classification": "PROXIMITY",
+    "reason": "clearance_met"
+  },
+  "panel_path_negative": {
+    "id": "panel_path_negative",
+    "status": "FAIL",
+    "moving_component": "panel",
+    "direction_unit": [
+      0.0,
+      0.0,
+      -1.0
+    ],
+    "travel_mm": 15.0,
+    "samples_requested": 61,
+    "allowed_contact_pairs": [],
+    "blockages": [
+      {
+        "sample": 20,
+        "other_component": "fan",
+        "status": "FAIL",
+        "distance_mm": 0.0,
+        "intersection_volume_mm3": 0.0
+      },
+      {
+        "sample": 21,
+        "other_component": "fan",
+        "status": "FAIL",
+        "distance_mm": 0.0,
+        "intersection_volume_mm3": 15.999999999999996
+      },
+      {
+        "sample": 22,
+        "other_component": "fan",
+        "status": "FAIL",
+        "distance_mm": 0.0,
+        "intersection_volume_mm3": 31.999999999999993
+      },
+      {
+        "sample": 23,
+        "other_component": "fan",
+        "status": "FAIL",
+        "distance_mm": 0.0,
+        "intersection_volume_mm3": 48.0
+      },
+      {
+        "sample": 24,
+        "other_component": "fan",
+        "status": "FAIL",
+        "distance_mm": 0.0,
+        "intersection_volume_mm3": 63.999999999999986
+      },
+      {
+        "sample": 25,
+        "other_component": "fan",
+        "status": "FAIL",
+        "distance_mm": 0.0,
+        "intersection_volume_mm3": 79.99999999999999
+      },
+      {
+        "sample": 26,
+        "other_component": "fan",
+        "status": "FAIL",
+        "distance_mm": 0.0,
+        "intersection_volume_mm3": 96.0
+      },
+      {
+        "sample": 27,
+        "other_component": "fan",
+        "status": "FAIL",
+        "distance_mm": 0.0,
+        "intersection_volume_mm3": 112.00000000000001
+      },
+      {
+        "sample": 28,
+        "other_component": "fan",
+        "status": "FAIL",
+        "distance_mm": 0.0,
+        "intersection_volume_mm3": 127.99999999999997
+      },
+      {
+        "sample": 29,
+        "other_component": "fan",
+        "status": "FAIL",
+        "distance_mm": 0.0,
+        "intersection_volume_mm3": 127.99999999999997
+      },
+      {
+        "sample": 30,
+        "other_component": "fan",
+        "status": "FAIL",
+        "distance_mm": 0.0,
+        "intersection_volume_mm3": 127.99999999999997
+      },
+      {
+        "sample": 31,
+        "other_component": "fan",
+        "status": "FAIL",
+        "distance_mm": 0.0,
+        "intersection_volume_mm3": 127.99999999999997
+      },
+      {
+        "sample": 32,
+        "other_component": "fan",
+        "status": "FAIL",
+        "distance_mm": 0.0,
+        "intersection_volume_mm3": 127.99999999999997
+      },
+      {
+        "sample": 33,
+        "other_component": "fan",
+        "status": "FAIL",
+        "distance_mm": 0.0,
+        "intersection_volume_mm3": 127.99999999999997
+      },
+      {
+        "sample": 34,
+        "other_component": "fan",
+        "status": "FAIL",
+        "distance_mm": 0.0,
+        "intersection_volume_mm3": 127.99999999999997
+      },
+      {
+        "sample": 35,
+        "other_component": "fan",
+        "status": "FAIL",
+        "distance_mm": 0.0,
+        "intersection_volume_mm3": 127.99999999999997
+      },
+      {
+        "sample": 36,
+        "other_component": "fan",
+        "status": "FAIL",
+        "distance_mm": 0.0,
+        "intersection_volume_mm3": 127.99999999999997
+      },
+      {
+        "sample": 37,
+        "other_component": "fan",
+        "status": "FAIL",
+        "distance_mm": 0.0,
+        "intersection_volume_mm3": 112.00000000000001
+      },
+      {
+        "sample": 38,
+        "other_component": "fan",
+        "status": "FAIL",
+        "distance_mm": 0.0,
+        "intersection_volume_mm3": 96.0
+      },
+      {
+        "sample": 39,
+        "other_component": "fan",
+        "status": "FAIL",
+        "distance_mm": 0.0,
+        "intersection_volume_mm3": 79.99999999999999
+      },
+      {
+        "sample": 40,
+        "other_component": "fan",
+        "status": "FAIL",
+        "distance_mm": 0.0,
+        "intersection_volume_mm3": 63.999999999999986
+      },
+      {
+        "sample": 41,
+        "other_component": "fan",
+        "status": "FAIL",
+        "distance_mm": 0.0,
+        "intersection_volume_mm3": 48.0
+      },
+      {
+        "sample": 42,
+        "other_component": "fan",
+        "status": "FAIL",
+        "distance_mm": 0.0,
+        "intersection_volume_mm3": 31.999999999999993
+      },
+      {
+        "sample": 43,
+        "other_component": "fan",
+        "status": "FAIL",
+        "distance_mm": 0.0,
+        "intersection_volume_mm3": 15.999999999999996
+      },
+      {
+        "sample": 44,
+        "other_component": "fan",
+        "status": "FAIL",
+        "distance_mm": 0.0,
+        "intersection_volume_mm3": 0.0
+      }
+    ],
+    "method": "sampled_linear_translation_OCP_BREP",
+    "coverage": "sampled_not_continuous"
+  },
+  "panel_path_corrected": {
+    "id": "panel_path_corrected",
+    "status": "PASS",
+    "moving_component": "panel",
+    "direction_unit": [
+      -1.0,
+      0.0,
+      0.0
+    ],
+    "travel_mm": 30.0,
+    "samples_requested": 61,
+    "allowed_contact_pairs": [],
+    "blockages": [],
+    "method": "sampled_linear_translation_OCP_BREP",
+    "coverage": "sampled_not_continuous"
+  },
+  "fan_path_corrected": {
+    "id": "fan_path_corrected",
+    "status": "PASS",
+    "moving_component": "fan",
+    "direction_unit": [
+      0.0,
+      0.0,
+      -1.0
+    ],
+    "travel_mm": 15.0,
+    "samples_requested": 61,
+    "allowed_contact_pairs": [],
+    "blockages": [],
+    "method": "sampled_linear_translation_OCP_BREP",
+    "coverage": "sampled_not_continuous"
+  },
+  "signed_tolerance": {
+    "female_bounds_mm": [
+      10.25,
+      10.55
+    ],
+    "male_bounds_mm": [
+      9.9,
+      10.1
+    ],
+    "clearance_bounds_mm": [
+      0.15000000000000036,
+      0.6500000000000004
+    ],
+    "required_min_mm": 0.2,
+    "nominal_clearance_mm": 0.4,
+    "status": "FAIL",
+    "deficit_mm": 0.049999999999999656
+  },
+  "fixture_scope": {
+    "kind": "synthetic_BREP_regression",
+    "dimensions": "assumed; not vendor qualified",
+    "valid_solids": {
+      "head": true,
+      "shank": true,
+      "sink_bad": true,
+      "sink_good": true,
+      "tool": true,
+      "bridge_bad": true,
+      "bridge_good": true,
+      "panel": true,
+      "fan": true,
+      "anchor": true
+    },
+    "retention_strength": "NOT_EVALUATED",
+    "physical_validation": "NOT_EVALUATED",
+    "sampling": "61 poses inclusive; panel corrected spacing 0.5 mm; other paths 0.25 mm; continuous motion not proven",
+    "service_prerequisites": "release own fasteners; other item remains installed; anchors remain; cables/grip/thread engagement not represented"
+  }
+}

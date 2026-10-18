@@ -1,0 +1,1 @@
+Crie um espaçador PETG de 30 × 20 × 5 mm com dois furos passantes de 3,4 mm separados por 18 mm, simétricos ao centro. Gere modelo paramétrico, STEP, STL e vista técnica. A impressora ainda não foi selecionada.

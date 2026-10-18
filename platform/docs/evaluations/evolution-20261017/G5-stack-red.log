@@ -1,0 +1,14 @@
+...F..
+======================================================================
+FAIL: test_nominal_fastener_stack_detects_short_bottomed_and_unseated (__main__.Service.test_nominal_fastener_stack_detects_short_bottomed_and_unseated)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/candidate/scripts/test-service-states.py", line 29, in test_nominal_fastener_stack_detects_short_bottomed_and_unseated
+    m=self.module();self.assertTrue(hasattr(m,'check_fastener_stack'),'nominal engagement/seat evaluator missing')
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : nominal engagement/seat evaluator missing
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.151s
+
+FAILED (failures=1)

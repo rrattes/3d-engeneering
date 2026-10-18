@@ -1,0 +1,8 @@
+Reading additional input from stdin...
+2026-10-13T02:40:06.287521Z ERROR codex_core::tools::router: error=apply_patch verification failed: Failed to find expected lines in /tmp/cad3d-v141-eval/baseline/A-organizer/.cad3d/engineering.yaml:
+      status: verified
+2026-10-13T02:42:19.854227Z ERROR codex_core::tools::router: error=apply_patch verification failed: Failed to find expected lines in /tmp/cad3d-v141-eval/baseline/A-organizer/src/model.py:
+    gap, rail_h, base_h = p["clearance"], p["rail_height"], p["base_height"]
+2026-10-13T02:49:30.906495Z ERROR codex_core::tools::router: error=apply_patch verification failed: Failed to find expected lines in /tmp/cad3d-v141-eval/baseline/A-organizer/.cad3d/engineering.yaml:
+        fit_class: Uncalibrated FDM clearance, nominal 0.35 mm per side.
+        material_process: Bambu A1 profile, PLA starting profile; calibrate before final fit.

@@ -1,0 +1,40 @@
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile.patch
+#1 transferring dockerfile: 593B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/cad3d-engineering:1.4.0
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 97B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 19.98kB done
+#4 DONE 0.0s
+
+#5 [cad3d 1/4] FROM docker.io/library/cad3d-engineering:1.4.0@sha256:90d034df91c55d8bb17d17b4aa165f17b8ec771b8437e9e86b60c3e3710da8e1
+#5 resolve docker.io/library/cad3d-engineering:1.4.0@sha256:90d034df91c55d8bb17d17b4aa165f17b8ec771b8437e9e86b60c3e3710da8e1 0.0s done
+#5 CACHED
+
+#6 [cad3d 2/4] COPY cli/ /opt/cad3d/
+#6 DONE 0.1s
+
+#7 [cad3d 3/4] COPY templates/project/ /opt/cad3d/template/
+#7 DONE 0.1s
+
+#8 [cad3d 4/4] COPY profiles/ /opt/cad3d/profiles/
+#8 DONE 0.1s
+
+#9 exporting to image
+#9 exporting layers
+#9 exporting layers 0.2s done
+#9 exporting manifest sha256:97a281089964689c12546e741e8e48e473f5e5cf3c010db0f5846a523533c9c3 0.0s done
+#9 exporting config sha256:18df0e7bf90f99c8fbefa4e7a9fd49c725cec9336630b847990cc77291b39f87 0.0s done
+#9 exporting attestation manifest sha256:0142d24997a9717d456d3e89a1341a2bd3207a75fd6e7ce91b9e0f1dc9419d1c 0.0s done
+#9 exporting manifest list sha256:2d85bbc9cc0a613dde6c0de79d2c17e7fffd3aafed8f428bfd4d36819a5b6e2a 0.0s done
+#9 naming to docker.io/library/cad3d-engineering:1.5.0 done
+#9 unpacking to docker.io/library/cad3d-engineering:1.5.0 0.1s done
+#9 DONE 0.3s

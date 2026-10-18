@@ -1,0 +1,16 @@
+..F.........
+======================================================================
+FAIL: test_declared_contact_never_waives_positive_volume (__main__.Helical.test_declared_contact_never_waives_positive_volume)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/candidate/scripts/test-helical-motion.py", line 46, in test_declared_contact_never_waives_positive_volume
+    self.assertEqual(r['status'],'FAIL')
+AssertionError: 'NOT_EVALUATED' != 'FAIL'
+- NOT_EVALUATED
++ FAIL
+
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.436s
+
+FAILED (failures=1)

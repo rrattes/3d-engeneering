@@ -1,0 +1,90 @@
+engineering:
+  schema_version: 1
+  workflow_level: product
+  model_gate: true
+  project:
+    name: modulo-circulacao-tres-camaras
+    class: passive_fluid_module
+    purpose: Conduzir água passivamente em série entre três câmaras, com acesso para limpeza e bocais para mangueira.
+    units: mm
+  operating_conditions:
+    - {id: ENV-1, condition: circulação depende de diferença de carga externa; alvo de vazão não definido}
+  measurements:
+    - {id: ENV-2, quantity: CAD module envelope including hose collars and cover, value_mm: [160, 78, 58], confidence: assumption, uncertainty: CAD nominal; limit from user is 160 x 100 x 90 mm}
+    - {id: HOSE-1, quantity: hose inside diameter, value_mm: null, confidence: assumption, uncertainty: hose specification not supplied; straight collar OD 22 mm and bore 16 mm are provisional}
+  external_interfaces:
+    - {id: PORT-IN, type: inlet, center_mm: [-9, 39, 11], note: straight collar OD 22 mm, bore 16 mm, length 18 mm; hose retention not modeled}
+    - {id: PORT-OUT, type: outlet, center_mm: [133, 39, 11], note: straight collar OD 22 mm, bore 16 mm, length 18 mm; hose retention not modeled}
+    - {id: VENT-1, type: fill_and_vent, center_mm: [20.7, 39, 54], bore_diameter_mm: 6}
+    - {id: VENT-2, type: fill_and_vent, center_mm: [62, 39, 54], bore_diameter_mm: 6}
+    - {id: VENT-3, type: fill_and_vent, center_mm: [103.3, 39, 54], bore_diameter_mm: 6}
+  acceptance_criteria:
+    - {id: AC-ENV, method: CAD bounding box, threshold: <= 160 x 100 x 90 mm}
+    - {id: AC-PATH, method: sampled open-void centerline against B-rep, threshold: zero blocked samples at 2 mm spacing}
+    - {id: AC-SERVICE, method: prototype inspection, threshold: lid removal exposes all three chambers and transfer openings}
+    - {id: AC-HOSE, method: hose fit and retention test after selection, threshold: TBD; straight collars OD 22 mm and bore 16 mm are provisional}
+    - {id: AC-FLOW, method: bench measurement at declared head, threshold: TBD; target flow not supplied}
+  risks_and_unknowns:
+    - {id: R-1, severity: major, status: open, description: no CFD, pressure-loss, flow-rate, priming, leakage or purge performance has been measured}
+    - {id: R-2, severity: major, status: open, description: hose bore, cover seal, material and pressure limits are provisional or unspecified}
+    - {id: R-3, severity: major, status: open, description: 6 mm purge apertures require closable sealed plugs during operation; plugs are not modeled}
+  requirements:
+    - id: REQ-FLOW-CONTINUITY
+      description: Declared route remains open through all three chambers and both low transfer openings.
+      subsystem: fluid-path
+      components: [chamber-body]
+      critical: true
+      verification:
+        method: flow_path
+        target: inlet-to-outlet
+        status: NOT_EVALUATED
+  functional_architecture:
+    subsystems:
+      - {id: inlet, purpose: Admit fluid at the inlet port}
+      - {id: chamber-one, purpose: Carry fluid to the first baffle}
+      - {id: chamber-two, purpose: Route fluid between baffles}
+      - {id: chamber-three, purpose: Receive fluid after the second baffle}
+      - {id: fluid-path, purpose: Preserve connected open volume between declared ports}
+      - {id: outlet, purpose: Release fluid at the outlet port}
+    flows:
+      - id: inlet-to-outlet
+        kind: fluid
+        path: [inlet, chamber-one, chamber-two, chamber-three, outlet]
+        geometry_check:
+          domain_bbox_mm: [[-18, 31, 5], [142, 47, 17]]
+          centerline_mm: [[-18, 39, 11], [0, 39, 11], [20, 39, 11], [41, 39, 11], [62, 39, 11], [83, 39, 11], [104, 39, 11], [124, 39, 11], [142, 39, 11]]
+          clearance_radius_mm: 6
+          sample_step_mm: 2
+    operating_modes:
+      - {id: passive-flow, description: fluid follows the two low transfers when external head is sufficient; flow rate remains unmeasured}
+      - {id: service, description: remove the cover for access to all chambers and openings}
+    failure_modes:
+      - {id: trapped-air, effect: air may interrupt the liquid column, control: three cover vents permit filling/bleeding; efficacy remains to be tested}
+      - {id: blocked-channel, effect: no continuous fluid path, control: inspect route against B-rep and perform physical flow test}
+      - {id: excessive-loss, effect: low downstream flow, control: hydraulic test; no CFD is claimed}
+  mechanical_architecture:
+    components:
+      - id: chamber-body
+        part: body
+        function: Form the floor, external walls, three chambers, transfer openings and hollow hose collars.
+        retention: {method: monolithic}
+      - id: access-cover
+        part: cover
+        function: Removably close chambers and provide three fill/vent apertures.
+        retention: {method: fastener, interface_ids: [cover-seat]}
+    interfaces:
+      - {id: cover-seat, components: [chamber-body, access-cover], kind: removable_seated_cover, positioning: cover rests on body rim; fastening and seal remain to be designed, tolerance_mm: 0.3}
+    assembly_steps:
+      - {id: STEP-1, action: Seat suitable gasket on body rim; gasket geometry and compression to be selected.}
+      - {id: STEP-2, action: Fit cover and secure with a yet-to-be-selected removable fastener scheme.}
+      - {id: STEP-3, action: Connect hoses after confirming actual hose fit and retention.}
+    maintenance_access:
+      - {id: removable-cover, action: remove cover to inspect and clean each chamber and low transfer opening}
+    print_split:
+      - {part: body, orientation: base-on-bed; material/process to be confirmed}
+      - {part: cover, orientation: flat; fasteners and gasket not modeled}
+  manufacturing:
+    physical_validation: NOT_EVALUATED
+  visualization:
+    hidden_components: [access-cover]
+    critical_interfaces: [cover-seat]

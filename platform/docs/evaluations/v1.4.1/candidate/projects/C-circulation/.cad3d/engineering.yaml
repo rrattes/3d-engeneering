@@ -1,0 +1,115 @@
+engineering:
+  schema_version: 1
+  workflow_level: product
+  model_gate: true
+  project:
+    name: passive-three-chamber-water-module
+    class: passive_fluid_module
+    purpose: Circulação passiva entre três câmaras com conexões acessíveis e acesso para limpeza.
+    units: mm
+  operating_conditions:
+    - {id: USE-1, condition: Água em circulação passiva; orientação e carga hidráulica ainda a definir.}
+  measurements:
+    - {id: ENV-1, confidence: verified, source: user, value_mm: [160, 100, 90]}
+    - {id: HOSE-1, confidence: assumption, uncertainty: diâmetros de mangueira e parede não informados, value_mm: [12, 8]}
+  external_interfaces:
+    - {id: EXT-IN, type: hose, description: Espigão axial de entrada conceitual para mangueira nominal OD 12 / ID 8 mm.}
+    - {id: EXT-OUT, type: hose, description: Espigão axial de saída conceitual para mangueira nominal OD 12 / ID 8 mm.}
+  acceptance_criteria:
+    - {id: AC-ENV, method: bounding_box, threshold: Envelope total <= 160 x 100 x 90 mm.}
+    - {id: AC-PATH, method: sampled_open_path, threshold: Rota geométrica contínua de entrada às três câmaras e saída, em void.}
+    - {id: AC-FLOW, method: physical_flow_test, threshold: Vazão a medir; não especificada nesta fase.}
+  risks_and_unknowns:
+    - {id: U-FLOW, description: Vazão e perda de carga não especificadas, status: NOT_EVALUATED, resolution: Medir com circuito e desnível de uso definidos.}
+    - {id: U-HOSE, description: Diâmetro/parede reais de mangueira não informados; espigões são conceituais, status: NOT_EVALUATED, resolution: Medir a mangueira antes de congelar interface.}
+    - {id: U-SEAL, description: Vedação tampa/corpo e conexões não validada, status: NOT_EVALUATED, resolution: Protótipo e ensaio de estanqueidade.}
+  requirements:
+    - id: REQ-ENV
+      description: Manter o módulo dentro de 160 x 100 x 90 mm.
+      subsystem: enclosure
+      components: [body, lid]
+      verification:
+        method: bounding_box
+        status: NOT_EVALUATED
+        evidence: [{path: build/outputs/geometry-evidence.json, json_pointer: /overall_envelope_mm, expected: [160.0, 80.0, 51.3]}]
+    - id: REQ-CHAMBERS
+      description: Interligar três câmaras em série por aberturas geométricas junto ao fundo.
+      subsystem: chambers
+      components: [body]
+      verification: {method: flow_path, target: FLOW-WATER, status: NOT_EVALUATED}
+    - id: REQ-SERVICE
+      description: Permitir acesso superior às câmaras para inspeção e limpeza.
+      subsystem: service
+      components: [body, lid]
+      verification:
+        method: assembly_removal_path
+        status: NOT_EVALUATED
+        evidence: [{path: build/outputs/validation.json, json_pointer: /assembly/assembly_sequence/status, expected: PASS}]
+    - id: REQ-HOSE
+      description: Manter conexões de mangueira acessíveis nas extremidades.
+      subsystem: connections
+      components: [body]
+      verification:
+        method: interface_geometry
+        status: NOT_EVALUATED
+        evidence: [{path: build/outputs/geometry-evidence.json, json_pointer: /hose_nominal_mm, expected: [12.0, 8.0]}]
+    - id: REQ-FLOW
+      description: Vazão será medida em ensaio; nenhum valor é alegado pelo CAD.
+      subsystem: chambers
+      components: [body]
+      verification: {method: physical_flow_test, status: NOT_EVALUATED}
+  functional_architecture:
+    subsystems:
+      - {id: enclosure, purpose: Conter as três câmaras e permitir cobertura removível, components: [body, lid]}
+      - {id: connections, purpose: Conduzir água entre mangueiras e câmaras terminais, components: [body]}
+      - {id: chambers, purpose: Alojar o volume de água e encaminhar fluxo pelas três câmaras, components: [body]}
+      - {id: service, purpose: Abrir o topo para inspeção, limpeza e escape de ar durante enchimento, components: [body, lid]}
+    flows:
+      - id: FLOW-WATER
+        path: [connections, chambers, chambers, chambers, connections]
+        medium: water
+        status: NOT_EVALUATED
+        geometry_check:
+          centerline_mm: [[-80, 0, 24], [-55, 0, 24], [-55, 0, 10], [55, 0, 10], [55, 0, 24], [80, 0, 24]]
+          clearance_radius_mm: 2.0
+          sample_step_mm: 1.0
+          domain_bbox_mm: [[-80, -50, 0], [80, 50, 55]]
+    operating_modes:
+      - {id: normal, description: Enchimento/circulação passiva com conexões em extremidades e tampa removível.}
+      - {id: service, description: Remover tampa para inspeção, drenagem e limpeza.}
+    failure_modes:
+      - {id: FM-AIR, description: Bolha residual ou módulo inclinado retém ar, detection: Inspeção visual durante enchimento em protótipo.}
+      - {id: FM-CLOG, description: Resíduo obstrui uma abertura inferior, detection: Inspeção visual com tampa removida.}
+      - {id: FM-LEAK, description: Vazamento em tampa ou mangueira, detection: Ensaio físico de estanqueidade.}
+  mechanical_architecture:
+    components:
+      - {id: body, part: body, function: Corpo com câmaras, divisórias, passagens e espigões integrais, retention: {method: monolithic}}
+      - {id: lid, part: lid, function: Cobertura removível para reduzir contaminação e permitir serviço, retention: {method: intentional_free, reason: Removida manualmente para abrir e limpar as câmaras}}
+    interfaces:
+      - {id: I-LID, components: [body, lid], kind: contact, datums: [top_rim], tolerance_profile: nominal}
+    assembly_steps:
+      - {id: A-LID, action: Apoiar a tampa removível sobre o aro superior após limpeza/enchimento.}
+    maintenance_access:
+      - {id: M-OPEN, action: Levantar a tampa sem ferramenta e acessar as três câmaras e passagens.}
+    print_split:
+      - {part: body, reason: Corpo monolítico mantém câmaras e divisórias alinhadas; orientação de fabricação a revisar.}
+      - {part: lid, reason: Tampa separada para acesso e limpeza; ajuste/vedação ainda não definidos.}
+  manufacturing:
+    physical_validation: NOT_EVALUATED
+  visualization:
+    hidden_components: [lid]
+    critical_interfaces: [I-LID]
+  design_study:
+    concepts:
+      - id: inline-open-chambers
+        description: Três câmaras lado a lado, conectadas por janelas largas junto ao fundo, corpo aberto e tampa removível.
+        tradeoffs: {function: Percurso em série curto e visível, space: Usa comprimento do envelope, service: Acesso superior direto a todas as câmaras, fabrication: Corpo monolítico e tampa simples, risk: Janelas inferiores podem acumular sedimento; orientação pode influir na purga.}
+      - id: stacked-tubular
+        description: Câmaras empilhadas com tubos externos ou internos ligando níveis.
+        tradeoffs: {function: Mais percurso vertical e interfaces, space: Menor área em planta, service: Tubos e junções mais difíceis de limpar, fabrication: Mais peças e vedações, risk: Pontos altos e trechos estreitos podem reter ar ou obstruir.}
+    selection: {concept: inline-open-chambers, rationale: Favorece inspeção/limpeza e reduz trechos fechados; as aberturas junto ao fundo oferecem comunicação geométrica sem tubos finos., sacrifices: Ocupa área em planta e não comprova purga completa em uso., reversal_condition: Se medições de desnível/instalação exigirem orientação vertical ou espaço em planta menor, reconsiderar a arquitetura.}
+    spatial_budget:
+      - {id: envelope, state: verified, dimensions_mm: [160, 100, 90], source: limite do usuário}
+      - {id: modeled_body, state: assumption, dimensions_mm: [124, 80, 48], source: escolha conceitual paramétrica}
+      - {id: hose_protrusion, state: assumption, dimensions_mm: [160, 80, 48], source: espigões 18 mm em cada ponta, OD 12 mm}
+      - {id: service_access, state: NOT_EVALUATED, purpose: Curso livre acima da tampa para removê-la; depende da instalação.}

@@ -1,0 +1,135 @@
+FFFFF
+======================================================================
+FAIL: test_composite_cumulative_transforms (__main__.Motion.test_composite_cumulative_transforms)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/candidate/scripts/test-motion-paths.py", line 8, in module
+    try:return importlib.import_module('motion_paths')
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'motion_paths'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/candidate/scripts/test-motion-paths.py", line 15, in test_composite_cumulative_transforms
+    m=self.module();p={'lid':Pos(3,0,0)*Box(.5,.5,.5)}
+      ^^^^^^^^^^^^^
+  File "/candidate/scripts/test-motion-paths.py", line 9, in module
+    except ModuleNotFoundError:self.fail('rotation/composite evaluator missing')
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: rotation/composite evaluator missing
+
+======================================================================
+FAIL: test_contacts_do_not_waive_volume (__main__.Motion.test_contacts_do_not_waive_volume)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/candidate/scripts/test-motion-paths.py", line 8, in module
+    try:return importlib.import_module('motion_paths')
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'motion_paths'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/candidate/scripts/test-motion-paths.py", line 29, in test_contacts_do_not_waive_volume
+    m=self.module();r=m.path_check({'lid':Box(2,2,2),'stop':Box(2,2,2)},{'id':'x','moving_ids':['lid'],'allowed_contact_pairs':['lid::stop'],'motion':{'type':'translation','vector_mm':[0,0,4]}})
+      ^^^^^^^^^^^^^
+  File "/candidate/scripts/test-motion-paths.py", line 9, in module
+    except ModuleNotFoundError:self.fail('rotation/composite evaluator missing')
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: rotation/composite evaluator missing
+
+======================================================================
+FAIL: test_invalid_motion_and_budget_rejected (__main__.Motion.test_invalid_motion_and_budget_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/candidate/scripts/test-motion-paths.py", line 8, in module
+    try:return importlib.import_module('motion_paths')
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'motion_paths'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/candidate/scripts/test-motion-paths.py", line 20, in test_invalid_motion_and_budget_rejected
+    m=self.module()
+      ^^^^^^^^^^^^^
+  File "/candidate/scripts/test-motion-paths.py", line 9, in module
+    except ModuleNotFoundError:self.fail('rotation/composite evaluator missing')
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: rotation/composite evaluator missing
+
+======================================================================
+FAIL: test_native_dispatch_and_release_proof (__main__.Motion.test_native_dispatch_and_release_proof)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/candidate/scripts/test-motion-paths.py", line 8, in module
+    try:return importlib.import_module('motion_paths')
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'motion_paths'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/candidate/scripts/test-motion-paths.py", line 24, in test_native_dispatch_and_release_proof
+    self.module();from service_states import evaluate_steps
+    ^^^^^^^^^^^^^
+  File "/candidate/scripts/test-motion-paths.py", line 9, in module
+    except ModuleNotFoundError:self.fail('rotation/composite evaluator missing')
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: rotation/composite evaluator missing
+
+======================================================================
+FAIL: test_rotation_checks_intermediate_pose (__main__.Motion.test_rotation_checks_intermediate_pose)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/candidate/scripts/test-motion-paths.py", line 8, in module
+    try:return importlib.import_module('motion_paths')
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'motion_paths'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/candidate/scripts/test-motion-paths.py", line 11, in test_rotation_checks_intermediate_pose
+    m=self.module();p={'lid':Pos(3,0,0)*Box(.5,.5,.5),'stop':Pos(0,3,0)*Box(.7,.7,.7)}
+      ^^^^^^^^^^^^^
+  File "/candidate/scripts/test-motion-paths.py", line 9, in module
+    except ModuleNotFoundError:self.fail('rotation/composite evaluator missing')
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: rotation/composite evaluator missing
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.002s
+
+FAILED (failures=5)

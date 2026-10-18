@@ -1,0 +1,7 @@
+right False PASS
+Traceback (most recent call last):
+  File "/evidence/real-basket-probe.py", line 19, in <module>
+left False PASS
+    assert r['status']==expected
+           ^^^^^^^^^^^^^^^^^^^^^
+AssertionError

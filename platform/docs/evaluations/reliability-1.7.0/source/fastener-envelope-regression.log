@@ -1,0 +1,145 @@
+MODULE_ROOT /candidate/cli
+MODULE_SHA256 {"artifact_publication.py": "c27c7c77721daba9f35f6c33fef8c22991d13e9605078e303a683fbeb41bb466", "brep_pairs.py": "77fcaedf5c00fcc0fe25680dad8eba962c9c15bba9da664ecea8f164ccca5fc0", "cad3d.py": "7fa0970a6fe533b2c453d17cf165e0c9fa101d57bff52176a70ed10ec95ad3f5", "cad3d_visualization.py": "20386d67b2779e460e3bb8fb2176e5cd7973d3becfeb5f113ae0ca347193c96f", "calibration.py": "1497c2e733b8b55fea3a2ed8e6080fbeff670bca29de2c3edace925f0cfae761", "commercial_components.py": "56912185e72dba86a36969a245b98e97d3d0ae8b43804e5de560dab726e75df1", "component_catalog.py": "9cd9fffdd9e4d2a9f0c23e90c87188459c66ec1cdace6453fb33e0edcaea394e", "face_references.py": "7aff2170b58099f9946d0f28b00903254adab8a8699075e0895f09df73066bf1", "helical_motion.py": "e1fc4096090c65e6d5478ccb52dbb1a4561db9827780d5c9b0bc1fbc05fff789", "manufacturing.py": "a80da2a101542f91057fa0767a04eb18bd2d76fc299e25833af0d21ee8f7b6af", "product_engineering.py": "1a8b51dc79dd496145a0b7fc942978c778cc671ef1f5c72a518318c6ae3054f2", "service_states.py": "a3f2f90a7d453e61144948eb977c5f40f48b948524ffc95205f2cc2bb58d5f7e", "slicer_bridge.py": "8342a4a2fab8c500ea566cdd068351e95a8f321297f730950bc42bddb3cd219a", "source_fingerprint.py": "36be6211774fda13d21171e59adf71eb001bb7dff3b538b31002b239a9f9e679", "tolerance_stack.py": "c55df4c097545486310a3db2bca96b8d77e22c4d1d19574f9839f6b5818de539", "validation.py": "526ee1f058b8eec364bd2c205844268c706ca7ae16de76a32054f8e87b9b98df"}
+{
+  "regression_status": "PASS",
+  "candidate_validation_module": "/candidate/cli/validation.py",
+  "checks": [
+    {
+      "id": "shank_only_misses_blocked_head",
+      "expected": "PASS",
+      "result": {
+        "pair": "shank_only_misses_blocked_head",
+        "method": "atomic_solids_OCP_BREP",
+        "clearance_scope": "global minimum across world-located atomic solid pairs; sampled paths remain separate",
+        "min_clearance_required_mm": 0.0,
+        "intentional_contact": false,
+        "status": "PASS",
+        "solid_pair_count": 1,
+        "intersection_volume_mm3": 0.0,
+        "classification": "SEPARATED",
+        "reason": "clearance_met",
+        "broad_phase": "DISJOINT",
+        "findings": [],
+        "surface_distance_mm": 0.5
+      }
+    },
+    {
+      "id": "head_hits_rib",
+      "expected": "FAIL",
+      "result": {
+        "pair": "head_hits_rib",
+        "method": "atomic_solids_OCP_BREP",
+        "clearance_scope": "global minimum across world-located atomic solid pairs; sampled paths remain separate",
+        "min_clearance_required_mm": 0.0,
+        "intentional_contact": false,
+        "status": "FAIL",
+        "solid_pair_count": 1,
+        "intersection_volume_mm3": 5.660877929499845,
+        "classification": "VOLUMETRIC_COLLISION",
+        "reason": "positive_intersection_volume",
+        "broad_phase": "OVERLAP",
+        "findings": [
+          {
+            "pair": "head_hits_rib",
+            "intentional_contact": false,
+            "intersection_volume_mm3": 5.660877929499845,
+            "method": "OCP_atomic_solid_common",
+            "status": "FAIL",
+            "surface_distance_mm": 0.0,
+            "classification": "VOLUMETRIC_COLLISION",
+            "reason": "positive_intersection_volume"
+          }
+        ],
+        "surface_distance_mm": 0.0
+      }
+    },
+    {
+      "id": "installed_head_clear_but_tool_blocked",
+      "expected": "PASS",
+      "result": {
+        "pair": "installed_head_clear_but_tool_blocked",
+        "method": "atomic_solids_OCP_BREP",
+        "clearance_scope": "global minimum across world-located atomic solid pairs; sampled paths remain separate",
+        "min_clearance_required_mm": 0.0,
+        "intentional_contact": false,
+        "status": "PASS",
+        "solid_pair_count": 1,
+        "intersection_volume_mm3": 0.0,
+        "classification": "SEPARATED",
+        "reason": "clearance_met",
+        "broad_phase": "DISJOINT",
+        "findings": [],
+        "surface_distance_mm": 7.0178344238090995
+      }
+    },
+    {
+      "id": "driver_approach_hits_upper_rib",
+      "expected": "FAIL",
+      "result": {
+        "pair": "driver_approach_hits_upper_rib",
+        "method": "atomic_solids_OCP_BREP",
+        "clearance_scope": "global minimum across world-located atomic solid pairs; sampled paths remain separate",
+        "min_clearance_required_mm": 0.0,
+        "intentional_contact": false,
+        "status": "FAIL",
+        "solid_pair_count": 1,
+        "intersection_volume_mm3": 5.495204570884055,
+        "classification": "VOLUMETRIC_COLLISION",
+        "reason": "positive_intersection_volume",
+        "broad_phase": "OVERLAP",
+        "findings": [
+          {
+            "pair": "driver_approach_hits_upper_rib",
+            "intentional_contact": false,
+            "intersection_volume_mm3": 5.495204570884055,
+            "method": "OCP_atomic_solid_common",
+            "status": "FAIL",
+            "surface_distance_mm": 0.0,
+            "classification": "VOLUMETRIC_COLLISION",
+            "reason": "positive_intersection_volume"
+          }
+        ],
+        "surface_distance_mm": 0.0
+      }
+    },
+    {
+      "id": "head_clear_control",
+      "expected": "PASS",
+      "result": {
+        "pair": "head_clear_control",
+        "method": "atomic_solids_OCP_BREP",
+        "clearance_scope": "global minimum across world-located atomic solid pairs; sampled paths remain separate",
+        "min_clearance_required_mm": 0.0,
+        "intentional_contact": false,
+        "status": "PASS",
+        "solid_pair_count": 1,
+        "intersection_volume_mm3": 0.0,
+        "classification": "SEPARATED",
+        "reason": "clearance_met",
+        "broad_phase": "DISJOINT",
+        "findings": [],
+        "surface_distance_mm": 7.615773105863909
+      }
+    },
+    {
+      "id": "driver_approach_clear_control",
+      "expected": "PASS",
+      "result": {
+        "pair": "driver_approach_clear_control",
+        "method": "atomic_solids_OCP_BREP",
+        "clearance_scope": "global minimum across world-located atomic solid pairs; sampled paths remain separate",
+        "min_clearance_required_mm": 0.0,
+        "intentional_contact": false,
+        "status": "PASS",
+        "solid_pair_count": 1,
+        "intersection_volume_mm3": 0.0,
+        "classification": "SEPARATED",
+        "reason": "clearance_met",
+        "broad_phase": "DISJOINT",
+        "findings": [],
+        "surface_distance_mm": 2.0
+      }
+    }
+  ],
+  "scope": "Static fixture head and straight cylindrical driver keep-out B-rep collisions only; no torque, hand access, load, retention, tolerance or physical validation."
+}

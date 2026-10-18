@@ -1,0 +1,18 @@
+id: organizer
+contact_tolerance_mm: 0.02
+components:
+  - {id: base, part: base, position_mm: [0, 0, 0]}
+  - {id: module_1, part: module_1, position_mm: [0, -37, 0]}
+  - {id: module_2, part: module_2, position_mm: [0, -1, 0]}
+  - {id: module_3, part: module_3, position_mm: [0, 35, 0]}
+interfaces:
+  - {id: tray_1_base_support, a: base, b: module_1, type: removable_cover, intentional_contact: true, clearance_mm: 0.0}
+  - {id: tray_2_base_support, a: base, b: module_2, type: removable_cover, intentional_contact: true, clearance_mm: 0.0}
+  - {id: tray_3_base_support, a: base, b: module_3, type: removable_cover, intentional_contact: true, clearance_mm: 0.0}
+assembly_steps:
+  - id: insert_modules
+    moving_component: module_1
+    direction_mm: [0, 0, -1]
+    travel_mm: 30
+    samples: 8
+    allowed_contact_pairs: [module_1::base]

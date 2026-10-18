@@ -1,0 +1,14 @@
+F
+======================================================================
+FAIL: test_portable_archive_projections_and_inventory (__main__.Kit.test_portable_archive_projections_and_inventory)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/candidate/scripts/test-portable-kit.py", line 6, in test_portable_archive_projections_and_inventory
+    root=Path(__file__).resolve().parents[1];script=root/'scripts/package-kit.py';self.assertTrue(script.is_file(),'portable packager is missing')
+                                                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : portable packager is missing
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (failures=1)

@@ -1,0 +1,109 @@
+{
+  "regression_status": "PASS",
+  "candidate_validation_module": "/candidate/cli/validation.py",
+  "checks": [
+    {
+      "id": "shank_only_misses_blocked_head",
+      "expected": "PASS",
+      "result": {
+        "pair": "shank_only_misses_blocked_head",
+        "min_clearance_required_mm": 0.0,
+        "intentional_contact": false,
+        "method": "AABB+OCP_BREP",
+        "clearance_scope": "global minimum between component B-reps; mating faces are not isolated",
+        "status": "PASS",
+        "broad_phase": "DISJOINT",
+        "intersection_volume_mm3": 0.0,
+        "surface_distance_mm": 0.5,
+        "classification": "SEPARATED",
+        "reason": "clearance_met"
+      }
+    },
+    {
+      "id": "head_hits_rib",
+      "expected": "FAIL",
+      "result": {
+        "pair": "head_hits_rib",
+        "min_clearance_required_mm": 0.0,
+        "intentional_contact": false,
+        "method": "AABB+OCP_BREP",
+        "clearance_scope": "global minimum between component B-reps; mating faces are not isolated",
+        "broad_phase": "OVERLAP",
+        "intersection_volume_mm3": 5.660877929499845,
+        "surface_distance_mm": 0.0,
+        "status": "FAIL",
+        "classification": "VOLUMETRIC_COLLISION",
+        "reason": "positive_intersection_volume"
+      }
+    },
+    {
+      "id": "installed_head_clear_but_tool_blocked",
+      "expected": "PASS",
+      "result": {
+        "pair": "installed_head_clear_but_tool_blocked",
+        "min_clearance_required_mm": 0.0,
+        "intentional_contact": false,
+        "method": "AABB+OCP_BREP",
+        "clearance_scope": "global minimum between component B-reps; mating faces are not isolated",
+        "status": "PASS",
+        "broad_phase": "DISJOINT",
+        "intersection_volume_mm3": 0.0,
+        "surface_distance_mm": 7.0178344238090995,
+        "classification": "SEPARATED",
+        "reason": "clearance_met"
+      }
+    },
+    {
+      "id": "driver_approach_hits_upper_rib",
+      "expected": "FAIL",
+      "result": {
+        "pair": "driver_approach_hits_upper_rib",
+        "min_clearance_required_mm": 0.0,
+        "intentional_contact": false,
+        "method": "AABB+OCP_BREP",
+        "clearance_scope": "global minimum between component B-reps; mating faces are not isolated",
+        "broad_phase": "OVERLAP",
+        "intersection_volume_mm3": 5.495204570884055,
+        "surface_distance_mm": 0.0,
+        "status": "FAIL",
+        "classification": "VOLUMETRIC_COLLISION",
+        "reason": "positive_intersection_volume"
+      }
+    },
+    {
+      "id": "head_clear_control",
+      "expected": "PASS",
+      "result": {
+        "pair": "head_clear_control",
+        "min_clearance_required_mm": 0.0,
+        "intentional_contact": false,
+        "method": "AABB+OCP_BREP",
+        "clearance_scope": "global minimum between component B-reps; mating faces are not isolated",
+        "status": "PASS",
+        "broad_phase": "DISJOINT",
+        "intersection_volume_mm3": 0.0,
+        "surface_distance_mm": 7.615773105863909,
+        "classification": "SEPARATED",
+        "reason": "clearance_met"
+      }
+    },
+    {
+      "id": "driver_approach_clear_control",
+      "expected": "PASS",
+      "result": {
+        "pair": "driver_approach_clear_control",
+        "min_clearance_required_mm": 0.0,
+        "intentional_contact": false,
+        "method": "AABB+OCP_BREP",
+        "clearance_scope": "global minimum between component B-reps; mating faces are not isolated",
+        "status": "PASS",
+        "broad_phase": "DISJOINT",
+        "intersection_volume_mm3": 0.0,
+        "surface_distance_mm": 2.0,
+        "classification": "SEPARATED",
+        "reason": "clearance_met"
+      }
+    }
+  ],
+  "scope": "Static fixture head and straight cylindrical driver keep-out B-rep collisions only; no torque, hand access, load, retention, tolerance or physical validation."
+}

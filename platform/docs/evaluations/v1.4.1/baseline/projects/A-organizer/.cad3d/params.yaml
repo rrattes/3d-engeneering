@@ -1,0 +1,20 @@
+# Envelope dimensions supplied by user. Object dimensions remain unknown.
+organizer:
+  length: 180.0
+  width: 120.0
+  height: 70.0
+  module_count: 3
+  rim: 5.0
+  slot_gap: 1.0
+  clearance: 0.35
+  rail_width: 1.6
+  wall: 1.8
+  floor: 2.0
+  base_height: 4.0
+  rail_height: 3.0
+  tray_height: 28.0
+  access_radius: 12.0
+printer:
+  profile: elegoo-cc2
+material:
+  profile: petg

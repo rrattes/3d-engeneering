@@ -1,0 +1,11 @@
+test_dates_and_nonmeasured_values_cannot_calibrate (__main__.FitCalibration.test_dates_and_nonmeasured_values_cannot_calibrate) ... ok
+test_each_identity_component_must_match (__main__.FitCalibration.test_each_identity_component_must_match) ... ok
+test_measured_envelope_and_no_preset_mutation (__main__.FitCalibration.test_measured_envelope_and_no_preset_mutation) ... ok
+test_missing_confirmation_evidence_and_hash_mismatch (__main__.FitCalibration.test_missing_confirmation_evidence_and_hash_mismatch) ... ok
+test_mixed_nominals_not_extrapolated (__main__.FitCalibration.test_mixed_nominals_not_extrapolated) ... ok
+test_outside_evidence_and_symlink_rejected (__main__.FitCalibration.test_outside_evidence_and_symlink_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.006s
+
+OK

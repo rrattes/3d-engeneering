@@ -1,0 +1,101 @@
+engineering:
+  schema_version: 1
+  workflow_level: product
+  model_gate: true
+  project:
+    name: suporte-removivel-de-parede
+    class: mechanical_product
+    purpose: Suporte FDM desmontável para equipamento nominal de 1 kg, com remoção repetida para manutenção.
+    units: mm
+  operating_conditions:
+    - {id: USE-1, condition: Uso interno estático; equipamento de até 1 kg; retirada manual para manutenção.}
+  measurements:
+    - {id: ENV-1, confidence: verified, source: user, value_mm: [100, 80, 50]}
+    - {id: LOAD-1, confidence: verified, source: user, value_kg: 1}
+  external_interfaces:
+    - {id: WALL-IF, type: mounting, description: Parede plana; material, âncoras e padrão de fixação ainda não medidos.}
+    - {id: EQUIP-IF, type: equipment_mount, description: Interface física do equipamento não fornecida; assume-se base plana apoiada em bandeja.}
+  acceptance_criteria:
+    - {id: AC-ENV, method: bounding_box, threshold: Partes impressas montadas dentro de 100 x 80 x 50 mm.}
+    - {id: AC-SERVICE, method: assembly_removal_path, threshold: Carreador removível por deslizamento vertical após liberar trava.}
+  risks_and_unknowns:
+    - {id: U-WALL, description: "Material da parede, tipo de bucha/âncora e posições permitidas desconhecidos; dois rasgos ajustáveis não determinam fixação segura.", status: NOT_EVALUATED, resolution: Medir parede e selecionar fixadores apropriados antes da instalação.}
+    - {id: U-EQUIP, description: "Dimensões, centro de gravidade e interface do equipamento desconhecidos.", status: NOT_EVALUATED, resolution: Medir equipamento e confirmar apoio/retentor antes de imprimir versão final.}
+    - {id: U-LOAD, description: "Capacidade estrutural, fluência, fadiga e anisotropia FDM não verificadas.", status: NOT_EVALUATED, resolution: Revisão de carga e ensaio físico progressivo após protótipo.}
+    - {id: U-HARDWARE, description: "Trava secundária não está modelada; fixadores de parede ainda não estão selecionados.", status: NOT_EVALUATED, resolution: "Definir ferragem, acesso e torque de serviço antes da instalação."}
+  requirements:
+    - id: REQ-ENV
+      description: O suporte impresso montado deve caber no envelope máximo de 100 x 80 x 50 mm.
+      subsystem: support
+      components: [wall_plate, equipment_carrier]
+      verification: {method: bounding_box, status: NOT_EVALUATED}
+    - id: REQ-SERVICE
+      description: O equipamento deve poder ser retirado removendo o carreador sem desmontar a placa da parede.
+      subsystem: service
+      components: [wall_plate, equipment_carrier]
+      verification: {method: assembly_removal_path, status: NOT_EVALUATED}
+    - id: REQ-LOAD
+      description: A arquitetura deve oferecer apoio para equipamento de 1 kg.
+      subsystem: support
+      components: [wall_plate, equipment_carrier]
+      verification: {method: physical_load_test, status: NOT_EVALUATED}
+  functional_architecture:
+    subsystems:
+      - {id: support, purpose: Transferir peso do equipamento por bandeja, trilho e placa até fixadores de parede., components: [wall_plate, equipment_carrier]}
+      - {id: service, purpose: Permitir deslizamento e retirada do carreador após liberação de trava secundária., components: [wall_plate, equipment_carrier]}
+    flows:
+      - {id: FORCE-1, path: [equipment_carrier, wall_plate], medium: carga mecânica, status: NOT_EVALUATED}
+    operating_modes:
+      - {id: installed, description: Carreador assentado no trilho e retido por gravidade; equipamento apoiado na bandeja.}
+      - {id: service, description: Parafuso removido e carreador deslizado para cima e retirado.}
+    failure_modes:
+      - {id: F-WALL, description: Extração ou cisalhamento dos fixadores na parede., detection: Inspecionar substrato/fixadores e executar ensaio instalado.}
+      - {id: F-RAIL, description: Fratura, deformação ou soltura do trilho/bandeja por carga ou fluência., detection: Inspeção visual e ensaio de carga/tempo.}
+      - {id: F-LOCK, description: Elevação acidental do carreador pode desengatá-lo porque não há trava secundária modelada., detection: Inspeção da trava antes do uso.}
+  mechanical_architecture:
+    components:
+      - {id: wall_plate, part: wall_plate, function: Fixar à parede e fornecer trilho macho e batente inferior., retention: {method: monolithic}}
+      - {id: equipment_carrier, part: equipment_carrier, function: Sustentar equipamento em bandeja e deslizar sobre trilho macho., retention: {method: captured_rail, interface_ids: [I-RAIL]}}
+    interfaces:
+      - {id: I-RAIL, components: [wall_plate, equipment_carrier], kind: sliding, datums: [wall_plane, rail_axis_z], tolerance_profile: uncalibrated_clearance}
+    assembly_steps:
+      - {id: A-1, action: Fixar a placa à parede com até dois fixadores escolhidos para o substrato.}
+      - {id: A-2, action: Deslizar o carreador para baixo no trilho até o batente inferior e confirmar que trava secundária opcional foi instalada.}
+    maintenance_access:
+      - {id: M-1, action: Se houver trava secundária, removê-la; deslizar carreador para cima e retirar conjunto/equipamento.}
+    print_split:
+      - {part: wall_plate, reason: Parte fixada à parede.}
+      - {part: equipment_carrier, reason: Parte removível para serviço; folga deslizante entre peças.}
+  manufacturing:
+    process: FDM
+    material: PETG assumed
+    physical_validation: NOT_EVALUATED
+  visualization:
+    hidden_components: [equipment_carrier]
+    critical_interfaces: [I-RAIL]
+  design_study:
+    need_types:
+      - {id: NEED-1, kind: user_need, description: Remover equipamento de 1 kg para manutenção e remontar repetidamente.}
+      - {id: C-ENV, kind: hard_constraint, source: user, value: 100 x 80 x 50 mm envelope.}
+      - {id: C-FDM, kind: hard_constraint, source: user, value: fabricação FDM.}
+      - {id: U-WALL, kind: assumption, status: NOT_EVALUATED, resolution: Medir substrato, padrão e fixadores.}
+      - {id: U-EQUIP, kind: assumption, status: NOT_EVALUATED, resolution: Medir interface do equipamento.}
+    concepts:
+      - id: screw_service
+        description: Equipamento preso diretamente à placa por dois parafusos removíveis.
+        tradeoffs: {function: Retenção positiva simples., space: Baixo volume., service: Remoção repetida exige acesso a parafusos do equipamento., fabrication: Geometria simples., risk: Roscas em plástico podem desgastar e interface do equipamento é desconhecida.}
+      - id: captured_slide
+        description: Carreador com canal de cauda-de-andorinha desliza em trilho da placa; batente inferior sustenta a bandeja; o trilho captura esforços para fora e permite remoção vertical.
+        tradeoffs: {function: Trilha suporta carga transversal; trava bloqueia saída., space: Usa profundidade e curso vertical dentro do envelope., service: Carreador pode ser removido como conjunto., fabrication: Duas peças FDM com folga não calibrada., risk: Carga, fluência, encaixe e fixador de parede ainda precisam de validação.}
+    selection:
+      concept: captured_slide
+      rationale: Atende remoção repetida sem exigir acesso ou roscas no equipamento; mantém placa instalada e separa a operação de serviço do vínculo com a parede.
+      sacrifices: Exige duas peças impressas e folga de deslizamento; deslizar requer espaço livre acima e pode desengatar se levantado acidentalmente.
+      reversal_condition: Se não houver curso vertical livre ou se o equipamento não puder ser apoiado na bandeja, redesenhar interface após medição.
+    space_budget:
+      - {id: overall, state: user_limit, dimensions_mm: [100, 80, 50], source: limite informado; interpretação CAD x,y,z.}
+      - {id: assembly, state: estimated, dimensions_mm: [80, 44, 48], source: conceito preliminar; envelope externo menor que o limite.}
+      - {id: equipment, state: NOT_EVALUATED, purpose: Volume do equipamento não informado; não incluso na caixa do suporte.}
+      - {id: removal, state: NOT_EVALUATED, purpose: Curso vertical de retirada requer espaço livre acima da peça.}
+    functions:
+      - {id: FN-1, subsystem: support, inputs: [peso do equipamento], outputs: [carga transmitida à parede], mode: installed, failure_modes: [F-WALL, F-RAIL], verification: NOT_EVALUATED}

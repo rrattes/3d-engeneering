@@ -1,0 +1,26 @@
+# Dimensões de conceito por categoria; atualizar após medir as ferramentas reais.
+organizer:
+  base_length: 174.0
+  base_width: 114.0
+  base_thickness: 4.5
+  socket_depth: 3.2
+  pin_engagement: 3.0
+  category_a_length: 50.0
+  category_a_width: 50.0
+  category_a_height: 60.0
+  category_b_length: 50.0
+  category_b_width: 50.0
+  category_b_height: 60.0
+  category_c_length: 50.0
+  category_c_width: 50.0
+  category_c_height: 60.0
+  module_wall: 2.0
+  module_floor: 2.4
+  slot_pitch: 56.0
+  slot_columns: 3
+  slot_rows: 2
+  pin_offset: 20.0
+  pin_radius: 2.0
+  socket_clearance: 0.6
+  grip_notch_width: 18.0
+  grip_notch_height: 15.0

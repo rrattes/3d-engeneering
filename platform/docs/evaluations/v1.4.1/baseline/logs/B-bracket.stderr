@@ -1,0 +1,12 @@
+Reading additional input from stdin...
+2026-10-13T02:50:59.748274Z ERROR codex_core::tools::router: error=apply_patch verification failed: Failed to find expected lines in /tmp/cad3d-v141-eval/baseline/B-bracket/.cad3d/engineering.yaml:
+      - id: IF-WALL
+        components: [wall_plate, removable_carriage]
+        kind: external_wall_fixing
+        tolerance_profile: substrate_to_be_measured
+        positioning: {datum: face traseira Z=0}
+        relation: encosto plano com quatro furos passantes Ø5,5, padrão 70 x 50 mm
+        fit: interface de fixação não definida até medição do substrato
+        service: parafusos selecionados conforme parede
+2026-10-13T02:58:30.923885Z ERROR codex_core::tools::router: error=apply_patch verification failed: Failed to find expected lines in /tmp/cad3d-v141-eval/baseline/B-bracket/src/model.py:
+    plate += Pos(-25, -2.5, 16.4) * Box(50, 5, 30, align=(Align.MIN, Align.MIN, Align.MIN))

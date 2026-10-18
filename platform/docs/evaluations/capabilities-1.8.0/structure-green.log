@@ -1,0 +1,11 @@
+test_assumed_material_is_warning_missing_is_unknown (__main__.StructuralScreening.test_assumed_material_is_warning_missing_is_unknown) ... ok
+test_hand_calculated_results_and_safety_factor (__main__.StructuralScreening.test_hand_calculated_results_and_safety_factor) ... ok
+test_small_deflection_scope_warning (__main__.StructuralScreening.test_small_deflection_scope_warning) ... ok
+test_stress_or_deflection_limit_failure (__main__.StructuralScreening.test_stress_or_deflection_limit_failure) ... ok
+test_thickness_axis_cubic_stiffness_and_zero_load (__main__.StructuralScreening.test_thickness_axis_cubic_stiffness_and_zero_load) ... ok
+test_unsupported_models_units_and_invalid_numbers_rejected (__main__.StructuralScreening.test_unsupported_models_units_and_invalid_numbers_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.001s
+
+OK

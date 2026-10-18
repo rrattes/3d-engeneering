@@ -1,0 +1,30 @@
+{
+  "schema": "product-design-evidence-policy-v1",
+  "revision": "r1",
+  "source_refs": [
+    {
+      "path": "body.step",
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+    }
+  ],
+  "parameter_ref": {
+    "path": "parameters.json",
+    "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+  },
+  "checks": [
+    {
+      "id": "wall",
+      "part": "body",
+      "requirement_id": "W",
+      "method": "actual provider method required",
+      "unit": "mm",
+      "expected_limit": {
+        "min": 2
+      },
+      "coverage": {
+        "scope": "declare actual sampling"
+      },
+      "calibration": "declare calibration revision"
+    }
+  ]
+}
