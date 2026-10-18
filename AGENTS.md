@@ -2,6 +2,8 @@
 
 Leia README.md e docs/WORKFLOW.md. Use skills/3d-engineering/SKILL.md para engenharia. Use skills/product-design/SKILL.md apenas na etapa estética opcional solicitada pelo usuário. Engenharia prevalece sobre aparência.
 
+Na primeira utilização, antes de modelar, conferir a disponibilidade efetiva das skills necessárias e do container com platform/scripts/cad3d doctor. Seguir e registrar a conferência definida em docs/WORKFLOW.md; uma falha relevante impede a modelagem até resolução.
+
 CAD usa platform/scripts/cad3d e o Docker existente; não instalar CAD no host. Parta de briefing novo em projects/<nome>; não herde dimensões, materiais ou soluções dos exemplos. Separe peças fabricáveis de referências comerciais.
 
 Auxiliares estão em third_party/skills e são selecionadas conforme a etapa, sem carregar todo o catálogo. Consulte seus créditos/licenças antes de redistribuir. A evolução03 está promovida em skills/product-design; a cópia histórica em docs/product-design/candidates não deve ser descoberta em duplicidade. Avaliação comportamental continua parcial20/36, sem julgamento final.

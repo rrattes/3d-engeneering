@@ -13,6 +13,10 @@ Requisitos: Git, Bash, Python3 no host para orquestração, Docker Engine e Comp
 
 O fatiamento Orca é opcional e separado. Ver `platform/docs/INSTALL.md` e `platform/Dockerfile.orca`; impressora, material e processo exatos precisam de perfis confirmados. Nenhum trabalho é enviado à impressora por este fluxo.
 
+## Primeira utilização no agente
+
+Antes de modelar, peça ao agente para conferir as skills necessárias e executar `./platform/scripts/cad3d doctor`. O procedimento e o registro esperado estão em [Primeira utilização](WORKFLOW.md#primeira-utilização-conferir-antes-de-modelar).
+
 ## Portabilidade
 
 Os vínculos dentro do repositório são relativos. Em sistemas sem suporte, copie as duas pastas de skills para o local de descoberta do agente sem substituir versões existentes. Não copiar caminhos absolutos do histórico.

@@ -1,5 +1,15 @@
 # Fluxo atual
 
+## Primeira utilização: conferir antes de modelar
+
+**Na primeira utilização, peça ao agente para conferir a disponibilidade das skills e do container antes de modelar.** O agente deve fazer essa conferência ao iniciar o fluxo em uma instalação nova:
+
+1. Confirmar que consegue localizar e ler `skills/3d-engineering/SKILL.md` e, quando design for solicitado, `skills/product-design/SKILL.md`. Conferir a descoberta no agente; arquivos presentes não comprovam ativação. Verificar somente as auxiliares necessárias à tarefa.
+2. Confirmar Docker Engine acessível, Compose v2 e imagem CAD disponível. Na raiz do repositório, executar `./platform/scripts/cad3d doctor` e conferir o resultado, registrando falhas e limitações.
+3. Se faltar uma skill ou o ambiente CAD não estiver operacional, informar o impedimento e seguir `docs/INSTALL.md` para resolver antes da modelagem. Briefing e planejamento podem continuar; não afirmar que CAD foi executado sem evidência.
+
+Registrar a conferência no documento de estado do projeto. Repetir após mudança de ambiente, versão ou descoberta de falha relevante; não reconstruir imagens nem carregar todas as skills a cada peça.
+
 1. **Briefing:** brainstorming + 3d-engineering. Função, interfaces, dimensões conhecidas, hipóteses, material, fabricação e critérios de aceitação.
 2. **Plano proporcional:** writing-plans; change-impact/product-capability para mudanças com contratos ou dependências relevantes.
 3. **Execução:** executing-plans + 3d-engineering. Arquitetura, parâmetros, peças independentes, montagem e referências comerciais. Componentes reais desconhecidos permanecem parametrizados e pendentes.

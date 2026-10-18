@@ -26,7 +26,7 @@ export PATH="$PWD/platform/scripts:$PATH"
 cad3d init projects/meu-produto
 ```
 
-Abra Codex ou Claude Code nesta raiz e forneça um briefing novo. As skills próprias estão vinculadas em `.agents/skills` e `.claude/skills`; confira a descoberta no agente. Leia [instalação e uso](docs/INSTALL.md) e [fluxo atual](docs/WORKFLOW.md).
+Abra Codex ou Claude Code nesta raiz e forneça um briefing novo. **Na primeira utilização, peça ao agente para conferir a disponibilidade das skills e do container antes de modelar.** As skills próprias estão vinculadas em `.agents/skills` e `.claude/skills`; confira a descoberta no agente. Leia [instalação e uso](docs/INSTALL.md) e [fluxo atual](docs/WORKFLOW.md).
 
 ## Skills auxiliares
 
