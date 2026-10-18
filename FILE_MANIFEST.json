@@ -5,7 +5,7 @@
     "AGENTS.md": "ffe9f88a3997aef8e97501a6af4788ed1a51c06e58a3961bbe4d8b32afd66d0e",
     "CLAUDE.md": "cade75d8a4284c9f238665fcacdc29e5f2da580e6dfd5d7caa241e859f4d062c",
     "LICENSE": "0db41c4c1e3f5247458df298844f1e02e987e4cb32174d59167f6b3205c9b004",
-    "README.md": "2d1c903f35802be7ba95db082dff24a84ef7cff4f67ec0d00745b74e49259b1b",
+    "README.md": "ce8f3966bd5e8c6ae4e7ef8d41d9460959bb4dc5c0210582fc14a8097cba1cbb",
     "THIRD_PARTY_NOTICES.md": "d21fc28b4db0debc7ab33bf23ad8786f2ba86549455856d2af8839bba45f2c0d",
     "docs/CANDIDATE.md": "3ca629dfc7d083d34f38ba848667a29a3df6c5e59933521ef10a7c2026572dde",
     "docs/INSTALL.md": "93ad4921c453e956d07e1cbeac7fffd06ff365ecf1e1bc3e26f8982106420d6e",
@@ -1026,7 +1026,14 @@
     "third_party/skills/writing-skills/persuasion-principles.md": "a51bc9bf75189ea73a27b3fb504a2fdfdb966fb1f7f1cdf03203230a216ccc03",
     "third_party/skills/writing-skills/render-graphs.js": "c7f412cc629461c4d10287e668731874c0497707023e3e3f74a5355eb2cee196",
     "third_party/skills/writing-skills/testing-skills-with-subagents.md": "c711346852c911b24a84aa161e0cff06a4cd7f4e2fa9e9c0a266cead5afcbade",
-    "third_party/skills-manifest.json": "6c7709b2cdfeb05f45b15bca79b352c6e27c75586c12627336f150b88f0eb092"
+    "third_party/skills-manifest.json": "6c7709b2cdfeb05f45b15bca79b352c6e27c75586c12627336f150b88f0eb092",
+    "docs/images/gallery-sources.json": "49489c47a413dd7c6b756f4ed0d00a25b758d32fd3c0d6f4011483196a8ca78d",
+    "docs/images/console-bc250.png": "252d8d1e2f4822eae074418e5268e58045d79fbdcac403ee092edca0d0d464c7",
+    "docs/images/console-bc250-interior.png": "49ee83ecbae0f1ba29497dc70ad41478538d0bfdd94ff63775709c10c5053f12",
+    "docs/images/estilos-caixas-joias.png": "c4dfdfd3625e20e562001f63000ff9f306b608f4d88c9fffeef3bbb4f1b1ae15",
+    "docs/images/estilos-porta-joias-gavetas.png": "bec235b95b6d6ba38365a0fc4a828f5550b1196d33c463eb42d72055c9e5b9b0",
+    "docs/images/cesta-anemonas.png": "b6e440654166e0b3788d0578e96f5abbd14ee96cdbdf6c7caef19e9ac4b972d2",
+    "docs/images/aqualith-photon-v.png": "d0530e2a5d5e789f6f1efdb012df818762138e42e6eb563ee1e74616d0b28a60"
   },
   "relative_symlinks": {
     ".claude/skills/3d-engineering": "../../skills/3d-engineering",

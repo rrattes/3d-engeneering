@@ -1,0 +1,53 @@
+{
+  "kind": "existing CAD project gallery",
+  "images": [
+    {
+      "image": "docs/images/console-bc250.png",
+      "source_project_path": "BC250_Console_Rev_B/renders/CONSOLE.png",
+      "title": "Console BC250 Rev B — exterior",
+      "scope": "Geometria CAD; aceitação definitiva bloqueada pela pendência da grelha lateral.",
+      "sha256": "252d8d1e2f4822eae074418e5268e58045d79fbdcac403ee092edca0d0d464c7",
+      "image_editing": "none; existing image copied unchanged"
+    },
+    {
+      "image": "docs/images/console-bc250-interior.png",
+      "source_project_path": "BC250_Console_Rev_B/renders/INTERIOR.png",
+      "title": "Console BC250 Rev B — interior",
+      "scope": "Geometria CAD com componentes de referência; dimensões comerciais a confirmar.",
+      "sha256": "49ee83ecbae0f1ba29497dc70ad41478538d0bfdd94ff63775709c10c5053f12",
+      "image_editing": "none; existing image copied unchanged"
+    },
+    {
+      "image": "docs/images/estilos-caixas-joias.png",
+      "source_project_path": "Caixas_Joias_Cinco_Estilos_Rev_A/renders/comparacao_fechadas.png",
+      "title": "Caixas de joias — cinco estilos",
+      "scope": "Estudos em CAD, mesma câmera e escala; encaixe físico não validado.",
+      "sha256": "c4dfdfd3625e20e562001f63000ff9f306b608f4d88c9fffeef3bbb4f1b1ae15",
+      "image_editing": "none; existing image copied unchanged"
+    },
+    {
+      "image": "docs/images/estilos-porta-joias-gavetas.png",
+      "source_project_path": "Porta_Joias_Duas_Gavetas_Cinco_Estilos_Rev_A/reports/comparacao-abertos/comparison-iso.png",
+      "title": "Porta-joias — duas gavetas, cinco estilos",
+      "scope": "STEP renderizado; poses abertas de apresentação não demonstram trajetória livre.",
+      "sha256": "bec235b95b6d6ba38365a0fc4a828f5550b1196d33c463eb42d72055c9e5b9b0",
+      "image_editing": "none; existing image copied unchanged"
+    },
+    {
+      "image": "docs/images/cesta-anemonas.png",
+      "source_project_path": "Cesta_Anemonas_Rev_C/exports/b2424b46c6cf442eb3bed87637e7a560/P_presentation.png",
+      "title": "Cesta de anêmonas Rev C",
+      "scope": "Render da entrega selecionada; fabricação e ensaio físico permanecem pendentes.",
+      "sha256": "b6e440654166e0b3788d0578e96f5abbd14ee96cdbdf6c7caef19e9ac4b972d2",
+      "image_editing": "none; existing image copied unchanged"
+    },
+    {
+      "image": "docs/images/aqualith-photon-v.png",
+      "source_project_path": "Aqualith_Photon_V_Rev_B/renders/assembly_top.png",
+      "title": "Aqualith Photon V Rev B",
+      "scope": "Protótipo CAD; validação térmica, elétrica, óptica e contra água pendente.",
+      "sha256": "d0530e2a5d5e789f6f1efdb012df818762138e42e6eb563ee1e74616d0b28a60",
+      "image_editing": "none; existing image copied unchanged"
+    }
+  ]
+}
